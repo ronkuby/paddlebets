@@ -1,0 +1,4193 @@
+  1: Chuck
+   1: 1481 292 260
+     Rip -- Consume
+     Surge -- Water Jet
+     Devour -- Blood in the Water
+  2: Muckbreath
+   1: 1481 292 260
+     Rip -- Consume
+     Surge -- Water Jet
+     Devour -- Blood in the Water
+  3: Snarly
+   1: 1546 305 244
+     Rip -- Consume
+     Surge -- Water Jet
+     Devour -- Blood in the Water
+  4: Toothy
+   1: 1400 305 273
+     Rip -- Consume
+     Surge -- Water Jet
+     Devour -- Blood in the Water
+  5: Emperor Crab
+   1: 1806 292 211
+   2: 1481 357 211
+     Snap -- Surge
+     Renewing Mists -- Healing Wave
+     Shell Shield -- Whirlpool
+  6: Frostshell Pincher
+     Rip -- Claw
+     Spiny Carapace -- Shell Shield
+     Dive -- Blood in the Water
+  7: Ironclaw Scuttler
+     Rip -- Claw
+     Spiny Carapace -- Shell Shield
+     Dive -- Blood in the Water
+  8: Kelp Scuttler
+     Rip -- Claw
+     Spiny Carapace -- Shell Shield
+     Dive -- Blood in the Water
+  9: Magical Crawdad
+   1: 1887 260 227
+     Snap -- Surge
+     Renewing Mists -- Shell Shield
+     Whirlpool -- Wish
+ 10: Moonshell Crab
+     Arcane Slash -- Water Jet
+     Shell Shield -- Amplify Magic
+     Renewing Mists -- Moon Tears
+ 11: Shore Crab
+   1: 1806 260 244
+   2: 1627 289 244
+   3: 1562 276 260
+     Snap -- Surge
+     Renewing Mists -- Healing Wave
+     Shell Shield -- Whirlpool
+ 12: Shore Crawler
+   1: 1481 325 244
+   2: 1627 289 244
+   3: 1562 276 260
+     Snap -- Surge
+     Renewing Mists -- Healing Wave
+     Shell Shield -- Whirlpool
+ 13: Spineclaw Crab
+   1: 1644 292 244
+   2: 1319 357 244
+     Rip -- Triple Snap
+     Spiny Carapace -- Healing Wave
+     Whirlpool -- Blood in the Water
+ 14: Spirebound Crab
+   1: 1806 260 244
+   2: 1481 325 244
+     Snap -- Surge
+     Renewing Mists -- Healing Wave
+     Shell Shield -- Whirlpool
+ 15: Strand Crab
+   1: 1806 260 244
+   2: 1627 289 244
+   3: 1562 276 260
+     Snap -- Surge
+     Renewing Mists -- Healing Wave
+     Shell Shield -- Whirlpool
+ 16: Strand Crawler
+   1: 1806 260 244
+     Snap -- Surge
+     Renewing Mists -- Healing Wave
+     Shell Shield -- Whirlpool
+ 17: Zangar Crawler
+     Rip -- Claw
+     Spiny Carapace -- Shell Shield
+     Dive -- Blood in the Water
+ 18: Fishy
+   1: 1546 273 273
+     Water Jet -- Surge
+     Cleansing Rain -- Healing Wave
+     Whirlpool -- Pump
+ 19: Land Shark
+     Water Jet -- Tail Slap
+     Tidal Wave -- Focus
+     Blood in the Water -- Swallow You Whole
+ 20: Purple Puffer
+   1: 1400 325 260
+     Water Jet -- Surge
+     Spiked Skin -- Healing Wave
+     Whirlpool -- Pump
+ 21: Tiny Blue Carp
+   1: 1465 289 289
+     Surge -- Psychic Blast
+     Healing Stream -- Wild Magic
+     Pump -- Mana Surge
+ 22: Tiny Goldfish
+   1: 1465 273 289
+     Water Jet -- Surge
+     Cleansing Rain -- Healing Wave
+     Whirlpool -- Pump
+ 23: Tiny Green Carp
+   1: 1384 273 305
+     Water Jet -- Surge
+     Cleansing Rain -- Healing Stream
+     Whirlpool -- Invisibility
+ 24: Tiny Red Carp
+   1: 1384 289 289
+     Water Jet -- Poison Spit
+     Cleansing Rain -- Healing Stream
+     Whirlpool -- Spiked Skin
+ 25: Tiny White Carp
+   1: 1400 276 292
+     Water Jet -- Surge
+     Cleansing Rain -- Healing Wave
+     Dive -- Healing Stream
+ 26: Biletoad
+   1: 1709 273 244
+   2: 1562 273 273
+   3: 1644 260 260
+     Water Jet -- Tongue Lash
+     Healing Wave -- Cleansing Rain
+     Frog Kiss -- Swarm of Flies
+ 27: Frog
+   1: 1627 257 273
+   2: 1562 260 276
+     Water Jet -- Tongue Lash
+     Healing Wave -- Cleansing Rain
+     Frog Kiss -- Swarm of Flies
+ 28: Garden Frog
+   1: 1627 257 273
+   2: 1562 260 276
+     Water Jet -- Tongue Lash
+     Healing Wave -- Cleansing Rain
+     Frog Kiss -- Swarm of Flies
+ 29: Gulp Froglet
+   1: 1627 273 260
+   2: 1627 257 273
+   3: 1562 260 276
+     Water Jet -- Frog Kiss
+     Mudslide -- Toxic Skin
+     Swarm -- Corpse Explosion
+ 30: Huge Toad
+   1: 1887 244 244
+   2: 1709 273 244
+   3: 1709 257 257
+   4: 1644 260 260
+     Water Jet -- Tongue Lash
+     Healing Wave -- Cleansing Rain
+     Frog Kiss -- Swarm of Flies
+ 31: Jubling
+   1: 1546 273 273
+     Water Jet -- Tongue Lash
+     Healing Wave -- Cleansing Rain
+     Frog Kiss -- Swarm of Flies
+ 32: Jungle Darter
+   1: 1627 257 273
+   2: 1562 260 276
+     Water Jet -- Tongue Lash
+     Healing Wave -- Cleansing Rain
+     Frog Kiss -- Swarm of Flies
+ 33: Leopard Tree Frog
+   1: 1481 244 325
+   2: 1627 257 273
+   3: 1562 260 276
+     Water Jet -- Tongue Lash
+     Healing Wave -- Cleansing Rain
+     Frog Kiss -- Swarm of Flies
+ 34: Mac Frog
+   1: 1627 257 273
+   2: 1562 260 276
+     Water Jet -- Tongue Lash
+     Healing Wave -- Cleansing Rain
+     Frog Kiss -- Swarm of Flies
+ 35: Mojo
+   1: 1627 244 289
+     Water Jet -- Tongue Lash
+     Healing Wave -- Cleansing Rain
+     Frog Kiss -- Swarm of Flies
+ 36: Mud Jumper
+     Water Jet -- Tongue Lash
+     Mudslide -- Swarm of Flies
+     Bubble -- Pump
+ 37: Small Frog
+   1: 1546 257 289
+   2: 1562 260 276
+     Water Jet -- Tongue Lash
+     Healing Wave -- Cleansing Rain
+     Frog Kiss -- Swarm of Flies
+ 38: Spotted Bell Frog
+   1: 1627 257 273
+   2: 1562 260 276
+     Water Jet -- Tongue Lash
+     Healing Wave -- Cleansing Rain
+     Frog Kiss -- Swarm of Flies
+ 39: Swamp Croaker
+   1: 1627 257 273
+   2: 1562 260 276
+     Water Jet -- Tongue Lash
+     Croak -- Swarm of Flies
+     Frog Kiss -- Bubble
+ 40: Toad
+   1: 1627 273 260
+   2: 1627 257 273
+   3: 1562 260 276
+     Water Jet -- Tongue Lash
+     Healing Wave -- Cleansing Rain
+     Frog Kiss -- Swarm of Flies
+ 41: Tree Frog
+   1: 1627 257 273
+     Water Jet -- Tongue Lash
+     Healing Wave -- Cleansing Rain
+     Frog Kiss -- Swarm of Flies
+ 42: Wood Frog
+   1: 1627 244 289
+     Water Jet -- Tongue Lash
+     Healing Wave -- Cleansing Rain
+     Frog Kiss -- Swarm of Flies
+ 43: Yellow-Bellied Bullfrog
+   1: 1562 309 244
+   2: 1709 257 257
+   3: 1644 260 260
+     Water Jet -- Tongue Lash
+     Healing Wave -- Cleansing Rain
+     Frog Kiss -- Swarm of Flies
+ 44: Aqua Strider
+   1: 1319 227 374
+     Water Jet -- Poison Spit
+     Healing Wave -- Cleansing Rain
+     Soothe -- Pump
+ 45: Dancing Water Skimmer
+   1: 1546 244 305
+   2: 1546 257 289
+   3: 1465 257 305
+   4: 1481 260 292
+     Water Jet -- Poison Spit
+     Healing Wave -- Cleansing Rain
+     Soothe -- Pump
+ 46: Eternal Strider
+   1: 1400 273 305
+   2: 1465 257 305
+     Water Jet -- Poison Spit
+     Healing Wave -- Cleansing Rain
+     Soothe -- Pump
+ 47: Mirror Strider
+   1: 1465 244 322
+   2: 1465 257 305
+   3: 1400 260 309
+     Water Jet -- Poison Spit
+     Healing Wave -- Cleansing Rain
+     Soothe -- Pump
+ 48: Golden Civet
+   1: 1400 260 325
+   2: 1465 273 289
+     Bite -- Gnaw
+     Screech -- Survival
+     Surge -- Dive
+ 49: Golden Civet Kitten
+   1: 1400 260 325
+   2: 1465 273 289
+   3: 1481 276 276
+     Bite -- Gnaw
+     Screech -- Survival
+     Surge -- Dive
+ 50: Kuitan Mongoose
+   1: 1400 260 325
+   2: 1465 273 289
+     Bite -- Gnaw
+     Screech -- Survival
+     Surge -- Dive
+ 51: Mongoose
+   1: 1156 260 374
+   2: 1156 289 338
+     Bite -- Gnaw
+     Screech -- Survival
+     Surge -- Dive
+ 52: Mongoose Pup
+   1: 1237 260 357
+   2: 1237 289 322
+     Bite -- Gnaw
+     Screech -- Survival
+     Surge -- Dive
+ 53: Sea Calf
+     Water Jet -- Surge
+     Bubble -- Dive
+     Feed -- Blood in the Water
+ 54: Sifang Otter
+   1: 1400 260 325
+   2: 1465 273 289
+   3: 1481 276 276
+     Bite -- Gnaw
+     Screech -- Survival
+     Surge -- Dive
+ 55: Sifang Otter Pup
+   1: 1400 260 325
+   2: 1465 273 289
+   3: 1481 276 276
+     Bite -- Gnaw
+     Screech -- Survival
+     Surge -- Dive
+ 56: Mr. Chilly
+   1: 1546 260 289
+     Peck -- Surge
+     Frost Spit -- Slippery Ice
+     Ice Lance -- Belly Slide
+ 57: Pengu
+   1: 1465 273 289
+     Peck -- Surge
+     Frost Spit -- Slippery Ice
+     Ice Lance -- Belly Slide
+ 58: Tundra Penguin
+   1: 1627 289 244
+   2: 1627 260 273
+     Peck -- Surge
+     Frost Spit -- Slippery Ice
+     Ice Lance -- Belly Slide
+ 59: Darkmoon Turtle
+   1: 1709 257 257
+     Bite -- Grasp
+     Shell Shield -- Healing Wave
+     Headbutt -- Powerball
+ 60: Emerald Turtle
+   1: 1969 244 227
+   2: 1790 257 240
+   3: 1725 260 244
+     Emerald Bite -- Grasp
+     Shell Shield -- Healing Wave
+     Headbutt -- Powerball
+ 61: Softshell Snapling
+   1: 1709 244 273
+   2: 1644 260 260
+     Bite -- Grasp
+     Shell Shield -- Healing Wave
+     Headbutt -- Powerball
+ 62: Speedy
+   1: 1400 260 325
+     Bite -- Grasp
+     Shell Shield -- Healing Wave
+     Headbutt -- Powerball
+ 63: Spiny Terrapin
+   1: 1887 244 244
+   2: 1709 244 273
+   3: 1644 260 260
+     Bite -- Grasp
+     Shell Shield -- Healing Wave
+     Headbutt -- Powerball
+ 64: Turquoise Turtle
+   1: 1709 244 273
+   2: 1644 260 260
+     Bite -- Grasp
+     Shell Shield -- Healing Wave
+     Headbutt -- Powerball
+ 65: Wanderer\'s Festival Hatchling
+   1: 1887 244 244
+   2: 1709 244 273
+   3: 1644 260 260
+     Bite -- Grasp
+     Shell Shield -- Perk Up
+     Pump -- Cleansing Rain
+ 66: Gahz\'rooki
+   1: 1400 297 281
+     Bite -- Tail Slap
+     Devour -- Swallow You Whole
+     Whirlpool -- Geyser
+ 67: Horny Toad
+   1: 1627 257 273
+   2: 1562 260 276
+     Water Jet -- Tongue Lash
+     Healing Wave -- Cleansing Rain
+     Frog Kiss -- Swarm of Flies
+ 68: Hydraling
+     Deep Bite -- Tail Slap
+     Call Lightning -- Swallow You Whole
+     Shell Armor -- Whirlpool
+ 69: Puddle Terror
+     Water Jet -- Punch
+     Nature\'s Ward -- Clobber
+     Sunlight -- Dive
+ 70: Sea Pony
+   1: 1481 276 276
+     Water Jet -- Tidal Wave
+     Surge -- Cleansing Rain
+     Whirlpool -- Pump
+ 71: Spawn of G\'nathus
+   1: 1302 305 289
+     Swallow You Whole -- Jolt
+     Dive -- Lightning Shield
+     Thunderbolt -- Paralyzing Shock
+ 72: Tideskipper
+   1: 1766 268 244
+   2: 1587 297 244
+   3: 1587 268 273
+     Crush -- Grasp
+     Tidal Wave -- Body Slam
+     Clobber -- Geyser
+ 73: Baby Blizzard Bear
+   1: 1546 289 260
+     Bite -- Roar
+     Bash -- Hibernate
+     Maul -- Call Blizzard
+ 74: Darkshore Cub
+   1: 1400 325 260
+   2: 1546 289 260
+   3: 1481 276 276
+     Bite -- Roar
+     Hibernate -- Bash
+     Maul -- Rampage
+ 75: Dun Morogh Cub
+   1: 1546 289 260
+     Bite -- Roar
+     Hibernate -- Bash
+     Maul -- Rampage
+ 76: Hyjal Bear Cub
+   1: 1562 292 244
+     Bite -- Roar
+     Hibernate -- Bash
+     Maul -- Rampage
+ 77: Panda Cub
+   1: 1481 276 276
+     Bite -- Roar
+     Hibernate -- Bash
+     Maul -- Rampage
+ 78: Poley
+   1: 1375 255 255
+     Bite -- Roar
+     Bash -- Hibernate
+     Maul -- Call Blizzard
+ 79: Alpine Foxling
+   1: 1400 260 325
+   2: 1465 289 273
+     Bite -- Flurry
+     Crouch -- Howl
+     Leap -- Dazzling Dance
+ 80: Alpine Foxling Kit
+   1: 1465 273 289
+   2: 1481 276 276
+     Bite -- Flurry
+     Crouch -- Howl
+     Leap -- Dazzling Dance
+ 81: Alterac Brew-Pup
+   1: 1400 289 289
+     Bite -- Bark
+     The Good Stuff -- Tough n\' Cuddly
+     Avalanche -- Call the Pack
+ 82: Arctic Fox Kit
+   1: 1400 289 289
+     Bite -- Flurry
+     Crouch -- Howl
+     Leap -- Dazzling Dance
+ 83: Fjord Worg Pup
+   1: 1400 325 260
+   2: 1546 289 260
+     Bite -- Flurry
+     Crouch -- Howl
+     Leap -- Dazzling Dance
+ 84: Fox Kit
+   1: 1546 260 289
+     Bite -- Flurry
+     Crouch -- Howl
+     Leap -- Dazzling Dance
+ 85: Frostwolf Pup
+     Bite -- Flurry
+     Crouch -- Howl
+     Maul -- Vengeance
+ 86: Moon Moon
+   1: 1400 325 260
+   2: 1400 260 325
+   3: 1400 289 289
+     Moon Fang -- Bite
+     Howl -- Crouch
+     Moon Tears -- Moon Dance
+ 87: Tito
+   1: 1319 297 297
+     Bite -- Triple Snap
+     Impale -- Howl
+     Cyclone -- Buried Treasure
+ 88: Worg Pup
+   1: 1725 260 260
+     Bite -- Flurry
+     Crouch -- Howl
+     Leap -- Dazzling Dance
+ 89: Direhorn Runt
+   1: 1766 260 252
+   2: 1587 289 252
+   3: 1587 260 281
+   4: 1506 289 265
+   5: 1522 276 268
+     Trihorn Charge -- Trample
+     Horn Attack -- Stampede
+     Primal Cry -- Trihorn Shield
+ 90: Pygmy Direhorn
+   1: 1441 289 281
+     Trihorn Charge -- Trample
+     Horn Attack -- Stampede
+     Primal Cry -- Trihorn Shield
+ 91: Stunted Direhorn
+   1: 1441 325 252
+     Trihorn Charge -- Trample
+     Horn Attack -- Stampede
+     Primal Cry -- Trihorn Shield
+ 92: Black Tabby Cat
+   1: 1302 322 276
+     Claw -- Pounce
+     Rake -- Screech
+     Devour -- Prowl
+ 93: Bombay Cat
+   1: 1237 305 305
+     Claw -- Pounce
+     Rake -- Screech
+     Devour -- Prowl
+ 94: Calico Cat
+   1: 1302 305 289
+     Claw -- Pounce
+     Rake -- Screech
+     Devour -- Prowl
+ 95: Cat
+   1: 1237 276 341
+   2: 1237 305 305
+   3: 1302 289 305
+   4: 1319 292 292
+     Claw -- Pounce
+     Rake -- Screech
+     Devour -- Prowl
+ 96: Cheetah Cub
+   1: 1075 260 390
+     Claw -- Pounce
+     Rake -- Screech
+     Devour -- Prowl
+ 97: Cornish Rex Cat
+   1: 1237 341 276
+     Claw -- Pounce
+     Rake -- Screech
+     Devour -- Prowl
+ 98: Darkmoon Cub
+   1: 1237 305 305
+   2: 1319 292 292
+     Claw -- Pounce
+     Rake -- Screech
+     Devour -- Prowl
+ 99: Feline Familiar
+   1: 1221 322 289
+     Onyx Bite -- Pounce
+     Stoneskin -- Call Darkness
+     Devour -- Prowl
+100: Nightsaber Cub
+   1: 1237 276 341
+     Claw -- Pounce
+     Rake -- Screech
+     Devour -- Prowl
+101: Orange Tabby Cat
+   1: 1319 309 276
+     Claw -- Pounce
+     Rake -- Screech
+     Devour -- Prowl
+102: Panther Cub
+   1: 1302 289 305
+     Claw -- Pounce
+     Rake -- Screech
+     Devour -- Prowl
+103: Sand Kitten
+   1: 1237 292 325
+   2: 1237 322 289
+     Claw -- Pounce
+     Rake -- Screech
+     Devour -- Prowl
+104: Siamese Cat
+   1: 1237 276 341
+     Claw -- Pounce
+     Rake -- Screech
+     Devour -- Prowl
+105: Silver Tabby Cat
+   1: 1319 292 292
+     Claw -- Pounce
+     Rake -- Screech
+     Devour -- Prowl
+106: Snow Cub
+   1: 1400 325 260
+   2: 1400 289 289
+   3: 1481 276 276
+     Claw -- Pounce
+     Rake -- Screech
+     Devour -- Prowl
+107: White Kitten
+   1: 1465 257 305
+     Claw -- Pounce
+     Rake -- Screech
+     Devour -- Prowl
+108: Winterspring Cub
+   1: 1302 289 305
+     Claw -- Pounce
+     Rake -- Screech
+     Devour -- Prowl
+109: Xu-Fu, Cub of Xuen
+   1: 1400 333 252
+     Spirit Claws -- Bite
+     Feed -- Moonfire
+     Vengeance -- Prowl
+110: Albino River Calf
+     Bite -- Water Jet
+     Takedown -- Stoneskin
+     Clobber -- Headbutt
+111: Flat-Tooth Calf
+     Bite -- Water Jet
+     Takedown -- Stoneskin
+     Clobber -- Headbutt
+112: Mudback Calf
+     Bite -- Water Jet
+     Takedown -- Stoneskin
+     Clobber -- Headbutt
+113: Devouring Maggot
+   1: 1887 260 227
+   2: 1709 260 257
+     Chomp -- Consume
+     Acidic Goo -- Sticky Goo
+     Leap -- Burrow
+114: Festering Maggot
+   1: 1887 260 227
+   2: 1709 260 257
+     Chomp -- Consume
+     Acidic Goo -- Sticky Goo
+     Leap -- Burrow
+115: Jungle Grub
+   1: 1725 260 260
+   2: 1546 260 289
+     Chomp -- Consume
+     Acidic Goo -- Sticky Goo
+     Leap -- Burrow
+116: Kovok
+   1: 1644 260 276
+   2: 1465 289 276
+   3: 1465 260 305
+     Poison Fang -- Body Slam
+     Pheromones -- Digest Brains
+     Black Claw -- Puncture Wound
+117: Larva
+   1: 1644 276 244
+     Chomp -- Consume
+     Acidic Goo -- Sticky Goo
+     Leap -- Burrow
+118: Maggot
+   1: 1887 260 227
+   2: 1644 276 244
+     Chomp -- Consume
+     Acidic Goo -- Sticky Goo
+     Leap -- Burrow
+119: Mr. Grubbs
+   1: 1709 289 227
+     Chomp -- Consume
+     Acidic Goo -- Sticky Goo
+     Leap -- Burrow
+120: Silithid Hatchling
+   1: 1725 260 260
+   2: 1546 289 260
+   3: 1481 276 276
+     Scratch -- Devour
+     Hiss -- Survival
+     Swarm -- Sandstorm
+121: Ash Lizard
+   1: 1384 289 289
+   2: 1400 276 292
+     Claw -- Quick Attack
+     Screech -- Triple Snap
+     Comeback -- Ravage
+122: Diemetradon Hatchling
+   1: 1400 341 244
+   2: 1465 305 257
+   3: 1481 292 260
+     Claw -- Quick Attack
+     Screech -- Triple Snap
+     Comeback -- Ravage
+123: Horned Lizard
+   1: 1319 260 341
+   2: 1465 289 276
+   3: 1400 276 292
+     Claw -- Quick Attack
+     Screech -- Triple Snap
+     Comeback -- Ravage
+124: Lizard Hatchling
+   1: 1319 260 341
+   2: 1384 273 305
+   3: 1400 276 292
+     Claw -- Quick Attack
+     Screech -- Triple Snap
+     Comeback -- Ravage
+125: Parched Lizard
+     Claw -- Quick Attack
+     Screech -- Conflagrate
+     Comeback -- Ravage
+126: Plains Monitor
+   1: 1237 276 341
+   2: 1384 305 276
+   3: 1319 292 292
+     Claw -- Quick Attack
+     Screech -- Triple Snap
+     Comeback -- Ravage
+127: Scalded Basilisk Hatchling
+   1: 1465 260 305
+   2: 1465 273 289
+     Bite -- Crystal Prison
+     Roar -- Feign Death
+     Thrash -- Screech
+128: Spiky Lizard
+   1: 1319 260 341
+   2: 1465 289 276
+   3: 1400 276 292
+     Claw -- Quick Attack
+     Screech -- Triple Snap
+     Comeback -- Ravage
+129: Spiny Lizard
+   1: 1319 260 341
+   2: 1465 289 276
+   3: 1400 276 292
+     Claw -- Quick Attack
+     Screech -- Triple Snap
+     Comeback -- Ravage
+130: Twilight Iguana
+   1: 1319 260 341
+   2: 1465 289 276
+   3: 1384 273 305
+   4: 1400 276 292
+     Claw -- Quick Attack
+     Screech -- Triple Snap
+     Comeback -- Ravage
+131: Warpstalker Hatchling
+   1: 1400 289 289
+   2: 1481 276 276
+     Claw -- Blinkstrike
+     Screech -- Triple Snap
+     Ravage -- Comeback
+132: Mountain Panda
+   1: 1400 289 289
+     Bite -- Scratch
+     Cute Face -- Rock Barrage
+     Burrow -- Mudslide
+133: Red Panda
+   1: 1481 276 276
+     Bite -- Scratch
+     Crouch -- Cute Face
+     Perk Up -- Hibernate
+134: Snowy Panda
+   1: 1546 289 260
+     Bite -- Snowball
+     Cute Face -- Call Blizzard
+     Crouch -- Ice Barrier
+135: Sunfur Panda
+   1: 1546 260 289
+     Bite -- Scratch
+     Hibernate -- Cute Face
+     Sunlight -- Crouch
+136: Baby Ape
+   1: 1400 325 260
+   2: 1481 276 276
+     Smash -- Rake
+     Roar -- Clobber
+     Banana Barrage -- Barrel Toss
+137: Bananas
+   1: 1481 276 276
+     Smash -- Rake
+     Roar -- Clobber
+     Banana Barrage -- Barrel Toss
+138: Darkmoon Monkey
+   1: 1465 289 273
+     Smash -- Rake
+     Roar -- Clobber
+     Banana Barrage -- Barrel Toss
+139: Darting Hatchling
+   1: 1237 305 305
+     Bite -- Flank
+     Leap -- Screech
+     Devour -- Exposed Wounds
+140: Deviate Hatchling
+   1: 1237 305 305
+     Bite -- Flank
+     Leap -- Screech
+     Devour -- Exposed Wounds
+141: Gundrak Hatchling
+   1: 1302 305 289
+     Bite -- Flank
+     Leap -- Screech
+     Devour -- Exposed Wounds
+142: Lashtail Hatchling
+   1: 1481 276 276
+     Bite -- Flank
+     Leap -- Screech
+     Devour -- Exposed Wounds
+143: Leaping Hatchling
+   1: 1302 305 289
+     Bite -- Flank
+     Leap -- Screech
+     Devour -- Exposed Wounds
+144: Obsidian Hatchling
+   1: 1644 276 260
+     Bite -- Flank
+     Leap -- Screech
+     Devour -- Exposed Wounds
+145: Ravasaur Hatchling
+   1: 1319 292 292
+     Bite -- Flank
+     Leap -- Screech
+     Devour -- Exposed Wounds
+146: Razormaw Hatchling
+   1: 1302 289 305
+     Bite -- Flank
+     Leap -- Screech
+     Devour -- Exposed Wounds
+147: Razzashi Hatchling
+   1: 1400 325 260
+     Bite -- Flank
+     Leap -- Screech
+     Devour -- Exposed Wounds
+148: Zandalari Anklerender
+   1: 1237 341 276
+   2: 1237 276 341
+   3: 1237 305 305
+   4: 1302 305 289
+     Bite -- Hunting Party
+     Leap -- Primal Cry
+     Devour -- Black Claw
+149: Zandalari Footslasher
+   1: 1237 341 276
+   2: 1237 276 341
+   3: 1237 305 305
+   4: 1302 305 289
+     Bite -- Hunting Party
+     Leap -- Primal Cry
+     Bloodfang -- Exposed Wounds
+150: Zandalari Kneebiter
+   1: 1237 341 276
+   2: 1237 276 341
+   3: 1237 305 305
+   4: 1302 305 289
+     Bite -- Hunting Party
+     Screech -- Black Claw
+     Leap -- Bloodfang
+151: Zandalari Toenibbler
+   1: 1237 341 276
+   2: 1237 276 341
+   3: 1237 305 305
+   4: 1302 305 289
+     Bite -- Flank
+     Leap -- Primal Cry
+     Bloodfang -- Black Claw
+152: Deathwatch Hatchling
+     Woodchipper -- Bite
+     Feed -- Clobber
+     Takedown -- Leap
+153: Icespine Hatchling
+     Gnaw -- Bite
+     Ravage -- Body Slam
+     Puncture Wound -- Takedown
+154: Mossbite Skitterer
+     Gnaw -- Bite
+     Ravage -- Body Slam
+     Puncture Wound -- Takedown
+155: Ravager Hatchling
+   1: 1237 341 276
+   2: 1237 305 305
+   3: 1319 292 292
+     Bite -- Rend
+     Screech -- Sting
+     Devour -- Rampage
+156: Thicket Skitterer
+     Gnaw -- Bite
+     Ravage -- Body Slam
+     Puncture Wound -- Takedown
+157: Bucktooth Flapper
+   1: 1546 273 273
+   2: 1481 276 276
+     Tail Slap -- Gnaw
+     Screech -- Survival
+     Woodchipper -- Chew
+158: Clouded Hedgehog
+   1: 1400 260 325
+   2: 1481 276 276
+     Bite -- Poison Fang
+     Survival -- Spiked Skin
+     Counterstrike -- Powerball
+159: Silent Hedgehog
+   1: 1546 273 273
+   2: 1481 276 276
+     Bite -- Poison Fang
+     Spiked Skin -- Counterstrike
+     Survival -- Powerball
+160: Sumprush Rodent
+   1: 1546 273 273
+   2: 1481 276 276
+     Gnaw -- Tail Slap
+     Mudslide -- Poison Fang
+     Survival -- Stench
+161: Vengeful Porcupette
+   1: 1587 289 252
+     Bite -- Powerball
+     Spirit Spikes -- Survival
+     Flank -- Vengeance
+162: Crunchy Scorpion
+   1: 1546 260 289
+   2: 1481 276 276
+     Snap -- Triple Snap
+     Crouch -- Screech
+     Sting -- Rampage
+163: Durotar Scorpion
+   1: 1400 289 289
+     Snap -- Triple Snap
+     Crouch -- Screech
+     Sting -- Rampage
+164: Leopard Scorpid
+   1: 1400 260 325
+   2: 1400 289 289
+   3: 1481 276 276
+     Snap -- Triple Snap
+     Crouch -- Screech
+     Sting -- Rampage
+165: Scorpid
+   1: 1400 289 289
+   2: 1481 276 276
+     Snap -- Triple Snap
+     Crouch -- Screech
+     Sting -- Rampage
+166: Scorpling
+   1: 1400 260 325
+   2: 1400 289 289
+   3: 1481 276 276
+     Snap -- Triple Snap
+     Crouch -- Screech
+     Sting -- Rampage
+167: Stripe-Tailed Scorpid
+   1: 1400 289 289
+   2: 1481 276 276
+     Snap -- Triple Snap
+     Crouch -- Screech
+     Sting -- Rampage
+168: Adder
+   1: 1319 289 305
+   2: 1384 289 289
+   3: 1400 276 292
+     Bite -- Poison Fang
+     Hiss -- Counterstrike
+     Burrow -- Vicious Fang
+169: Albino Snake
+   1: 1384 257 322
+     Bite -- Poison Fang
+     Hiss -- Counterstrike
+     Burrow -- Vicious Fang
+170: Ash Viper
+   1: 1319 289 305
+   2: 1384 289 289
+   3: 1400 276 292
+     Bite -- Poison Fang
+     Hiss -- Counterstrike
+     Burrow -- Vicious Fang
+171: Black Kingsnake
+   1: 1319 276 325
+     Bite -- Poison Fang
+     Hiss -- Counterstrike
+     Burrow -- Vicious Fang
+172: Brown Snake
+   1: 1481 276 276
+     Bite -- Poison Fang
+     Hiss -- Counterstrike
+     Burrow -- Vicious Fang
+173: Cobra Hatchling
+   1: 1319 289 305
+     Bite -- Poison Fang
+     Hiss -- Counterstrike
+     Burrow -- Vicious Fang
+174: Coral Adder
+   1: 1319 260 341
+   2: 1319 289 305
+   3: 1400 276 292
+     Bite -- Poison Fang
+     Hiss -- Counterstrike
+     Burrow -- Vicious Fang
+175: Coral Snake
+   1: 1465 273 289
+     Bite -- Poison Fang
+     Hiss -- Counterstrike
+     Burrow -- Vicious Fang
+176: Crimson Snake
+   1: 1465 289 273
+     Bite -- Poison Fang
+     Hiss -- Counterstrike
+     Burrow -- Vicious Fang
+177: Death Adder Hatchling
+   1: 1644 260 276
+   2: 1319 325 276
+   3: 1319 260 341
+   4: 1319 289 305
+   5: 1400 276 292
+     Poison Fang -- Vicious Fang
+     Puncture Wound -- Crouch
+     Burrow -- Blinding Poison
+178: Elder Python
+   1: 1644 260 276
+   2: 1465 260 305
+     Bite -- Poison Fang
+     Sting -- Huge Fang
+     Burrow -- Slither
+179: Emerald Boa
+   1: 1465 289 276
+   2: 1465 260 305
+     Bite -- Poison Fang
+     Hiss -- Counterstrike
+     Burrow -- Vicious Fang
+180: Grove Viper
+   1: 1319 260 341
+   2: 1400 276 292
+     Bite -- Poison Fang
+     Hiss -- Counterstrike
+     Burrow -- Vicious Fang
+181: King Snake
+   1: 1644 260 276
+   2: 1465 260 305
+     Bite -- Poison Fang
+     Hiss -- Counterstrike
+     Burrow -- Vicious Fang
+182: Moccasin
+   1: 1319 276 325
+   2: 1319 305 289
+   3: 1400 292 276
+     Bite -- Poison Fang
+     Hiss -- Counterstrike
+     Burrow -- Vicious Fang
+183: Rat Snake
+   1: 1319 260 341
+   2: 1319 289 305
+   3: 1400 276 292
+     Bite -- Poison Fang
+     Hiss -- Counterstrike
+     Burrow -- Vicious Fang
+184: Rattlesnake
+   1: 1465 260 305
+   2: 1319 289 305
+     Bite -- Poison Fang
+     Hiss -- Counterstrike
+     Burrow -- Vicious Fang
+185: Rock Viper
+   1: 1319 260 341
+   2: 1400 276 292
+     Bite -- Poison Fang
+     Hiss -- Counterstrike
+     Burrow -- Vicious Fang
+186: Sidewinder
+   1: 1319 260 341
+   2: 1384 273 305
+   3: 1400 276 292
+     Bite -- Poison Fang
+     Hiss -- Counterstrike
+     Burrow -- Vicious Fang
+187: Snake
+   1: 1319 260 341
+   2: 1400 276 292
+     Bite -- Poison Fang
+     Hiss -- Counterstrike
+     Burrow -- Vicious Fang
+188: Temple Snake
+   1: 1319 260 341
+   2: 1384 289 289
+     Bite -- Poison Fang
+     Hiss -- Counterstrike
+     Burrow -- Vicious Fang
+189: Tree Python
+   1: 1319 325 276
+   2: 1465 289 276
+   3: 1400 276 292
+     Bite -- Poison Fang
+     Hiss -- Counterstrike
+     Burrow -- Vicious Fang
+190: Water Snake
+   1: 1384 273 305
+   2: 1400 276 292
+     Bite -- Poison Fang
+     Hiss -- Counterstrike
+     Burrow -- Vicious Fang
+191: Zooey Snake
+   1: 1384 305 276
+   2: 1384 276 305
+     Bite -- Poison Fang
+     Hiss -- Counterstrike
+     Burrow -- Vicious Fang
+192: Amethyst Spiderling
+   1: 1384 305 276
+   2: 1384 276 305
+     Strike -- Poison Spit
+     Sticky Web -- Brittle Webbing
+     Leech Life -- Spiderling Swarm
+193: Ash Spiderling
+   1: 1384 276 305
+   2: 1319 292 292
+     Strike -- Poison Spit
+     Sticky Web -- Brittle Webbing
+     Leech Life -- Spiderling Swarm
+194: Crystal Spider
+   1: 1384 276 305
+   2: 1319 292 292
+     Strike -- Crystal Prison
+     Sticky Web -- Brittle Webbing
+     Leech Life -- Spiderling Swarm
+195: Desert Spider
+   1: 1237 276 341
+   2: 1237 305 305
+   3: 1302 289 305
+   4: 1319 292 292
+     Strike -- Poison Spit
+     Sticky Web -- Brittle Webbing
+     Leech Life -- Spiderling Swarm
+196: Dusk Spiderling
+   1: 1237 305 305
+   2: 1302 289 305
+     Strike -- Poison Spit
+     Sticky Web -- Brittle Webbing
+     Leech Life -- Spiderling Swarm
+197: Feverbite Hatchling
+   1: 1237 341 276
+   2: 1302 305 289
+   3: 1302 289 305
+   4: 1319 292 292
+     Strike -- Poison Spit
+     Sticky Web -- Brittle Webbing
+     Leech Life -- Spiderling Swarm
+198: Forest Spiderling
+   1: 1237 276 341
+   2: 1237 305 305
+   3: 1302 289 305
+   4: 1319 292 292
+     Strike -- Poison Spit
+     Sticky Web -- Brittle Webbing
+     Leech Life -- Spiderling Swarm
+199: Jumping Spider
+   1: 1384 276 305
+   2: 1384 289 289
+   3: 1302 289 305
+   4: 1319 292 292
+     Strike -- Poison Spit
+     Sticky Web -- Brittle Webbing
+     Leech Life -- Spiderling Swarm
+200: Molten Hatchling
+   1: 1237 276 341
+   2: 1237 305 305
+   3: 1302 289 305
+   4: 1319 292 292
+     Burn -- Leech Life
+     Sticky Web -- Cauterize
+     Magma Wave -- Brittle Webbing
+201: Skittering Cavern Crawler
+   1: 1400 260 325
+   2: 1465 273 289
+   3: 1481 276 276
+     Strike -- Poison Spit
+     Sticky Web -- Brittle Webbing
+     Leech Life -- Spiderling Swarm
+202: Smolderweb Hatchling
+   1: 1384 305 276
+     Strike -- Poison Spit
+     Sticky Web -- Brittle Webbing
+     Leech Life -- Spiderling Swarm
+203: Spider
+   1: 1237 276 341
+   2: 1302 289 305
+   3: 1319 292 292
+     Strike -- Poison Spit
+     Sticky Web -- Brittle Webbing
+     Leech Life -- Spiderling Swarm
+204: Twilight Spider
+   1: 1237 341 276
+   2: 1384 305 276
+   3: 1302 289 305
+   4: 1319 292 292
+     Strike -- Poison Spit
+     Sticky Web -- Brittle Webbing
+     Leech Life -- Spiderling Swarm
+205: Venomspitter Hatchling
+   1: 1562 276 276
+   2: 1384 276 305
+   3: 1302 289 305
+   4: 1319 292 292
+     Strike -- Poison Spit
+     Sticky Web -- Brittle Webbing
+     Leech Life -- Spiderling Swarm
+206: Widow Spiderling
+   1: 1237 341 276
+   2: 1384 276 305
+   3: 1302 289 305
+   4: 1319 292 292
+     Strike -- Poison Spit
+     Sticky Web -- Brittle Webbing
+     Leech Life -- Spiderling Swarm
+207: Argi
+     Gnaw -- Horn Gore
+     Gift of the Naaru -- Chew
+     Stampede -- Headbutt
+208: Clefthoof Runt
+   1: 1887 276 211
+   2: 1644 292 227
+     Smash -- Trample
+     Survival -- Trumpet Strike
+     Horn Attack -- Stampede
+209: Giraffe Calf
+   1: 1627 240 289
+   2: 1562 244 292
+     Hoof -- Stampede
+     Tranquility -- Survival
+     Headbutt -- Bleat
+210: Leatherhide Runt
+     Smash -- Trample
+     Survival -- Trumpet Strike
+     Horn Attack -- Stampede
+211: Little Black Ram
+   1: 1465 289 273
+   2: 1481 276 276
+     Hoof -- Chew
+     Comeback -- Soothe
+     Headbutt -- Stampede
+212: Meadowstomper Calf
+     Trample -- Smash
+     Primal Cry -- Tough n\' Cuddly
+     Headbutt -- Stampede
+213: Stunted Shardhorn
+   1: 1806 292 211
+   2: 1481 357 211
+     Smash -- Survival
+     Trample -- Horn Attack
+     Trumpet Strike -- Stampede
+214: Summit Kid
+   1: 1400 260 325
+   2: 1465 273 289
+     Hoof -- Chew
+     Comeback -- Soothe
+     Headbutt -- Stampede
+215: Zao, Calfling of Niuzao
+   1: 1481 289 273
+     Trample -- Horn Gore
+     Headbutt -- Wish
+     Niuzao\'s Charge -- Dominance
+216: Wind Rider Cub
+   1: 1481 276 276
+     Bite -- Squawk
+     Slicing Wind -- Adrenaline Rush
+     Flock -- Lift-Off
+217: Armadillo Pup
+   1: 1887 244 244
+   2: 1709 244 273
+     Scratch -- Thrash
+     Shell Shield -- Roar
+     Infected Claw -- Powerball
+218: Stone Armadillo
+   1: 1887 244 244
+   2: 1709 273 244
+   3: 1709 244 273
+     Scratch -- Thrash
+     Shell Shield -- Roar
+     Infected Claw -- Powerball
+219: Bush Chicken
+     Flock -- Savage Talon
+     Squawk -- Rake
+     Headbutt -- Cyclone
+220: Darkmoon Hatchling
+   1: 1400 260 325
+     Peck -- Trample
+     Screech -- Hawk Eye
+     Flock -- Predatory Strike
+221: Egbert
+   1: 1481 276 276
+     Bite -- Peck
+     Shell Shield -- Adrenaline Rush
+     Trample -- Feign Death
+222: Lovebird Hatchling
+     Peck -- Alpha Strike
+     Lovestruck -- Hawk Eye
+     Pheromones -- Predatory Strike
+223: Mulgore Hatchling
+   1: 1400 260 325
+     Bite -- Peck
+     Shell Shield -- Adrenaline Rush
+     Trample -- Feign Death
+224: Fawn
+   1: 1400 244 341
+   2: 1546 244 305
+   3: 1546 257 289
+   4: 1465 257 305
+   5: 1481 260 292
+     Hoof -- Stampede
+     Tranquility -- Nature\'s Ward
+     Bleat -- Headbutt
+225: Gazelle Fawn
+   1: 1384 257 322
+   2: 1400 260 309
+     Hoof -- Stampede
+     Tranquility -- Nature\'s Ward
+     Bleat -- Headbutt
+226: Little Fawn
+   1: 1546 240 305
+     Hoof -- Stampede
+     Tranquility -- Nature\'s Ward
+     Bleat -- Headbutt
+227: Winter Reindeer
+   1: 1481 276 276
+     Hoof -- Stampede
+     Tranquility -- Nature\'s Ward
+     Bleat -- Headbutt
+228: Peanut
+   1: 1725 260 260
+     Smash -- Trample
+     Trumpet Strike -- Survival
+     Headbutt -- Stampede
+229: Pint-Sized Pink Pachyderm
+   1: 1627 305 227
+     Smash -- Trample
+     Trumpet Strike -- Survival
+     Headbutt -- Stampede
+230: Beetle
+   1: 1806 244 260
+   2: 1627 273 260
+   3: 1627 244 289
+   4: 1562 260 276
+     Scratch -- Flank
+     Hiss -- Survival
+     Swarm -- Apocalypse
+231: Cockroach
+   1: 1806 227 276
+   2: 1481 227 341
+   3: 1627 257 276
+   4: 1627 227 305
+   5: 1627 240 289
+   6: 1546 240 305
+     Scratch -- Flank
+     Hiss -- Survival
+     Swarm -- Apocalypse
+232: Creepy Crawly
+   1: 1644 276 260
+   2: 1465 305 260
+   3: 1465 276 289
+   4: 1400 292 276
+     Scratch -- Flank
+     Hiss -- Survival
+     Swarm -- Apocalypse
+233: Crystal Beetle
+   1: 1644 276 260
+   2: 1465 276 289
+   3: 1465 289 273
+     Scratch -- Flank
+     Hiss -- Survival
+     Swarm -- Apocalypse
+234: Death\'s Head Cockroach
+   1: 1562 240 305
+   2: 1627 240 289
+     Scratch -- Flank
+     Hiss -- Survival
+     Swarm -- Apocalypse
+235: Deepholm Cockroach
+   1: 1806 227 276
+   2: 1481 227 341
+   3: 1627 257 276
+   4: 1627 227 305
+     Scratch -- Flank
+     Hiss -- Survival
+     Swarm -- Apocalypse
+236: Dung Beetle
+   1: 1644 276 260
+   2: 1465 305 260
+   3: 1465 276 289
+   4: 1400 292 276
+     Scratch -- Flank
+     Hiss -- Survival
+     Swarm -- Apocalypse
+237: Fire Beetle
+   1: 1644 276 260
+   2: 1465 305 260
+   3: 1465 276 289
+     Burn -- Flank
+     Hiss -- Cauterize
+     Scorched Earth -- Apocalypse
+238: Fire-Proof Roach
+   1: 1806 227 276
+   2: 1481 227 341
+   3: 1627 257 276
+   4: 1627 227 305
+     Scratch -- Flank
+     Hiss -- Survival
+     Swarm -- Apocalypse
+239: Gold Beetle
+   1: 1400 276 309
+     Scratch -- Flank
+     Hiss -- Survival
+     Swarm -- Apocalypse
+240: Grassland Hopper
+   1: 1400 260 325
+   2: 1465 273 289
+   3: 1481 276 276
+     Skitter -- Screech
+     Swarm -- Cocoon Strike
+     Nature\'s Touch -- Inspiring Song
+241: Gu\'chi Swarmling
+   1: 1725 260 260
+   2: 1546 260 289
+     Chomp -- Swarm
+     Acidic Goo -- Chew
+     Consume -- Burrow
+242: Imperial Silkworm
+   1: 1725 260 260
+     Chomp -- Consume
+     Sticky Goo -- Moth Balls
+     Burrow -- Moth Dust
+243: Irradiated Roach
+   1: 1887 211 276
+   2: 1709 240 276
+   3: 1709 211 305
+   4: 1709 224 289
+     Scratch -- Flank
+     Hiss -- Survival
+     Swarm -- Apocalypse
+244: Lava Beetle
+   1: 1644 276 260
+   2: 1319 341 260
+   3: 1465 305 260
+   4: 1465 276 289
+     Burn -- Flank
+     Hiss -- Cauterize
+     Scorched Earth -- Apocalypse
+245: Locust
+   1: 1319 276 325
+   2: 1465 276 289
+   3: 1400 292 276
+     Scratch -- Flank
+     Hiss -- Survival
+     Swarm -- Apocalypse
+246: Marsh Fiddler
+   1: 1546 260 289
+   2: 1465 273 289
+   3: 1481 276 276
+     Skitter -- Screech
+     Swarm -- Cocoon Strike
+     Nature\'s Touch -- Inspiring Song
+247: Nether Roach
+   1: 1806 227 276
+   2: 1481 227 341
+   3: 1627 257 276
+   4: 1627 227 305
+     Flank -- Nether Blast
+     Hiss -- Survival
+     Swarm -- Apocalypse
+248: Red Cricket
+   1: 1197 370 249
+     Skitter -- Screech
+     Swarm -- Cocoon Strike
+     Nature\'s Touch -- Inspiring Song
+249: Resilient Roach
+   1: 1806 227 276
+   2: 1481 227 341
+   3: 1627 257 276
+   4: 1627 227 305
+   5: 1627 240 289
+   6: 1546 240 305
+     Scratch -- Flank
+     Hiss -- Survival
+     Swarm -- Apocalypse
+250: Roach
+   1: 1806 227 276
+   2: 1481 227 341
+   3: 1627 257 276
+   4: 1627 227 305
+   5: 1627 240 289
+   6: 1546 240 305
+     Scratch -- Flank
+     Hiss -- Survival
+     Swarm -- Apocalypse
+251: Sand Scarab
+   1: 1384 289 289
+     Scratch -- Flank
+     Hiss -- Survival
+     Swarm -- Apocalypse
+252: Savory Beetle
+   1: 1644 276 260
+   2: 1319 276 325
+   3: 1465 276 289
+   4: 1465 289 273
+     Scratch -- Flank
+     Hiss -- Survival
+     Swarm -- Apocalypse
+253: Scarab Hatchling
+   1: 1644 276 260
+   2: 1319 341 260
+   3: 1465 276 289
+   4: 1465 289 273
+     Scratch -- Flank
+     Hiss -- Survival
+     Swarm -- Apocalypse
+254: Singing Cricket
+   1: 1546 273 273
+     Skitter -- Screech
+     Swarm -- Cocoon Strike
+     Nature\'s Touch -- Inspiring Song
+255: Stinkbug
+   1: 1725 276 244
+   2: 1546 276 273
+   3: 1481 292 260
+     Scratch -- Flank
+     Hiss -- Survival
+     Swarm -- Apocalypse
+256: Tainted Cockroach
+   1: 1806 227 276
+   2: 1627 257 276
+   3: 1627 227 305
+   4: 1627 240 289
+     Scratch -- Flank
+     Hiss -- Survival
+     Swarm -- Apocalypse
+257: Tol\'vir Scarab
+   1: 1644 276 260
+   2: 1465 276 289
+   3: 1465 289 273
+     Scratch -- Flank
+     Hiss -- Survival
+     Swarm -- Apocalypse
+258: Twilight Beetle
+   1: 1562 276 276
+   2: 1237 341 276
+   3: 1384 305 276
+   4: 1384 276 305
+   5: 1319 292 292
+     Scratch -- Flank
+     Hiss -- Survival
+     Swarm -- Apocalypse
+259: Undercity Cockroach
+   1: 1806 227 276
+   2: 1481 227 341
+   3: 1627 227 305
+   4: 1562 244 292
+     Scratch -- Flank
+     Hiss -- Survival
+     Swarm -- Apocalypse
+260: Borean Marmot
+   1: 1400 244 341
+   2: 1546 257 289
+   3: 1465 273 289
+   4: 1465 257 305
+   5: 1481 260 292
+     Chomp -- Comeback
+     Crouch -- Adrenaline Rush
+     Leap -- Burrow
+261: Brown Marmot
+   1: 1400 260 325
+   2: 1465 273 289
+   3: 1481 276 276
+     Chomp -- Comeback
+     Crouch -- Adrenaline Rush
+     Leap -- Burrow
+262: Brown Prairie Dog
+   1: 1400 244 341
+   2: 1546 257 289
+   3: 1481 260 292
+     Chomp -- Comeback
+     Adrenaline Rush -- Crouch
+     Leap -- Burrow
+263: Prairie Dog
+   1: 1400 244 341
+   2: 1465 257 305
+   3: 1481 260 292
+     Chomp -- Adrenaline Rush
+     Leap -- Crouch
+     Burrow -- Comeback
+264: Yellow-Bellied Marmot
+   1: 1400 260 325
+   2: 1546 273 273
+   3: 1465 289 273
+   4: 1465 273 289
+   5: 1481 276 276
+     Chomp -- Adrenaline Rush
+     Leap -- Crouch
+     Burrow -- Comeback
+265: Golden Pig
+   1: 1546 289 260
+     Hoof -- Diseased Bite
+     Crouch -- Buried Treasure
+     Uncanny Luck -- Headbutt
+266: Lucky
+   1: 1546 289 260
+     Hoof -- Diseased Bite
+     Crouch -- Buried Treasure
+     Uncanny Luck -- Headbutt
+267: Mr. Wiggles
+   1: 1465 289 273
+     Hoof -- Diseased Bite
+     Crouch -- Buried Treasure
+     Uncanny Luck -- Headbutt
+268: Silver Pig
+   1: 1546 289 260
+     Hoof -- Diseased Bite
+     Crouch -- Buried Treasure
+     Uncanny Luck -- Headbutt
+269: Alpine Hare
+   1: 1400 227 357
+   2: 1546 257 292
+   3: 1546 227 322
+     Scratch -- Flurry
+     Adrenaline Rush -- Dodge
+     Burrow -- Stampede
+270: Arctic Hare
+   1: 1400 227 357
+   2: 1546 257 292
+   3: 1546 227 322
+   4: 1546 240 305
+   5: 1465 240 322
+   6: 1481 244 309
+     Scratch -- Flurry
+     Adrenaline Rush -- Dodge
+     Burrow -- Stampede
+271: Brown Rabbit
+   1: 1400 227 357
+   2: 1465 240 322
+   3: 1481 244 309
+     Scratch -- Flurry
+     Adrenaline Rush -- Dodge
+     Burrow -- Stampede
+272: Darkmoon Rabbit
+   1: 1400 227 357
+   2: 1546 227 322
+   3: 1481 244 309
+     Scratch -- Huge, Sharp Teeth!
+     Vicious Streak -- Dodge
+     Burrow -- Stampede
+273: Elfin Rabbit
+   1: 1465 224 338
+   2: 1481 227 325
+     Scratch -- Flurry
+     Adrenaline Rush -- Dodge
+     Burrow -- Stampede
+274: Grasslands Cottontail
+   1: 1400 260 325
+   2: 1546 289 260
+   3: 1546 260 289
+   4: 1546 273 273
+   5: 1465 273 289
+   6: 1481 276 276
+     Scratch -- Flurry
+     Adrenaline Rush -- Dodge
+     Burrow -- Stampede
+275: Hare
+   1: 1400 227 357
+   2: 1546 257 292
+   3: 1546 227 322
+   4: 1546 240 305
+   5: 1465 240 322
+   6: 1481 244 309
+     Scratch -- Flurry
+     Adrenaline Rush -- Dodge
+     Burrow -- Stampede
+276: Mountain Cottontail
+   1: 1400 227 357
+   2: 1546 227 322
+   3: 1481 244 309
+     Scratch -- Flurry
+     Adrenaline Rush -- Dodge
+     Burrow -- Stampede
+277: Rabbit
+   1: 1400 227 357
+   2: 1546 257 292
+   3: 1546 227 322
+   4: 1546 240 305
+   5: 1465 240 322
+   6: 1481 244 309
+     Scratch -- Flurry
+     Adrenaline Rush -- Dodge
+     Burrow -- Stampede
+278: Snowshoe Hare
+   1: 1400 227 357
+   2: 1546 257 292
+   3: 1546 227 322
+   4: 1546 240 305
+   5: 1465 240 322
+   6: 1481 244 309
+     Scratch -- Flurry
+     Adrenaline Rush -- Dodge
+     Burrow -- Stampede
+279: Snowshoe Rabbit
+   1: 1400 227 357
+   2: 1465 240 322
+   3: 1481 244 309
+     Scratch -- Flurry
+     Adrenaline Rush -- Dodge
+     Burrow -- Stampede
+280: Spring Rabbit
+   1: 1400 227 357
+     Scratch -- Flurry
+     Adrenaline Rush -- Dodge
+     Burrow -- Stampede
+281: Tolai Hare
+   1: 1400 227 357
+   2: 1546 257 292
+   3: 1546 227 322
+   4: 1546 240 305
+   5: 1465 240 322
+   6: 1481 244 309
+     Scratch -- Flurry
+     Adrenaline Rush -- Dodge
+     Burrow -- Stampede
+282: Tolai Hare Pup
+   1: 1400 227 357
+   2: 1546 227 322
+   3: 1546 240 305
+   4: 1465 240 322
+   5: 1481 244 309
+     Scratch -- Flurry
+     Adrenaline Rush -- Dodge
+     Burrow -- Stampede
+283: Wolpertinger
+   1: 1546 289 260
+     Scratch -- Horn Attack
+     Flyby -- Sleeping Gas
+     Headbutt -- Rampage
+284: Black Rat
+   1: 1400 244 341
+   2: 1546 244 305
+   3: 1465 257 305
+   4: 1481 260 292
+     Scratch -- Comeback
+     Flurry -- Poison Fang
+     Stampede -- Survival
+285: Carrion Rat
+   1: 1400 244 341
+   2: 1546 257 289
+   3: 1465 273 289
+   4: 1465 257 305
+   5: 1481 260 292
+     Scratch -- Comeback
+     Flurry -- Poison Fang
+     Stampede -- Survival
+286: Fjord Rat
+   1: 1400 244 341
+   2: 1546 257 289
+   3: 1465 273 289
+   4: 1465 257 305
+   5: 1481 260 292
+     Scratch -- Comeback
+     Flurry -- Poison Fang
+     Stampede -- Survival
+287: Frostfur Rat
+     Sneak Attack -- Flurry
+     Crouch -- Refuge
+     Stampede -- Call Darkness
+288: Giant Sewer Rat
+   1: 1400 341 244
+     Scratch -- Comeback
+     Flurry -- Poison Fang
+     Stampede -- Survival
+289: Grotto Vole
+   1: 1400 244 341
+   2: 1546 257 289
+   3: 1465 273 289
+   4: 1465 257 305
+   5: 1481 260 292
+     Scratch -- Flurry
+     Sting -- Survival
+     Stampede -- Comeback
+290: Highlands Mouse
+   1: 1400 244 341
+   2: 1546 257 289
+   3: 1465 273 289
+   4: 1465 257 305
+   5: 1481 260 292
+     Scratch -- Comeback
+     Flurry -- Poison Fang
+     Stampede -- Survival
+291: Long-tailed Mole
+   1: 1546 257 289
+   2: 1481 260 292
+     Scratch -- Comeback
+     Flurry -- Poison Fang
+     Stampede -- Survival
+292: Malayan Quillrat
+   1: 1400 244 341
+   2: 1546 257 289
+   3: 1465 273 289
+   4: 1465 257 305
+   5: 1481 260 292
+     Bite -- Poison Fang
+     Spiked Skin -- Counterstrike
+     Survival -- Powerball
+293: Malayan Quillrat Pup
+   1: 1400 244 341
+   2: 1546 257 289
+   3: 1465 257 305
+   4: 1481 260 292
+     Bite -- Poison Fang
+     Spiked Skin -- Counterstrike
+     Survival -- Powerball
+294: Mouse
+   1: 1400 244 341
+   2: 1400 273 305
+   3: 1546 257 289
+   4: 1465 257 305
+   5: 1481 260 292
+     Scratch -- Comeback
+     Flurry -- Poison Fang
+     Stampede -- Survival
+295: Prairie Mouse
+   1: 1400 260 325
+   2: 1400 289 289
+   3: 1546 273 273
+   4: 1465 273 289
+   5: 1481 276 276
+     Scratch -- Flurry
+     Comeback -- Poison Fang
+     Stampede -- Survival
+296: Rat
+   1: 1400 244 341
+   2: 1546 244 305
+   3: 1465 257 305
+   4: 1481 260 292
+     Scratch -- Comeback
+     Flurry -- Poison Fang
+     Stampede -- Survival
+297: Redridge Rat
+   1: 1400 244 341
+   2: 1546 244 305
+   3: 1465 257 305
+   4: 1481 260 292
+     Scratch -- Comeback
+     Flurry -- Poison Fang
+     Stampede -- Survival
+298: Stormwind Rat
+   1: 1400 244 341
+   2: 1546 257 289
+   3: 1465 273 289
+   4: 1465 257 305
+   5: 1481 260 292
+     Scratch -- Comeback
+     Flurry -- Poison Fang
+     Stampede -- Survival
+299: Stowaway Rat
+   1: 1400 244 341
+   2: 1546 257 289
+   3: 1465 273 289
+   4: 1465 257 305
+   5: 1481 260 292
+     Scratch -- Comeback
+     Flurry -- Poison Fang
+     Stampede -- Survival
+300: Tainted Rat
+   1: 1546 273 276
+     Scratch -- Comeback
+     Flurry -- Poison Fang
+     Stampede -- Survival
+301: Undercity Rat
+   1: 1400 244 341
+   2: 1546 244 305
+   3: 1465 257 305
+   4: 1481 260 292
+     Scratch -- Comeback
+     Flurry -- Poison Fang
+     Stampede -- Survival
+302: Wharf Rat
+   1: 1400 244 341
+   2: 1546 244 305
+   3: 1465 257 305
+   4: 1481 260 292
+     Scratch -- Comeback
+     Flurry -- Poison Fang
+     Stampede -- Survival
+303: Whiskers the Rat
+   1: 1546 273 276
+     Scratch -- Flurry
+     Sting -- Survival
+     Stampede -- Comeback
+304: Yakrat
+   1: 1546 244 305
+   2: 1546 257 289
+   3: 1465 273 289
+   4: 1465 257 305
+   5: 1481 260 292
+     Scratch -- Comeback
+     Flurry -- Poison Fang
+     Stampede -- Survival
+305: Black Lamb
+   1: 1546 289 260
+   2: 1546 260 289
+   3: 1400 289 289
+   4: 1546 273 273
+   5: 1465 289 273
+   6: 1465 273 289
+     Hoof -- Chew
+     Comeback -- Soothe
+     Bleat -- Stampede
+306: Elwynn Lamb
+   1: 1481 276 276
+     Hoof -- Chew
+     Comeback -- Soothe
+     Bleat -- Stampede
+307: Bandicoon
+   1: 1400 260 325
+   2: 1400 289 289
+   3: 1481 276 276
+     Bite -- Tongue Lash
+     Survival -- Counterstrike
+     Poison Fang -- Powerball
+308: Bandicoon Kit
+   1: 1400 260 325
+   2: 1481 276 276
+     Bite -- Tongue Lash
+     Survival -- Counterstrike
+     Poison Fang -- Powerball
+309: Highlands Skunk
+   1: 1400 260 325
+   2: 1546 260 289
+   3: 1546 273 273
+   4: 1481 276 276
+     Scratch -- Flurry
+     Rake -- Perk Up
+     Stench -- Bleat
+310: Masked Tanuki
+   1: 1465 289 273
+   2: 1481 276 276
+     Bite -- Tongue Lash
+     Survival -- Counterstrike
+     Poison Fang -- Powerball
+311: Masked Tanuki Pup
+   1: 1465 273 289
+   2: 1481 276 276
+     Bite -- Tongue Lash
+     Survival -- Counterstrike
+     Poison Fang -- Powerball
+312: Mountain Skunk
+   1: 1546 289 260
+   2: 1546 260 289
+   3: 1546 273 273
+   4: 1481 276 276
+     Scratch -- Flurry
+     Rake -- Perk Up
+     Stench -- Bleat
+313: Shy Bandicoon
+   1: 1400 260 325
+   2: 1400 289 289
+   3: 1481 276 276
+     Bite -- Tongue Lash
+     Survival -- Counterstrike
+     Poison Fang -- Powerball
+314: Skunk
+   1: 1546 260 289
+   2: 1546 273 273
+   3: 1465 273 289
+   4: 1481 276 276
+     Scratch -- Flurry
+     Rake -- Perk Up
+     Stench -- Bleat
+315: Stinker
+   1: 1400 325 260
+     Scratch -- Flurry
+     Rake -- Perk Up
+     Stench -- Bleat
+316: Rapana Whelk
+   1: 1644 276 260
+   2: 1790 289 208
+   3: 1725 292 211
+     Ooze Touch -- Absorb
+     Acidic Goo -- Shell Shield
+     Dive -- Headbutt
+317: Rusty Snail
+   1: 1790 276 224
+   2: 1790 289 208
+   3: 1725 292 211
+     Ooze Touch -- Absorb
+     Acidic Goo -- Shell Shield
+     Dive -- Headbutt
+318: Scooter the Snail
+   1: 1969 276 195
+     Ooze Touch -- Absorb
+     Acidic Goo -- Shell Shield
+     Dive -- Headbutt
+319: Shimmershell Snail
+   1: 1969 276 195
+   2: 1790 305 195
+   3: 1725 292 211
+     Ooze Touch -- Absorb
+     Acidic Goo -- Shell Shield
+     Dive -- Headbutt
+320: Silkbead Snail
+   1: 1790 276 224
+   2: 1725 292 211
+     Ooze Touch -- Absorb
+     Acidic Goo -- Shell Shield
+     Dive -- Headbutt
+321: Alpine Chipmunk
+   1: 1400 260 325
+   2: 1546 289 260
+   3: 1546 273 273
+   4: 1465 289 273
+   5: 1465 273 289
+   6: 1481 276 276
+     Scratch -- Woodchipper
+     Adrenaline Rush -- Crouch
+     Nut Barrage -- Stampede
+322: Grizzly Squirrel
+   1: 1400 260 325
+   2: 1400 289 289
+   3: 1465 289 273
+   4: 1465 273 289
+   5: 1481 276 276
+     Scratch -- Woodchipper
+     Adrenaline Rush -- Crouch
+     Nut Barrage -- Stampede
+323: Nuts
+   1: 1400 289 289
+     Scratch -- Woodchipper
+     Adrenaline Rush -- Crouch
+     Nut Barrage -- Stampede
+324: Red-Tailed Chipmunk
+   1: 1400 260 325
+   2: 1546 273 273
+   3: 1465 289 273
+   4: 1465 273 289
+   5: 1481 276 276
+     Scratch -- Woodchipper
+     Adrenaline Rush -- Crouch
+     Nut Barrage -- Stampede
+325: Squirrel
+   1: 1400 244 341
+   2: 1546 257 289
+   3: 1465 273 289
+   4: 1465 257 305
+   5: 1481 260 292
+     Scratch -- Woodchipper
+     Adrenaline Rush -- Crouch
+     Nut Barrage -- Stampede
+326: Lucky Quilen Cub
+   1: 1400 289 289
+     Bite -- Comeback
+     Perk Up -- Buried Treasure
+     Burrow -- Trample
+327: Perky Pug
+   1: 1319 322 273
+     Bite -- Comeback
+     Perk Up -- Buried Treasure
+     Burrow -- Trample
+328: Porcupette
+   1: 1546 260 289
+     Bite -- Poison Fang
+     Spiked Skin -- Counterstrike
+     Survival -- Powerball
+329: Pygmy Cow
+     Stampede -- Chew
+     Mother\'s Milk -- Feed
+     Where\'s the Beef? -- Udder Destruction
+330: Azure Whelpling
+   1: 1481 309 260
+     Claw -- Breath
+     Arcane Storm -- Wild Magic
+     Surge of Power -- Ice Tomb
+331: Bronze Whelpling
+   1: 1400 325 260
+   2: 1400 260 325
+   3: 1546 289 260
+   4: 1546 260 289
+     Arcane Slash -- Tail Sweep
+     Early Advantage -- Crystal Prison
+     Lift-Off -- Arcane Storm
+332: Crimson Whelpling
+   1: 1237 322 289
+     Breath -- Tail Sweep
+     Healing Flame -- Scorched Earth
+     Lift-Off -- Deep Breath
+333: Dark Whelpling
+   1: 1481 322 240
+     Shadowflame -- Tail Sweep
+     Roar -- Call Darkness
+     Lift-Off -- Deep Breath
+334: Emerald Proto-Whelp
+   1: 1400 341 244
+   2: 1400 305 273
+   3: 1465 305 257
+     Breath -- Emerald Bite
+     Ancient Blessing -- Emerald Presence
+     Proto-Strike -- Emerald Dream
+335: Emerald Whelpling
+   1: 1627 260 273
+     Breath -- Emerald Bite
+     Moonfire -- Emerald Presence
+     Tranquility -- Emerald Dream
+336: Infinite Whelpling
+   1: 1400 341 244
+   2: 1400 305 273
+   3: 1465 305 257
+     Tail Sweep -- Sleeping Gas
+     Healing Flame -- Weakness
+     Early Advantage -- Darkflame
+337: Lil\' Deathwing
+   1: 1481 357 211
+     Shadowflame -- Tail Sweep
+     Call Darkness -- Roll
+     Elementium Bolt -- Cataclysm
+338: Lil\' Tarecgosa
+   1: 1627 273 260
+     Breath -- Arcane Blast
+     Surge of Power -- Wild Magic
+     Arcane Storm -- Arcane Explosion
+339: Nether Faerie Dragon
+   1: 1319 341 260
+   2: 1319 276 325
+   3: 1465 305 260
+   4: 1384 305 273
+   5: 1384 289 289
+     Slicing Wind -- Arcane Blast
+     Evanescence -- Life Exchange
+     Moonfire -- Cyclone
+340: Netherwhelp
+   1: 1400 273 305
+     Breath -- Nether Blast
+     Phase Shift -- Accuracy
+     Instability -- Soulrush
+341: Nexus Whelpling
+   1: 1400 341 244
+   2: 1400 305 273
+   3: 1465 305 257
+     Tail Sweep -- Frost Breath
+     Sear Magic -- Mana Surge
+     Wild Magic -- Arcane Storm
+342: Onyxian Whelpling
+   1: 1627 322 208
+     Breath -- Tail Sweep
+     Healing Flame -- Scorched Earth
+     Lift-Off -- Deep Breath
+343: Proto-Drake Whelp
+   1: 1627 289 244
+     Breath -- Bite
+     Flamethrower -- Ancient Blessing
+     Proto-Strike -- Roar
+344: Spawn of Onyxia
+   1: 1400 341 244
+   2: 1400 305 273
+   3: 1465 305 257
+     Breath -- Tail Sweep
+     Healing Flame -- Scorched Earth
+     Lift-Off -- Deep Breath
+345: Blue Dragonhawk Hatchling
+   1: 1806 244 260
+   2: 1481 244 325
+   3: 1481 273 289
+   4: 1562 260 276
+     Claw -- Quills
+     Rake -- Conflagrate
+     Flame Breath -- Flamethrower
+346: Golden Dragonhawk Hatchling
+   1: 1400 276 309
+   2: 1481 292 260
+     Claw -- Quills
+     Rake -- Conflagrate
+     Flame Breath -- Flamethrower
+347: Phoenix Hawk Hatchling
+   1: 1400 260 325
+   2: 1546 273 273
+   3: 1465 273 289
+     Claw -- Quills
+     Rake -- Flyby
+     Flame Breath -- Lift-Off
+348: Red Dragonhawk Hatchling
+   1: 1319 276 325
+   2: 1319 305 289
+   3: 1400 292 276
+     Claw -- Quills
+     Rake -- Conflagrate
+     Flame Breath -- Flamethrower
+349: Silver Dragonhawk Hatchling
+   1: 1319 244 357
+   2: 1384 257 322
+   3: 1400 260 309
+     Claw -- Quills
+     Rake -- Conflagrate
+     Flame Breath -- Flamethrower
+350: Celestial Dragon
+   1: 1644 292 244
+     Flamethrower -- Roar
+     Ancient Blessing -- Arcane Storm
+     Moonfire -- Starfall
+351: Essence of Competition
+   1: 1627 289 244
+     Breath -- Tail Sweep
+     Ancient Blessing -- Competitive Spirit
+     Lift-Off -- Flamethrower
+352: Soul of the Aspects
+   1: 1481 301 252
+     Claw -- Breath
+     Sunlight -- Deflection
+     Surge of Light -- Solar Beam
+353: Spirit of Competition
+   1: 1627 289 244
+     Breath -- Tail Sweep
+     Ancient Blessing -- Competitive Spirit
+     Lift-Off -- Flamethrower
+354: Thundering Serpent Hatchling
+   1: 1481 341 227
+     Breath -- Tail Sweep
+     Call Lightning -- Roar
+     Cyclone -- Lift-Off
+355: Tiny Green Dragon
+   1: 1375 240 285
+     Breath -- Tail Sweep
+     Call Lightning -- Roar
+     Cyclone -- Lift-Off
+356: Wild Crimson Hatchling
+   1: 1319 276 325
+     Breath -- Tail Sweep
+     Healing Flame -- Scorched Earth
+     Lift-Off -- Deep Breath
+357: Wild Golden Hatchling
+   1: 1400 305 273
+     Breath -- Tail Sweep
+     Call Lightning -- Roar
+     Cyclone -- Lift-Off
+358: Wild Jade Hatchling
+   1: 1627 289 244
+     Breath -- Tail Sweep
+     Call Lightning -- Roar
+     Cyclone -- Lift-Off
+359: Yu\'la, Broodling of Yu\'lon
+   1: 1237 305 305
+     Breath -- Jadefire Lightning
+     Emerald Presence -- Celestial Blessing
+     Lift-Off -- Life Exchange
+360: Albino Chimaeraling
+     Shadowflame -- Tail Sweep
+     Roar -- Call Darkness
+     Lift-Off -- Deep Breath
+361: Chrominius
+   1: 1644 276 260
+     Bite -- Arcane Explosion
+     Howl -- Ancient Blessing
+     Ravage -- Surge of Power
+362: Death Talon Whelpguard
+   1: 1400 325 260
+     Blitz -- Shadowflame
+     Whirlwind -- Spiked Skin
+     Darkflame -- Clobber
+363: Lanticore Spawnling
+     Triple Snap -- Sleeping Gas
+     Cataclysm -- Corrosion
+     Ancient Blessing -- Devour
+364: Sprite Darter Hatchling
+   1: 1400 276 309
+     Slicing Wind -- Arcane Blast
+     Evanescence -- Life Exchange
+     Moonfire -- Cyclone
+365: Untamed Hatchling
+   1: 1546 289 260
+     Claw -- Tail Sweep
+     Roar -- Spiked Skin
+     Instability -- Healing Flame
+366: Fel Flame
+   1: 1806 260 244
+   2: 1627 289 244
+   3: 1627 260 273
+     Burn -- Flame Breath
+     Immolate -- Scorched Earth
+     Conflagrate -- Immolation
+367: Frigid Frostling
+   1: 1481 276 276
+     Ice Lance -- Surge
+     Frost Nova -- Slippery Ice
+     Ice Tomb -- Howling Blast
+368: Grinder
+   1: 1627 289 244
+     Stone Shot -- Stone Rush
+     Sandstorm -- Rupture
+     Rock Barrage -- Quake
+369: Hatespark the Tiny
+     Blast of Hatred -- Deep Burn
+     Conflagrate -- Cauterize
+     Flamethrower -- Armageddon
+370: Jadefire Spirit
+   1: 1400 289 289
+     Jade Breath -- Jade Claw
+     Emerald Presence -- Immolate
+     Healing Flame -- Fade
+371: Jademist Dancer
+   1: 1359 276 317
+   2: 1506 276 281
+   3: 1359 305 281
+   4: 1441 292 268
+     Steam Vent -- Jade Claw
+     Jadeskin -- Rain Dance
+     Acid Rain -- Geyser
+372: Kirin Tor Familiar
+   1: 1465 289 273
+     Beam -- Arcane Blast
+     Gravity -- Arcane Storm
+     Arcane Explosion -- Rot
+373: Living Sandling
+   1: 1887 260 227
+   2: 1709 289 227
+   3: 1709 260 257
+   4: 1627 289 240
+     Punch -- Sand Bolt
+     Stoneskin -- Sandstorm
+     Stone Rush -- Quicksand
+374: Lumpy
+   1: 1546 273 273
+     Stone Shot -- Stone Rush
+     Sandstorm -- Rupture
+     Rock Barrage -- Quake
+375: Ominous Flame
+   1: 1400 289 289
+     Burn -- Spiritfire Bolt
+     Nimbus -- Scorched Earth
+     Conflagrate -- Forboding Curse
+376: Pandaren Air Spirit
+   1: 1481 276 276
+     Slicing Wind -- Wild Winds
+     Whirlwind -- Soothing Mists
+     Cyclone -- Arcane Storm
+377: Pandaren Earth Spirit
+   1: 1546 289 260
+     Stone Shot -- Stone Rush
+     Rupture -- Rock Barrage
+     Crystal Prison -- Mudslide
+378: Pandaren Fire Spirit
+   1: 1400 289 289
+     Burn -- Magma Wave
+     Immolate -- Flamethrower
+     Cauterize -- Conflagrate
+379: Pandaren Water Spirit
+   1: 1546 260 289
+     Water Jet -- Tidal Wave
+     Healing Wave -- Whirlpool
+     Dive -- Geyser
+380: Pebble
+   1: 1969 260 211
+     Stone Shot -- Stone Rush
+     Sandstorm -- Rupture
+     Rock Barrage -- Quake
+381: Ruby Droplet
+   1: 1725 260 260
+   2: 1546 289 260
+   3: 1546 260 289
+   4: 1546 273 273
+   5: 1481 276 276
+     Acid Touch -- Absorb
+     Dive -- Bubble
+     Plagued Blood -- Drain Blood
+382: Searing Scorchling
+   1: 1384 305 273
+     Burn -- Flame Breath
+     Immolate -- Scorched Earth
+     Conflagrate -- Immolation
+383: Skunky Alemental
+   1: 1725 260 260
+   2: 1546 289 260
+   3: 1546 260 289
+   4: 1546 273 273
+   5: 1481 276 276
+     Brew Bolt -- Barrel Toss
+     Mudslide -- Skunky Brew
+     Inebriate -- Explosive Brew
+384: Soul of the Forge
+     Deep Burn -- Sulfuras Smash
+     Extra Plating -- Stoneskin
+     Flamethrower -- Reforge
+385: Stout Alemental
+     Brew Bolt -- Barrel Toss
+     Inebriate -- Explosive Brew
+     Dive -- Bubble
+386: Tainted Waveling
+   1: 1546 273 273
+   2: 1465 289 273
+   3: 1465 273 289
+   4: 1481 276 276
+     Ooze Touch -- Poison Spit
+     Acidic Goo -- Corrosion
+     Healing Wave -- Creeping Ooze
+387: Tiny Twister
+   1: 1725 260 260
+   2: 1546 289 260
+   3: 1546 260 289
+   4: 1465 289 273
+     Slicing Wind -- Wild Winds
+     Flyby -- Bash
+     Cyclone -- Call Lightning
+388: Water Waveling
+   1: 1546 260 289
+   2: 1481 276 276
+     Water Jet -- Ice Lance
+     Frost Nova -- Frost Shock
+     Geyser -- Tidal Wave
+389: Ashstone Core
+   1: 1546 260 289
+     Feedback -- Burn
+     Crystal Overload -- Stoneskin
+     Crystal Prison -- Instability
+390: Crimson Geode
+   1: 1644 292 244
+   2: 1319 357 244
+   3: 1465 322 244
+   4: 1465 292 273
+     Feedback -- Spark
+     Crystal Overload -- Amplify Magic
+     Stone Rush -- Elementium Bolt
+391: Elementium Geode
+   1: 1546 260 289
+     Feedback -- Spark
+     Crystal Overload -- Amplify Magic
+     Stone Rush -- Elementium Bolt
+392: Core Hound Pup
+   1: 1627 322 211
+     Scratch -- Thrash
+     Howl -- Dodge
+     Burn -- Burrow
+393: Dark Phoenix Hatchling
+   1: 1627 276 257
+     Burn -- Laser
+     Darkflame -- Immolate
+     Conflagrate -- Dark Rebirth
+394: Lil\' Ragnaros
+   1: 1400 374 211
+     Sulfuras Smash -- Magma Wave
+     Magma Trap -- Conflagrate
+     Flamethrower -- Sons of the Flame
+395: Phoenix Hatchling
+   1: 1319 276 325
+     Burn -- Peck
+     Cauterize -- Immolate
+     Immolation -- Conflagrate
+396: Ammen Vale Lashling
+   1: 1481 276 276
+     Lash -- Poison Lash
+     Soothing Mists -- Plant
+     Stun Seed -- Entangling Roots
+397: Blossoming Ancient
+   1: 1522 276 268
+     Poisoned Branch -- Ironbark
+     Autumn Breeze -- Photosynthesis
+     Stun Seed -- Sunlight
+398: Crazy Carrot
+     Jab -- Ironbark
+     Acid Rain -- Aged Yolk
+     Blistering Cold -- Bash
+399: Crimson Lasher
+   1: 1400 292 276
+     Lash -- Poison Lash
+     Soothing Mists -- Plant
+     Stun Seed -- Entangling Roots
+400: Doom Bloom
+     Lash -- Bite
+     Consume Corpse -- Healing Wave
+     Stun Seed -- Entangling Roots
+401: Ruby Sapling
+   1: 1644 276 260
+   2: 1465 276 289
+   3: 1400 292 276
+     Scratch -- Ironbark
+     Thorns -- Poisoned Branch
+     Photosynthesis -- Entangling Roots
+402: Singing Sunflower
+   1: 1709 257 257
+     Lash -- Solar Beam
+     Photosynthesis -- Inspiring Song
+     Early Advantage -- Sunlight
+403: Sinister Squashling
+   1: 1465 305 257
+     Burn -- Poison Lash
+     Thorns -- Stun Seed
+     Plant -- Leech Seed
+404: Teldrassil Sproutling
+   1: 1481 276 276
+     Scratch -- Ironbark
+     Thorns -- Poisoned Branch
+     Photosynthesis -- Entangling Roots
+405: Terrible Turnip
+   1: 1481 289 273
+     Weakening Blow -- Tidal Wave
+     Leech Seed -- Inspiring Song
+     Sunlight -- Sons of the Root
+406: Tiny Bog Beast
+   1: 1725 260 260
+   2: 1546 289 260
+   3: 1546 260 289
+     Crush -- Clobber
+     Lash -- Leap
+     Poison Lash -- Rampage
+407: Venus
+   1: 1400 292 276
+     Lash -- Poison Lash
+     Sunlight -- Plant
+     Stun Seed -- Leech Seed
+408: Withers
+   1: 1546 260 289
+     Scratch -- Ironbark
+     Thorns -- Poisoned Branch
+     Photosynthesis -- Entangling Roots
+409: Amethyst Shale Hatchling
+   1: 1725 260 260
+   2: 1400 325 260
+   3: 1400 260 325
+   4: 1546 289 260
+   5: 1546 260 289
+   6: 1400 289 289
+   7: 1546 273 273
+   8: 1465 289 273
+   9: 1465 273 289
+   10: 1481 276 276
+     Burn -- Leech Life
+     Sticky Web -- Poison Spit
+     Stone Rush -- Stoneskin
+410: Crimson Shale Hatchling
+   1: 1465 305 260
+   2: 1465 276 289
+   3: 1400 292 276
+     Burn -- Leech Life
+     Sticky Web -- Poison Spit
+     Stone Rush -- Stoneskin
+411: Emerald Shale Hatchling
+   1: 1806 260 244
+   2: 1481 325 244
+   3: 1481 260 309
+   4: 1627 289 244
+   5: 1627 260 273
+   6: 1481 289 273
+   7: 1627 273 257
+   8: 1546 289 257
+   9: 1546 273 273
+   10: 1562 276 260
+     Burn -- Leech Life
+     Sticky Web -- Poison Spit
+     Stone Rush -- Stoneskin
+412: Tiny Shale Spider
+   1: 1400 289 289
+     Burn -- Leech Life
+     Sticky Web -- Poison Spit
+     Stone Rush -- Stoneskin
+413: Topaz Shale Hatchling
+   1: 1725 276 244
+   2: 1546 276 273
+   3: 1481 292 260
+     Burn -- Leech Life
+     Sticky Web -- Poison Spit
+     Stone Rush -- Stoneskin
+414: Forest Sproutling
+     Lash -- Club
+     Refuge -- Leech Seed
+     Fist of the Forest -- Sons of the Root
+415: Nightshade Sproutling
+     Lash -- Poison Lash
+     Nature\'s Ward -- Call Darkness
+     Blinding Poison -- Fist of the Forest
+416: Sun Sproutling
+     Lash -- Club
+     Photosynthesis -- Healing Wave
+     Fist of the Forest -- Solar Beam
+417: Blazing Cindercrawler
+     Burn -- Flamethrower
+     Brittle Webbing -- Heat Up
+     Magma Wave -- Cauterize
+418: Cinder Kitten
+   1: 1400 292 292
+     Claw -- Rend
+     Immolate -- Leap
+     Prowl -- Scorched Earth
+419: Droplet of Y\'Shaarj
+   1: 1400 325 260
+   2: 1400 289 289
+   3: 1465 289 273
+     Corrosion -- Swallow You Whole
+     Acid Rain -- Expunge
+     Dreadful Breath -- Curse of Doom
+420: Electrified Razortooth
+   1: 1481 292 260
+     Rip -- Jolt
+     Paralyzing Shock -- Blood in the Water
+     Devour -- Lightning Shield
+421: Gooey Sha-ling
+   1: 1725 260 260
+   2: 1400 325 260
+   3: 1400 260 325
+     Seethe -- Creeping Ooze
+     Call Darkness -- Breath of Sorrow
+     Agony -- Death and Decay
+422: Jade Tentacle
+   1: 1546 260 289
+   2: 1546 273 273
+     Scratch -- Poisoned Branch
+     Shell Shield -- Photosynthesis
+     Entangling Roots -- Thorns
+423: Lava Crab
+   1: 1806 276 227
+   2: 1627 276 257
+   3: 1562 292 244
+     Burn -- Survival
+     Shell Shield -- Cauterize
+     Conflagrate -- Magma Wave
+424: Molten Corgi
+     Bark -- Flamethrower
+     Superbark -- Cauterize
+     Puppies of the Flame -- Inferno Herding
+425: Sapphire Cub
+   1: 1075 260 390
+     Lash -- Pounce
+     Rake -- Screech
+     Stone Rush -- Prowl
+426: Spirit of Summer
+   1: 1481 276 276
+     Burn -- Flame Breath
+     Immolate -- Scorched Earth
+     Conflagrate -- Immolation
+427: Thundertail Flapper
+   1: 1546 273 273
+   2: 1481 276 276
+     Tail Slap -- Jolt
+     Buried Treasure -- Lightning Shield
+     Thunderbolt -- Beaver Dam
+428: Tiny Snowman
+   1: 1481 276 276
+     Snowball -- Magic Hat
+     Call Blizzard -- Frost Nova
+     Howling Blast -- Deep Freeze
+429: Dragon Kite
+   1: 1400 260 325
+   2: 1481 276 276
+     Breath -- Tail Sweep
+     Call Lightning -- Roar
+     Volcano -- Lift-Off
+430: Tuskarr Kite
+   1: 1546 273 273
+     Slicing Wind -- Frost Shock
+     Wild Winds -- Cyclone
+     Flyby -- Reckless Strike
+431: Bat
+   1: 1319 325 276
+   2: 1319 260 341
+   3: 1465 289 276
+   4: 1319 289 305
+   5: 1384 289 289
+   6: 1384 273 305
+     Bite -- Leech Life
+     Screech -- Hawk Eye
+     Reckless Strike -- Nocturnal Strike
+432: Tirisfal Batling
+   1: 1627 276 257
+   2: 1546 289 257
+   3: 1562 292 244
+     Bite -- Leech Life
+     Screech -- Hawk Eye
+     Reckless Strike -- Nocturnal Strike
+433: Blue Mini Jouster
+   1: 1627 257 273
+     Slicing Wind -- Thrash
+     Hawk Eye -- Adrenaline Rush
+     Lift-Off -- Cyclone
+434: Brilliant Kaliri
+   1: 1319 292 309
+   2: 1319 322 273
+   3: 1384 322 257
+     Peck -- Quills
+     Shriek -- Cyclone
+     Nocturnal Strike -- Predatory Strike
+435: Dragonbone Hatchling
+   1: 1806 260 244
+   2: 1481 325 244
+   3: 1627 289 244
+   4: 1562 276 260
+     Slicing Wind -- Thrash
+     Hawk Eye -- Adrenaline Rush
+     Lift-Off -- Cyclone
+436: Dread Hatchling
+   1: 1420 337 244
+     Peck -- Shadow Talon
+     Call Darkness -- Consume Corpse
+     Nocturnal Strike -- Anzu\'s Blessing
+437: Fledgling Buzzard
+   1: 1806 260 244
+   2: 1627 289 244
+   3: 1562 276 260
+     Slicing Wind -- Thrash
+     Hawk Eye -- Adrenaline Rush
+     Lift-Off -- Cyclone
+438: Gold Mini Jouster
+   1: 1400 305 273
+     Slicing Wind -- Thrash
+     Hawk Eye -- Adrenaline Rush
+     Lift-Off -- Cyclone
+439: Ikky
+     Savage Talon -- Quills
+     Black Claw -- Nocturnal Strike
+     Flock -- Cyclone
+440: Imperial Eagle Chick
+   1: 1319 341 260
+   2: 1319 276 325
+   3: 1319 305 289
+   4: 1384 305 273
+   5: 1400 292 276
+     Slicing Wind -- Thrash
+     Cyclone -- Adrenaline Rush
+     Hawk Eye -- Lift-Off
+441: Ji-Kun Hatchling
+   1: 1465 273 289
+   2: 1481 260 292
+     Slicing Wind -- Peck
+     Wild Winds -- Acidic Goo
+     Flock -- Caw
+442: Kaliri Hatchling
+     Peck -- Quills
+     Wild Winds -- Hawk Eye
+     Nocturnal Strike -- Predatory Strike
+443: Sunfire Kaliri
+     Deep Burn -- Fire Quills
+     Shriek -- Scorched Earth
+     Cauterize -- Predatory Strike
+444: Tickbird Hatchling
+   1: 1400 260 325
+   2: 1546 260 289
+   3: 1400 289 289
+   4: 1465 273 289
+   5: 1481 276 276
+     Slicing Wind -- Thrash
+     Cyclone -- Adrenaline Rush
+     Hawk Eye -- Lift-Off
+445: Veilwatcher Hatchling
+     Peck -- Quills
+     Wild Winds -- Flock
+     Nocturnal Strike -- Predatory Strike
+446: White Tickbird Hatchling
+   1: 1319 244 357
+   2: 1465 244 322
+   3: 1319 273 322
+   4: 1384 257 322
+     Slicing Wind -- Thrash
+     Cyclone -- Adrenaline Rush
+     Hawk Eye -- Lift-Off
+447: Azure Crane Chick
+   1: 1400 341 244
+   2: 1400 276 309
+   3: 1546 305 244
+   4: 1400 305 273
+   5: 1465 305 257
+     Quills -- Flock
+     Cleansing Rain -- Healing Stream
+     Reckless Strike -- Surge
+448: Jade Crane Chick
+   1: 1546 289 257
+   2: 1481 292 260
+     Slicing Wind -- Thrash
+     Hawk Eye -- Jadeskin
+     Cyclone -- Flock
+449: Darkmoon Glowfly
+   1: 1546 244 305
+   2: 1546 257 289
+   3: 1465 273 289
+   4: 1481 260 292
+     Scratch -- Slicing Wind
+     Glowing Toxin -- Sting
+     Confusing Sting -- Dazzling Dance
+450: Effervescent Glowfly
+   1: 1465 276 289
+   2: 1465 289 273
+   3: 1384 305 273
+   4: 1400 292 276
+     Scratch -- Slicing Wind
+     Confusing Sting -- Cocoon Strike
+     Swarm -- Glowing Toxin
+451: Firefly
+   1: 1319 260 341
+   2: 1465 260 305
+   3: 1465 273 289
+   4: 1400 276 292
+     Scratch -- Slicing Wind
+     Confusing Sting -- Cocoon Strike
+     Swarm -- Glowing Toxin
+452: Mei Li Sparkler
+   1: 1465 276 289
+   2: 1465 289 273
+   3: 1384 305 273
+   4: 1400 292 276
+     Scratch -- Slicing Wind
+     Confusing Sting -- Cocoon Strike
+     Swarm -- Glowing Toxin
+453: Shrine Fly
+   1: 1400 260 325
+   2: 1546 289 260
+   3: 1546 260 289
+   4: 1400 289 289
+   5: 1546 273 273
+   6: 1465 273 289
+   7: 1481 276 276
+     Scratch -- Slicing Wind
+     Confusing Sting -- Cocoon Strike
+     Swarm -- Glowing Toxin
+454: Swamplighter Firefly
+     Barbed Stinger -- Alpha Strike
+     Lift-Off -- Puncture Wound
+     Flyby -- Nimbus
+455: Tiny Flamefly
+   1: 1481 260 292
+     Burn -- Alpha Strike
+     Immolate -- Hiss
+     Swarm -- Adrenaline Rush
+456: Waterfly
+     Barbed Stinger -- Alpha Strike
+     Healing Stream -- Puncture Wound
+     Lift-Off -- Dodge
+457: Ancona Chicken
+   1: 1546 273 273
+   2: 1465 289 273
+   3: 1465 273 289
+   4: 1481 276 276
+     Peck -- Slicing Wind
+     Squawk -- Adrenaline Rush
+     Egg Barrage -- Flock
+458: Chicken
+   1: 1400 260 325
+   2: 1546 273 273
+   3: 1465 273 289
+   4: 1481 276 276
+     Peck -- Slicing Wind
+     Squawk -- Adrenaline Rush
+     Egg Barrage -- Flock
+459: Highlands Turkey
+   1: 1546 260 289
+   2: 1400 289 289
+   3: 1481 276 276
+     Peck -- Slicing Wind
+     Squawk -- Gobble Strike
+     Food Coma -- Flock
+460: Plump Turkey
+   1: 1546 289 260
+     Peck -- Slicing Wind
+     Squawk -- Gobble Strike
+     Food Coma -- Flock
+461: Szechuan Chicken
+   1: 1400 260 325
+   2: 1546 273 273
+   3: 1465 273 289
+   4: 1481 276 276
+     Peck -- Slicing Wind
+     Squawk -- Adrenaline Rush
+     Egg Barrage -- Flock
+462: Turkey
+   1: 1400 260 325
+   2: 1546 273 273
+   3: 1481 276 276
+     Peck -- Slicing Wind
+     Squawk -- Gobble Strike
+     Food Coma -- Flock
+463: Westfall Chicken
+   1: 1546 273 273
+   2: 1465 289 273
+   3: 1465 273 289
+   4: 1481 276 276
+     Peck -- Slicing Wind
+     Squawk -- Adrenaline Rush
+     Egg Barrage -- Flock
+464: Crow
+   1: 1400 260 325
+   2: 1400 289 289
+   3: 1465 289 273
+   4: 1481 276 276
+     Peck -- Alpha Strike
+     Squawk -- Call Darkness
+     Murder -- Nocturnal Strike
+465: Gilnean Raven
+   1: 1400 260 325
+   2: 1400 289 289
+   3: 1465 289 273
+   4: 1481 276 276
+     Peck -- Alpha Strike
+     Darkflame -- Call Darkness
+     Nocturnal Strike -- Nevermore
+466: Rustberg Gull
+   1: 1546 244 305
+   2: 1465 273 289
+   3: 1481 260 292
+     Slicing Wind -- Thrash
+     Cyclone -- Adrenaline Rush
+     Hawk Eye -- Lift-Off
+467: Sandy Petrel
+   1: 1562 227 325
+   2: 1627 257 273
+   3: 1627 240 289
+   4: 1644 244 276
+     Slicing Wind -- Thrash
+     Cyclone -- Adrenaline Rush
+     Hawk Eye -- Lift-Off
+468: Sea Gull
+   1: 1481 244 325
+   2: 1546 273 273
+   3: 1562 260 276
+     Slicing Wind -- Thrash
+     Cyclone -- Adrenaline Rush
+     Hawk Eye -- Lift-Off
+469: Amber Moth
+   1: 1546 276 273
+   2: 1400 305 273
+     Slicing Wind -- Alpha Strike
+     Cocoon Strike -- Adrenaline Rush
+     Moth Balls -- Moth Dust
+470: Ashwing Moth
+   1: 1546 260 289
+   2: 1400 289 289
+   3: 1465 273 289
+   4: 1481 276 276
+     Alpha Strike -- Wild Winds
+     Nimbus -- Cocoon Strike
+     Moth Balls -- Moth Dust
+471: Blue Moth
+   1: 1627 257 273
+   2: 1562 260 276
+     Slicing Wind -- Alpha Strike
+     Cocoon Strike -- Adrenaline Rush
+     Moth Balls -- Moth Dust
+472: Crimson Moth
+   1: 1546 276 273
+   2: 1546 289 257
+   3: 1481 292 260
+     Slicing Wind -- Alpha Strike
+     Cocoon Strike -- Adrenaline Rush
+     Moth Balls -- Moth Dust
+473: Flamering Moth
+   1: 1546 260 289
+   2: 1400 289 289
+   3: 1481 276 276
+     Burn -- Alpha Strike
+     Cocoon Strike -- Healing Flame
+     Nimbus -- Moth Dust
+474: Forest Moth
+   1: 1627 260 273
+   2: 1627 273 257
+   3: 1546 273 273
+   4: 1562 276 260
+     Slicing Wind -- Alpha Strike
+     Cocoon Strike -- Adrenaline Rush
+     Moth Balls -- Moth Dust
+475: Fungal Moth
+   1: 1481 227 341
+   2: 1627 227 305
+   3: 1562 244 292
+     Slicing Wind -- Alpha Strike
+     Cocoon Strike -- Adrenaline Rush
+     Moth Balls -- Moth Dust
+476: Garden Moth
+   1: 1465 276 289
+   2: 1400 292 276
+     Slicing Wind -- Alpha Strike
+     Cocoon Strike -- Adrenaline Rush
+     Moth Balls -- Moth Dust
+477: Gilded Moth
+   1: 1400 276 309
+   2: 1546 305 244
+   3: 1546 276 273
+   4: 1400 305 273
+   5: 1546 289 257
+   6: 1465 305 257
+   7: 1465 289 273
+   8: 1481 292 260
+     Slicing Wind -- Alpha Strike
+     Cocoon Strike -- Adrenaline Rush
+     Moth Balls -- Moth Dust
+478: Grey Moth
+   1: 1400 260 325
+   2: 1546 260 289
+   3: 1481 276 276
+     Slicing Wind -- Alpha Strike
+     Cocoon Strike -- Adrenaline Rush
+     Moth Balls -- Moth Dust
+479: Imperial Moth
+   1: 1644 244 292
+     Slicing Wind -- Wild Winds
+     Cocoon Strike -- Moth Balls
+     Moth Dust -- Cyclone
+480: Luyu Moth
+   1: 1546 260 289
+   2: 1400 289 289
+   3: 1481 276 276
+     Slicing Wind -- Alpha Strike
+     Cocoon Strike -- Adrenaline Rush
+     Moth Balls -- Moth Dust
+481: Oasis Moth
+   1: 1481 276 292
+   2: 1627 289 240
+   3: 1546 289 257
+     Slicing Wind -- Alpha Strike
+     Cocoon Strike -- Adrenaline Rush
+     Moth Balls -- Moth Dust
+482: Red Moth
+   1: 1319 305 289
+   2: 1465 289 273
+   3: 1400 292 276
+     Slicing Wind -- Alpha Strike
+     Cocoon Strike -- Adrenaline Rush
+     Moth Balls -- Moth Dust
+483: Royal Moth
+     Slicing Wind -- Alpha Strike
+     Counterspell -- Hawk Eye
+     Moth Dust -- Predatory Strike
+484: Silky Moth
+   1: 1319 244 357
+   2: 1384 257 322
+   3: 1400 260 309
+     Slicing Wind -- Alpha Strike
+     Cocoon Strike -- Adrenaline Rush
+     Moth Balls -- Moth Dust
+485: Skywisp Moth
+   1: 1546 260 289
+   2: 1400 289 289
+   3: 1481 276 276
+     Slicing Wind -- Reckless Strike
+     Cocoon Strike -- Counterspell
+     Moth Dust -- Call Lightning
+486: Swamp Moth
+   1: 1627 260 273
+   2: 1627 273 257
+   3: 1562 276 260
+     Slicing Wind -- Alpha Strike
+     Cocoon Strike -- Adrenaline Rush
+     Moth Balls -- Moth Dust
+487: Tainted Moth
+   1: 1627 260 273
+   2: 1481 289 273
+   3: 1562 276 260
+     Slicing Wind -- Alpha Strike
+     Cocoon Strike -- Adrenaline Rush
+     Moth Balls -- Moth Dust
+488: White Moth
+   1: 1644 244 292
+   2: 1465 257 305
+   3: 1400 260 309
+     Slicing Wind -- Alpha Strike
+     Cocoon Strike -- Adrenaline Rush
+     Moth Balls -- Moth Dust
+489: Yellow Moth
+   1: 1400 341 244
+   2: 1546 289 257
+   3: 1481 292 260
+     Slicing Wind -- Alpha Strike
+     Cocoon Strike -- Adrenaline Rush
+     Moth Balls -- Moth Dust
+490: Cenarion Hatchling
+   1: 1562 260 276
+     Peck -- Quills
+     Screech -- Rush
+     Reckless Strike -- Lift-Off
+491: Chi-Chi, Hatchling of Chi-Ji
+   1: 1441 297 273
+     Fire Quills -- Alpha Strike
+     Tranquility -- Wild Magic
+     Ethereal -- Feign Death
+492: Firewing
+     Alpha Strike -- Deep Burn
+     Scorched Earth -- Sunlight
+     Healing Flame -- Murder
+493: Gryphon Hatchling
+   1: 1400 289 289
+     Peck -- Slicing Wind
+     Squawk -- Adrenaline Rush
+     Flock -- Lift-Off
+494: Guardian Cub
+   1: 1562 276 260
+     Slicing Wind -- Onyx Bite
+     Roar -- Wild Winds
+     Reckless Strike -- Cyclone
+495: Hippogryph Hatchling
+   1: 1481 276 276
+     Peck -- Quills
+     Screech -- Rush
+     Reckless Strike -- Lift-Off
+496: Sentinel\'s Companion
+     Peck -- Dark Talon
+     Nocturnal Strike -- Soulrush
+     Moonfire -- Ethereal
+497: Stormwing
+   1: 1465 289 273
+     Alpha Strike -- Quills
+     Call Lightning -- Lift-Off
+     Thunderbolt -- Flock
+498: Wildhammer Gryphon Hatchling
+   1: 1644 276 260
+   2: 1319 341 260
+   3: 1319 276 325
+   4: 1465 305 260
+   5: 1465 276 289
+   6: 1319 305 289
+   7: 1465 289 273
+   8: 1384 305 273
+   9: 1384 289 289
+   10: 1400 292 276
+     Peck -- Squawk
+     Slicing Wind -- Adrenaline Rush
+     Flock -- Lift-Off
+499: Fledgling Nether Ray
+   1: 1302 322 273
+     Bite -- Arcane Blast
+     Tail Sweep -- Slicing Wind
+     Shadow Shock -- Lash
+500: Nether Ray Fry
+   1: 1319 341 260
+   2: 1319 276 325
+   3: 1319 305 289
+   4: 1400 292 276
+     Bite -- Arcane Blast
+     Tail Sweep -- Slicing Wind
+     Shadow Shock -- Lash
+501: Sky Fry
+     Bite -- Arcane Blast
+     Vicious Slice -- Alpha Strike
+     Tail Sweep -- Shadow Shock
+502: Crested Owl
+   1: 1465 276 289
+   2: 1465 289 273
+   3: 1400 292 276
+     Peck -- Quills
+     Shriek -- Cyclone
+     Nocturnal Strike -- Predatory Strike
+503: Great Horned Owl
+   1: 1725 260 260
+   2: 1546 289 260
+   3: 1481 276 276
+     Peck -- Quills
+     Shriek -- Cyclone
+     Nocturnal Strike -- Predatory Strike
+504: Hawk Owl
+   1: 1400 289 289
+   2: 1465 289 273
+   3: 1481 276 276
+     Peck -- Quills
+     Shriek -- Cyclone
+     Nocturnal Strike -- Predatory Strike
+505: Snowy Owl
+   1: 1384 273 305
+   2: 1384 257 322
+   3: 1400 260 309
+     Peck -- Quills
+     Shriek -- Cyclone
+     Nocturnal Strike -- Predatory Strike
+506: Cockatiel
+   1: 1400 244 341
+   2: 1481 260 292
+     Slicing Wind -- Thrash
+     Hawk Eye -- Adrenaline Rush
+     Lift-Off -- Cyclone
+507: Green Wing Macaw
+   1: 1627 273 257
+     Slicing Wind -- Thrash
+     Hawk Eye -- Adrenaline Rush
+     Lift-Off -- Cyclone
+508: Hyacinth Macaw
+   1: 1644 244 276
+     Slicing Wind -- Thrash
+     Hawk Eye -- Adrenaline Rush
+     Lift-Off -- Cyclone
+509: Miniwing
+   1: 1465 227 338
+     Peck -- Quills
+     Shriek -- Cyclone
+     Nocturnal Strike -- Predatory Strike
+510: Parrot
+   1: 1319 260 341
+   2: 1319 289 305
+   3: 1384 289 289
+   4: 1400 276 292
+     Slicing Wind -- Thrash
+     Hawk Eye -- Adrenaline Rush
+     Lift-Off -- Cyclone
+511: Polly
+   1: 1237 260 357
+   2: 1237 289 322
+   3: 1302 289 305
+     Slicing Wind -- Thrash
+     Hawk Eye -- Adrenaline Rush
+     Lift-Off -- Cyclone
+512: Senegal
+   1: 1481 260 309
+   2: 1562 276 260
+     Slicing Wind -- Thrash
+     Hawk Eye -- Adrenaline Rush
+     Lift-Off -- Cyclone
+513: Brilliant Bloodfeather
+     Quills -- Peck
+     Hawk Eye -- Accuracy
+     Reckless Strike -- Drain Blood
+514: Everbloom Peachick
+     Quills -- Peck
+     Hawk Eye -- Accuracy
+     Reckless Strike -- Squawk
+515: Golden Dawnfeather
+     Quills -- Peck
+     Sunlight -- Hawk Eye
+     Reckless Strike -- Love Potion
+516: Royal Peacock
+     Quills -- Savage Talon
+     Dazzling Dance -- Arcane Storm
+     Rain Dance -- Feign Death
+517: Shadow Sporebat
+     Slicing Wind -- Shadow Slash
+     Creeping Fungus -- Leech Seed
+     Spore Shrooms -- Barbed Stinger
+518: Tiny Sporebat
+   1: 1887 244 244
+   2: 1709 244 273
+   3: 1644 260 260
+     Slicing Wind -- Shadow Slash
+     Creeping Fungus -- Leech Seed
+     Spore Shrooms -- Confusing Sting
+519: Brilliant Spore
+     Reckless Strike -- Creeping Fungus
+     Spiked Skin -- Blinding Powder
+     Spore Shrooms -- Explode
+520: Crimson Spore
+     Sting -- Creeping Fungus
+     Blinding Powder -- Spiked Skin
+     Spore Shrooms -- Explode
+521: Umbrafen Spore
+     Confusing Sting -- Creeping Fungus
+     Spiked Skin -- Blinding Powder
+     Spore Shrooms -- Explode
+522: Axebeak Hatchling
+     Slicing Wind -- Peck
+     Rain Dance -- Flyby
+     Lift-Off -- Nocturnal Strike
+523: Fruit Hunter
+     Slicing Wind -- Peck
+     Rain Dance -- Flyby
+     Lift-Off -- Nocturnal Strike
+524: Junglebeak
+     Slicing Wind -- Peck
+     Rain Dance -- Flyby
+     Lift-Off -- Nocturnal Strike
+525: Mechanical Axebeak
+     Alpha Strike -- Peck
+     Hawk Eye -- Haywire
+     Decoy -- Lift-Off
+526: Amberbarb Wasp
+     Barbed Stinger -- Bite
+     Focus -- Predatory Strike
+     Puncture Wound -- Ravage
+527: Bloodsting Wasp
+     Barbed Stinger -- Bite
+     Focus -- Predatory Strike
+     Puncture Wound -- Ravage
+528: Bone Wasp
+     Barbed Stinger -- Claw
+     Focus -- Predatory Strike
+     Puncture Wound -- Ravage
+529: Twilight Wasp
+     Barbed Stinger -- Bite
+     Focus -- Predatory Strike
+     Puncture Wound -- Ravage
+530: Wood Wasp
+     Barbed Stinger -- Bite
+     Focus -- Predatory Strike
+     Puncture Wound -- Ravage
+531: Pterrordax Hatchling
+   1: 1156 322 305
+     Slicing Wind -- Flyby
+     Ancient Blessing -- Apocalypse
+     Lift-Off -- Feign Death
+532: Teroclaw Hatchling
+     Claw -- Alpha Strike
+     Hawk Eye -- Dodge
+     Ravage -- Nature\'s Ward
+533: Father Winter\'s Helper
+   1: 1481 276 276
+     Snowball -- Ice Lance
+     Call Blizzard -- Eggnog
+     Ice Tomb -- Gift of Winter\'s Veil
+534: Rotten Little Helper
+   1: 1359 333 260
+     Club -- Ice Lance
+     Booby-Trapped Presents -- Ice Tomb
+     Greench\'s Gift -- Call Blizzard
+535: Winter\'s Little Helper
+   1: 1481 276 276
+     Snowball -- Ice Lance
+     Call Blizzard -- Eggnog
+     Ice Tomb -- Gift of Winter\'s Veil
+536: Feral Vermling
+   1: 1465 273 289
+     Crush -- Tongue Lash
+     Sticky Goo -- Poison Lash
+     Backflip -- Dreadful Breath
+537: Hopling
+   1: 1400 260 325
+     Crush -- Tongue Lash
+     Sticky Goo -- Poison Lash
+     Backflip -- Dreadful Breath
+538: Corefire Imp
+   1: 1400 289 289
+     Burn -- Rush
+     Immolation -- Flamethrower
+     Cauterize -- Wild Magic
+539: Fiendish Imp
+   1: 1359 260 333
+   2: 1359 289 297
+   3: 1424 289 281
+     Burn -- Sear Magic
+     Immolation -- Flamethrower
+     Rush -- Nether Gate
+540: Gregarious Grell
+   1: 1465 273 289
+     Punch -- Burn
+     Immolate -- Phase Shift
+     Cauterize -- Sear Magic
+541: Moonkin Hatchling
+   1: 1481 276 276
+     Punch -- Solar Beam
+     Entangling Roots -- Clobber
+     Cyclone -- Moonfire
+542: Moonkin Hatchling
+   1: 1481 276 276
+     Punch -- Solar Beam
+     Entangling Roots -- Clobber
+     Cyclone -- Moonfire
+543: Deathy
+   1: 1400 289 289
+     Punch -- Deep Breath
+     Scorched Earth -- Call Darkness
+     Clobber -- Roar
+544: Grommloc
+     Vicious Slice -- Smash
+     Clobber -- Mighty Charge
+     Giant\'s Blood -- Takedown
+545: Grunty
+   1: 1546 289 260
+     Gauss Rifle -- U-238 Rounds
+     Stimpack -- Shield Block
+     Launch -- Lock-On
+546: Gurky
+   1: 1481 276 276
+     Punch -- Flank
+     Acid Touch -- Lucky Dance
+     Clobber -- Stampede
+547: Lurky
+   1: 1546 273 273
+     Punch -- Flank
+     Acid Touch -- Lucky Dance
+     Clobber -- Stampede
+548: Murkablo
+   1: 1400 289 289
+     Burn -- Bone Prison
+     Agony -- Drain Power
+     Blast of Hatred -- Scorched Earth
+549: Murkalot
+   1: 1449 322 253
+     Punish -- Blessed Hammer
+     Falling Murloc -- Reflective Shield
+     Righteous Inspiration -- Shieldstorm
+550: Murki
+   1: 1546 273 273
+     Punch -- Flank
+     Acid Touch -- Lucky Dance
+     Clobber -- Stampede
+551: Murkimus the Gladiator
+   1: 1546 289 260
+     Punch -- Flurry
+     Shield Block -- Counterstrike
+     Heroic Leap -- Haymaker
+552: Murky
+   1: 1481 276 276
+     Punch -- Flank
+     Acid Touch -- Lucky Dance
+     Clobber -- Stampede
+553: Terky
+   1: 1546 273 273
+     Punch -- Flank
+     Acid Touch -- Lucky Dance
+     Clobber -- Stampede
+554: Ashleaf Spriteling
+   1: 1319 333 268
+   2: 1319 268 333
+   3: 1384 297 281
+   4: 1384 281 297
+   5: 1400 284 284
+     Poisoned Branch -- Punch
+     Solar Beam -- Wild Magic
+     Entangling Roots -- Thorns
+555: Dandelion Frolicker
+   1: 1400 260 325
+   2: 1546 260 289
+   3: 1400 289 289
+   4: 1465 273 289
+     Scratch -- Bite
+     Frolick -- Barkskin
+     Kick -- Dazzling Dance
+556: Anubisath Idol
+   1: 1725 276 244
+     Crush -- Demolish
+     Sandstorm -- Stoneskin
+     Deflection -- Rupture
+557: Bonkers
+   1: 1400 325 260
+   2: 1400 260 325
+   3: 1546 289 260
+   4: 1546 260 289
+   5: 1400 289 289
+     Jab -- Bite
+     Going Bonkers! -- Dodge
+     Haymaker -- Tornado Punch
+558: Curious Oracle Hatchling
+   1: 1481 276 276
+     Punch -- Water Jet
+     Super Sticky Goo -- Aged Yolk
+     Backflip -- Dreadful Breath
+559: Curious Wolvar Pup
+   1: 1400 325 260
+     Punch -- Bite
+     Snap Trap -- Frenzyheart Brew
+     Whirlwind -- Maul
+560: Flayer Youngling
+   1: 1725 260 260
+   2: 1400 325 260
+   3: 1400 260 325
+   4: 1546 289 260
+   5: 1546 260 289
+   6: 1400 289 289
+   7: 1546 273 273
+   8: 1465 289 273
+   9: 1465 273 289
+   10: 1481 276 276
+     Blitz -- Triple Snap
+     Focus -- Deflection
+     Kick -- Rampage
+561: Harbinger of Flame
+   1: 1400 325 260
+     Jab -- Burn
+     Magma Wave -- Immolate
+     Impale -- Conflagrate
+562: Harpy Youngling
+   1: 1546 273 273
+   2: 1481 276 276
+     Quills -- Slicing Wind
+     Flyby -- Counterstrike
+     Squawk -- Lift-Off
+563: Kun-Lai Runt
+   1: 1400 341 244
+   2: 1400 305 273
+   3: 1465 305 257
+     Thrash -- Takedown
+     Mangle -- Frost Shock
+     Rampage -- Deep Freeze
+564: Lil\' Bad Wolf
+   1: 1319 341 260
+   2: 1319 276 325
+   3: 1319 305 289
+   4: 1384 305 273
+   5: 1400 292 276
+     Claw -- Counterstrike
+     Mangle -- Dodge
+     Howl -- Pounce
+565: Mini Tyrael
+   1: 1481 276 276
+     Holy Sword -- Omnislash
+     Holy Justice -- Surge of Light
+     Holy Charge -- Restoration
+566: Ore Eater
+     Acid Touch -- Punch
+     Shell Armor -- Spiny Carapace
+     Body Slam -- Demolish
+567: Pandaren Monk
+   1: 1400 289 289
+     Jab -- Takedown
+     Focus Chi -- Staggered Steps
+     Fury of 1,000 Fists -- Blackout Kick
+568: Peddlefeet
+   1: 1400 260 325
+     Bow Shot -- Rapid Fire
+     Lovestruck -- Perfumed Arrow
+     Shot Through The Heart -- Love Potion
+569: Qiraji Guardling
+   1: 1725 260 260
+   2: 1400 325 260
+   3: 1400 260 325
+   4: 1546 289 260
+   5: 1546 260 289
+   6: 1400 289 289
+   7: 1546 273 273
+   8: 1465 289 273
+   9: 1465 273 289
+   10: 1481 276 276
+     Crush -- Whirlwind
+     Hawk Eye -- Sandstorm
+     Reckless Strike -- Blackout Kick
+570: Sporeling Sprout
+   1: 1725 260 260
+   2: 1400 325 260
+   3: 1400 260 325
+   4: 1546 289 260
+   5: 1546 260 289
+   6: 1400 289 289
+   7: 1546 273 273
+   8: 1465 289 273
+   9: 1465 273 289
+   10: 1481 276 276
+     Jab -- Charge
+     Creeping Fungus -- Leech Seed
+     Spore Shrooms -- Crouch
+571: Stunted Yeti
+   1: 1546 273 273
+     Thrash -- Punch
+     Mangle -- Haymaker
+     Rampage -- Bash
+572: Treasure Goblin
+   1: 1546 260 289
+     Coin Toss -- Magic Sword
+     Wild Magic -- Sear Magic
+     Dodge -- Portal
+573: Gusting Grimoire
+   1: 1465 289 273
+     Fel Immolate -- Shadow Shock
+     Agony -- Amplify Magic
+     Meteor Strike -- Curse of Doom
+574: Lofty Libram
+   1: 1465 289 273
+     Arcane Blast -- Shadow Shock
+     Arcane Explosion -- Amplify Magic
+     Inner Vision -- Curse of Doom
+575: Lesser Voidcaller
+   1: 1766 260 252
+   2: 1587 289 252
+   3: 1587 260 281
+   4: 1522 276 268
+     Shadow Shock -- Nether Blast
+     Siphon Life -- Prismatic Barrier
+     Curse of Doom -- Drain Power
+576: Minfernal
+   1: 1725 260 260
+   2: 1400 325 260
+   3: 1546 289 260
+   4: 1400 289 289
+   5: 1465 289 273
+   6: 1481 276 276
+     Crush -- Immolate
+     Immolation -- Extra Plating
+     Meteor Strike -- Explode
+577: Mini Diablo
+   1: 1156 357 276
+     Burn -- Blast of Hatred
+     Call Darkness -- Agony
+     Weakness -- Bone Prison
+578: Netherspace Abyssal
+   1: 1725 268 252
+   2: 1400 333 252
+   3: 1400 297 281
+     Crush -- Immolate
+     Immolation -- Explode
+     Meteor Strike -- Nether Gate
+579: Servant of Demidos
+     Magic Sword -- Arcane Explosion
+     Clean-Up -- Siphon Anima
+     Lightning Shield -- Soulrush
+580: Twilight Fiendling
+   1: 1644 276 260
+   2: 1319 341 260
+   3: 1465 305 260
+   4: 1384 289 289
+   5: 1400 292 276
+     Creepy Chomp -- Rake
+     Leap -- Creeping Ooze
+     Adrenal Glands -- Siphon Life
+581: Arcane Eye
+   1: 1481 289 273
+     Focused Beams -- Psychic Blast
+     Eyeblast -- Drain Power
+     Interrupting Gaze -- Mana Surge
+582: Darkmoon Eye
+   1: 1481 305 257
+     Laser -- Focused Beams
+     Eyeblast -- Inner Vision
+     Darkmoon Curse -- Interrupting Gaze
+583: Eye of Observation
+     Arcane Blast -- Eyeblast
+     Counterspell -- Lens Flare
+     Blinkstrike -- Powerball
+584: Willy
+   1: 1481 276 276
+     Tongue Lash -- Focused Beams
+     Interrupting Gaze -- Eyeblast
+     Agony -- Rot
+585: Jade Owl
+   1: 1400 289 289
+   2: 1465 289 273
+   3: 1481 276 276
+     Slicing Wind -- Thrash
+     Adrenaline Rush -- Hawk Eye
+     Lift-Off -- Cyclone
+586: Jade Tiger
+   1: 1562 276 260
+     Jade Claw -- Pounce
+     Rake -- Jadeskin
+     Devour -- Prowl
+587: Onyx Panther
+   1: 1450 270 225
+     Claw -- Onyx Bite
+     Stoneskin -- Roar
+     Leap -- Stone Rush
+588: Zipao Tiger
+   1: 1725 260 260
+     Onyx Bite -- Pounce
+     Rake -- Stoneskin
+     Devour -- Prowl
+589: Enchanted Lantern
+   1: 1481 276 276
+     Beam -- Burn
+     Illuminate -- Flash
+     Soul Ward -- Light
+590: Festival Lantern
+   1: 1481 276 276
+     Beam -- Burn
+     Illuminate -- Flash
+     Soul Ward -- Light
+591: Lunar Lantern
+   1: 1481 276 276
+     Beam -- Burn
+     Illuminate -- Flash
+     Soul Ward -- Light
+592: Magic Lamp
+   1: 1481 276 276
+     Beam -- Arcane Blast
+     Sear Magic -- Gravity
+     Soul Ward -- Wish
+593: Disgusting Oozeling
+   1: 1627 289 240
+     Ooze Touch -- Absorb
+     Corrosion -- Creeping Ooze
+     Expunge -- Acidic Goo
+594: Filthling
+   1: 1725 260 260
+   2: 1546 260 289
+   3: 1481 276 276
+     Dreadful Breath -- Absorb
+     Stench -- Expunge
+     Corrosion -- Creeping Ooze
+595: Jade Oozeling
+   1: 1806 260 244
+   2: 1481 325 244
+   3: 1627 260 273
+   4: 1562 276 260
+     Ooze Touch -- Absorb
+     Corrosion -- Creeping Ooze
+     Expunge -- Acidic Goo
+596: Lil\' Leftovers
+     Absorb -- Chew
+     Stench -- Crouch
+     High Fiber -- Food Coma
+597: Living Fluid
+   1: 1400 289 289
+     Ooze Touch -- Absorb
+     Corrosion -- Acidic Goo
+     Expunge -- Evolution
+598: Netherspawn, Spawn of Netherspawn
+     Nether Blast -- Absorb
+     Consume Magic -- Expunge
+     Poison Spit -- Creeping Ooze
+599: Oily Slimeling
+   1: 1725 260 260
+   2: 1546 289 260
+   3: 1546 260 289
+   4: 1481 276 276
+     Ooze Touch -- Absorb
+     Corrosion -- Creeping Ooze
+     Expunge -- Acidic Goo
+600: Toxic Wasteling
+   1: 1562 292 244
+     Ooze Touch -- Absorb
+     Corrosion -- Creeping Ooze
+     Expunge -- Acidic Goo
+601: Viscidus Globule
+   1: 1546 260 289
+     Ooze Touch -- Acid Touch
+     Weakness -- Poison Spit
+     Expunge -- Creeping Ooze
+602: Viscous Horror
+   1: 1546 289 260
+     Ooze Touch -- Absorb
+     Corrosion -- Plagued Blood
+     Expunge -- Evolution
+603: Harmonious Porcupette
+   1: 1546 260 289
+     Scratch -- Claw
+     Celestial Blessing -- Moonfire
+     Hibernate -- Tranquility
+604: Spectral Porcupette
+   1: 1546 260 289
+     Bite -- Powerball
+     Spectral Strike -- Spirit Spikes
+     Illusionary Barrier -- Spectral Spine
+605: Mana Wyrmling
+   1: 1546 289 260
+   2: 1546 273 273
+   3: 1465 289 273
+   4: 1481 276 276
+     Feedback -- Flurry
+     Drain Power -- Amplify Magic
+     Mana Surge -- Deflection
+606: Shimmering Wyrmling
+   1: 1481 276 276
+     Feedback -- Flurry
+     Drain Power -- Amplify Magic
+     Mana Surge -- Deflection
+607: Baneling
+   1: 1384 322 257
+     Bite -- Thrash
+     Centrifugal Hooks -- Adrenal Glands
+     Burrow -- Baneling Burst
+608: Zergling
+   1: 1237 227 390
+     Bite -- Flank
+     Metabolic Boost -- Adrenal Glands
+     Consume -- Zergling Rush
+609: Coilfang Stalker
+   1: 1506 281 273
+   2: 1424 297 273
+   3: 1441 284 276
+     Laser -- Focused Beams
+     Gravity -- Illusionary Barrier
+     Surge of Power -- Amplify Magic
+610: Elekk Plushie
+     Rawr! -- Cute As A Button
+     Nap Time -- Who\'s The Best Elekk In The Whole World?
+     Plushie Rush -- Itchin\' for a Stitchin\'
+611: Enchanted Broom
+   1: 1400 260 325
+     Broom -- Batter
+     Sandstorm -- Sweep
+     Clean-Up -- Wind-Up
+612: Ethereal Soul-Trader
+   1: 1481 276 276
+     Punch -- Beam
+     Soul Ward -- Inner Vision
+     Soulrush -- Life Exchange
+613: Legs
+   1: 1481 276 276
+     Laser -- Pump
+     Surge of Power -- Gravity
+     Focused Beams -- Whirlpool
+614: Mini Mindslayer
+   1: 1400 289 289
+     Eyeblast -- Mana Surge
+     Amplify Magic -- Inner Vision
+     Interrupting Gaze -- Life Exchange
+615: Nordrassil Wisp
+   1: 1400 227 357
+   2: 1546 257 292
+   3: 1546 227 322
+   4: 1465 257 305
+   5: 1465 240 322
+   6: 1481 244 309
+     Beam -- Light
+     Flash -- Arcane Blast
+     Soul Ward -- Arcane Explosion
+616: Spectral Cub
+   1: 1319 305 289
+     Claw -- Rend
+     Evanescence -- Spectral Strike
+     Leap -- Prowl
+617: Spectral Tiger Cub
+   1: 1319 305 289
+     Claw -- Rend
+     Evanescence -- Spectral Strike
+     Leap -- Prowl
+618: Syd the Squid
+     Water Jet -- Tidal Wave
+     Bubble -- Healing Stream
+     Whirlpool -- Cleansing Rain
+619: Trunks
+     When Elekks Fly -- Smash
+     Ethereal -- Moonfire
+     Headbutt -- Avalanche
+620: Blackfuse Bombling
+   1: 1806 276 227
+   2: 1481 341 227
+   3: 1627 305 227
+     Burn -- Zap
+     Bombing Run -- Flame Jet
+     Explode -- Armageddon
+621: Pet Bombling
+   1: 1627 244 289
+     Zap -- Batter
+     Minefield -- Toxic Smoke
+     Screeching Gears -- Explode
+622: Lifelike Mechanical Frostboar
+     Charge -- Missile
+     Rebuild -- Pig Out
+     Decoy -- Headbutt
+623: Lifelike Toad
+   1: 1481 276 276
+     Water Jet -- Tongue Lash
+     Healing Wave -- Cleansing Rain
+     Frog Kiss -- Repair
+624: Tranquil Mechanical Yeti
+   1: 1546 273 273
+     Metal Fist -- Thrash
+     Call Lightning -- Call Blizzard
+     Supercharge -- Ion Cannon
+625: Anodized Robo Cub
+   1: 1887 260 227
+   2: 1709 289 227
+     Bite -- Demolish
+     Repair -- Rebuild
+     Maul -- Supercharge
+626: Cogblade Raptor
+   1: 1319 260 341
+   2: 1384 273 305
+   3: 1400 276 292
+     Bite -- Batter
+     Overtune -- Screech
+     Exposed Wounds -- Repair
+627: De-Weaponized Mechanical Companion
+   1: 1481 244 325
+     Metal Fist -- Thrash
+     Overtune -- Extra Plating
+     Demolish -- Repair
+628: Fluxfire Feline
+   1: 1237 292 325
+   2: 1237 322 289
+     Claw -- Pounce
+     Flux -- Overtune
+     Prowl -- Supercharge
+629: Mechanical Chicken
+   1: 1481 273 289
+     Peck -- Batter
+     Overtune -- Rebuild
+     Supercharge -- Wind-Up
+630: Mechanical Pandaren Dragonling
+   1: 1400 276 309
+     Breath -- Flyby
+     Bombing Run -- Thunderbolt
+     Explode -- Decoy
+631: Mechanical Scorpid
+     Barbed Stinger -- Wind-Up
+     Blinding Poison -- Puncture Wound
+     Black Claw -- Extra Plating
+632: Mechanical Squirrel
+   1: 1546 257 289
+     Metal Fist -- Thrash
+     Overtune -- Extra Plating
+     Wind-Up -- Repair
+633: Mechanopeep
+   1: 1546 273 273
+     Peck -- Rebuild
+     Batter -- Overtune
+     Wind-Up -- Repair
+634: Rabid Nut Varmint 5000
+   1: 1806 244 260
+   2: 1481 309 260
+   3: 1481 244 325
+   4: 1627 273 260
+   5: 1481 273 289
+   6: 1546 273 273
+   7: 1546 257 289
+   8: 1562 260 276
+     Metal Fist -- Thrash
+     Overtune -- Extra Plating
+     Rabid Strike -- Repair
+635: Robo-Chick
+   1: 1806 244 260
+   2: 1481 244 325
+   3: 1627 244 289
+   4: 1481 273 289
+   5: 1546 273 273
+   6: 1562 260 276
+     Peck -- Batter
+     Overtune -- Rebuild
+     Supercharge -- Wind-Up
+636: Rocket Chicken
+   1: 1481 244 325
+     Missile -- Peck
+     Squawk -- Toxic Smoke
+     Extra Plating -- Launch
+637: Ancient Nest Guardian
+     Metal Fist -- Batter
+     Extra Plating -- Entangling Roots
+     Feathered Frenzy -- Wind-Up
+638: Blue Clockwork Rocket Bot
+   1: 1400 260 325
+   2: 1400 289 289
+   3: 1481 276 276
+     Missile -- Batter
+     Toxic Smoke -- Minefield
+     Sticky Grenade -- Launch Rocket
+639: Clock\'em
+   1: 1546 257 289
+     Jab -- Haymaker
+     Overtune -- Counterstrike
+     Kick -- Dodge
+640: Clockwork Gnome
+   1: 1546 257 289
+     Metal Fist -- Railgun
+     Repair -- Blitz
+     Build Turret -- Launch Rocket
+641: Clockwork Rocket Bot
+   1: 1562 260 276
+     Missile -- Batter
+     Toxic Smoke -- Minefield
+     Sticky Grenade -- Launch Rocket
+642: Draenei Micro Defender
+     Metal Fist -- Batter
+     Reflective Shield -- Shield Block
+     Explode -- Ion Cannon
+643: Landro\'s Lil\' XT
+   1: 1465 322 240
+     Zap -- Thrash
+     Repair -- Heartbroken
+     XE-321 Boombot -- Tympanic Tantrum
+644: Lil\' Bling
+   1: 1400 260 325
+     SMCKTHAT.EXE -- Inflation
+     Blingtron Gift Package -- Extra Plating
+     Make it Rain -- Launch Rocket
+645: Lil\' Smoky
+   1: 1627 273 260
+     Missile -- Batter
+     Toxic Smoke -- Minefield
+     Sticky Grenade -- Launch Rocket
+646: Lil\' XT
+   1: 1546 322 227
+     Zap -- Thrash
+     Repair -- Heartbroken
+     XE-321 Boombot -- Tympanic Tantrum
+647: Menagerie Custodian
+   1: 1806 260 244
+   2: 1627 289 244
+   3: 1627 260 273
+     Zap -- Overtune
+     Shock and Awe -- Demolish
+     Lock-On -- Ion Cannon
+648: Mini Thor
+   1: 1806 292 211
+     Missile -- Batter
+     Toxic Smoke -- Minefield
+     Sticky Grenade -- Launch Rocket
+649: Personal World Destroyer
+   1: 1481 309 260
+     Metal Fist -- Thrash
+     Repair -- Supercharge
+     Screeching Gears -- Quake
+650: Pocket Reaver
+   1: 1766 276 236
+   2: 1441 341 236
+   3: 1587 305 236
+   4: 1441 305 265
+     Metal Fist -- Thrash
+     Repair -- Quake
+     Fel Immolate -- Supercharge
+651: Rascal-Bot
+   1: 1465 289 273
+   2: 1465 273 289
+     Phaser -- Plot Twist
+     Lens Flare -- Amber Prison
+     Armageddon -- Reboot
+652: Sky-Bo
+   1: 1400 325 260
+   2: 1400 260 325
+     Flamethrower -- Screeching Gears
+     Sticky Grenade -- Reboot
+     Launch -- Decoy
+653: Son of Animus
+   1: 1400 325 260
+     Metal Fist -- Batter
+     Siphon Anima -- Touch of the Animus
+     Extra Plating -- Interrupting Jolt
+654: Sunreaver Micro-Sentry
+   1: 1400 325 260
+     Laser -- Fel Immolate
+     Extra Plating -- Haywire
+     Call Lightning -- Supercharge
+655: Tiny Harvester
+   1: 1806 244 260
+   2: 1481 309 260
+   3: 1481 244 325
+   4: 1627 273 260
+   5: 1627 244 289
+   6: 1481 273 289
+   7: 1627 257 273
+   8: 1546 273 273
+   9: 1546 257 289
+   10: 1562 260 276
+     Metal Fist -- Thrash
+     Overtune -- Extra Plating
+     Demolish -- Repair
+656: Warbot
+   1: 1400 325 260
+     Missile -- Batter
+     Toxic Smoke -- Minefield
+     Extra Plating -- Launch Rocket
+657: Darkmoon Tonk
+   1: 1627 273 260
+     Missile -- Charge
+     Shock and Awe -- Minefield
+     Lock-On -- Ion Cannon
+658: Darkmoon Zeppelin
+   1: 1546 273 273
+     Missile -- Flyby
+     Bombing Run -- Explode
+     Thunderbolt -- Decoy
+659: Iron Starlette
+   1: 1725 276 244
+   2: 1400 341 244
+   3: 1546 305 244
+   4: 1400 305 273
+   5: 1465 305 257
+     Wind-Up -- Demolish
+     Powerball -- Toxic Smoke
+     Supercharge -- Explode
+660: Pierre
+   1: 1546 257 289
+     Chop -- Frying Pan
+     Stench -- Heat Up
+     High Fiber -- Food Coma
+661: Stonegrinder
+     Screeching Gears -- Woodchipper
+     Thunderbolt -- Supercharge
+     Clean-Up -- Rebuild
+662: Blighted Squirrel
+   1: 1546 289 260
+   2: 1400 289 289
+   3: 1465 289 273
+     Scratch -- Woodchipper
+     Adrenaline Rush -- Crouch
+     Rabid Strike -- Stampede
+663: Blighthawk
+   1: 1725 276 244
+   2: 1546 305 244
+   3: 1400 305 273
+   4: 1481 292 260
+     Infected Claw -- Slicing Wind
+     Consume Corpse -- Ghostly Bite
+     Lift-Off -- Cyclone
+664: Infected Fawn
+   1: 1546 289 257
+   2: 1562 276 260
+     Diseased Bite -- Flurry
+     Adrenaline Rush -- Consume Corpse
+     Siphon Life -- Death and Decay
+665: Infected Squirrel
+   1: 1627 305 227
+   2: 1546 305 240
+     Diseased Bite -- Stampede
+     Rabid Strike -- Creeping Fungus
+     Consume -- Corpse Explosion
+666: Infested Bear Cub
+   1: 1887 260 227
+   2: 1709 289 227
+     Diseased Bite -- Roar
+     Bash -- Hibernate
+     Maul -- Corpse Explosion
+667: Scourged Whelpling
+   1: 1806 276 227
+   2: 1481 305 257
+     Shadowflame -- Tail Sweep
+     Call Darkness -- Death and Decay
+     Plagued Blood -- Dreadful Breath
+668: Fossilized Hatchling
+   1: 1481 305 257
+     Claw -- Bone Bite
+     Ancient Blessing -- Death and Decay
+     Bone Prison -- BONESTORM
+669: Frosty
+   1: 1806 276 227
+     Diseased Bite -- Frost Breath
+     Call Blizzard -- Shriek
+     Ice Tomb -- Blistering Cold
+670: Ghostly Skull
+   1: 1806 276 227
+   2: 1627 305 227
+   3: 1627 289 240
+     Shadow Slash -- Death Coil
+     Ghostly Bite -- Spectral Strike
+     Siphon Life -- Unholy Ascension
+671: Landro\'s Lichling
+   1: 1627 305 227
+     Shadow Slash -- Howling Blast
+     Siphon Life -- Death and Decay
+     Frost Nova -- Curse of Doom
+672: Lil\' K.T.
+   1: 1627 305 227
+     Shadow Slash -- Howling Blast
+     Siphon Life -- Death and Decay
+     Frost Nova -- Curse of Doom
+673: Macabre Marionette
+   1: 1546 289 260
+     Macabre Maraca -- Bone Bite
+     Death and Decay -- Siphon Life
+     Dead Man\'s Party -- Bone Barrage
+674: Cursed Birman
+     Pounce -- Spirit Claws
+     Call Darkness -- Spirit Spikes
+     Devour -- Prowl
+675: Frostwolf Ghostpup
+     Scratch -- Sneak Attack
+     Refuge -- Haunting Song
+     Frolick -- Ghostly Bite
+676: Ghastly Kid
+     Hoof -- Diseased Bite
+     Consume Magic -- Ethereal
+     Ghostly Bite -- Haunt
+677: Lost of Lordaeron
+   1: 1806 276 227
+   2: 1562 292 244
+     Shadow Slash -- Absorb
+     Siphon Life -- Arcane Explosion
+     Bone Prison -- Curse of Doom
+678: Restless Shadeling
+   1: 1806 260 244
+   2: 1627 260 273
+     Shadow Shock -- Arcane Blast
+     Plagued Blood -- Death and Decay
+     Death Coil -- Phase Shift
+679: Spirit Crab
+   1: 1887 292 195
+   2: 1709 292 224
+     Snap -- Amplify Magic
+     Surge -- Whirlpool
+     Shell Shield -- Rot
+680: Widget the Departed
+     Pounce -- Spirit Claws
+     Devour -- Spectral Strike
+     Call Darkness -- Prowl
+681: Fetish Shaman
+   1: 1481 276 276
+     Shadow Slash -- Flame Breath
+     Immolate -- Wild Magic
+     Sear Magic -- Rot
+682: Sen\'jin Fetish
+   1: 1481 309 260
+     Shadow Slash -- Flame Breath
+     Immolate -- Wild Magic
+     Sear Magic -- Rot
+683: Voodoo Figurine
+   1: 1400 289 289
+     Shadow Slash -- Flame Breath
+     Immolate -- Wild Magic
+     Sear Magic -- Rot
+684: Crawling Claw
+   1: 1481 305 257
+     Shadow Slash -- Agony
+     Ancient Blessing -- Death Grip
+     Curse of Doom -- Rot
+685: Creepy Crate
+   1: 1725 260 260
+     Creepy Chomp -- Agony
+     Death Grip -- Curse of Doom
+     Devour -- BONESTORM
+686: Eye of the Legion
+   1: 1481 305 257
+     Shadow Slash -- Eyeblast
+     Agony -- Gravity
+     Soul Ward -- Rot
+687: Fungal Abomination
+   1: 1546 260 289
+     Absorb -- Consume
+     Creeping Fungus -- Leech Seed
+     Spore Shrooms -- Stun Seed
+688: Giant Bone Spider
+   1: 1400 289 289
+     Bone Bite -- Poison Spit
+     Sticky Web -- Siphon Life
+     Leech Life -- Death Grip
+689: Mr. Bigglesworth
+   1: 1400 260 325
+     Claw -- Pounce
+     Ice Barrier -- Frost Nova
+     Ice Tomb -- Howling Blast
+690: Son of Sethe
+     Absorb -- Plagued Blood
+     Hiss -- Touch of the Animus
+     Drain Blood -- Lift-Off
+691: Stitched Pup
+   1: 1546 289 260
+     Diseased Bite -- Flurry
+     Rabid Strike -- Howl
+     Consume Corpse -- Plagued Blood
+692: Unborn Val\'kyr
+   1: 1806 276 227
+   2: 1562 292 244
+     Shadow Slash -- Shadow Shock
+     Siphon Life -- Curse of Doom
+     Haunt -- Unholy Ascension
+693: Vampiric Batling
+   1: 1481 305 257
+     Bite -- Screech
+     Leech Life -- Hawk Eye
+     Reckless Strike -- Nocturnal Strike
+694: Weebomination
+     Cleave -- Diseased Bite
+     Consume Corpse -- Death Grip
+     Corpse Explosion -- Haymaker
+695: Zomstrok
+     Infected Claw -- Creeping Fungus
+     Shell Shield -- Rot
+     Carpnado -- Toxic Skin
