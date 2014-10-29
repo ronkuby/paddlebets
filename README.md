@@ -1,7 +1,9 @@
 paddlebets
 ==========
 The Windows release may not function unless you download and install a dll package from Microsoft:
-http://www.microsoft.com/en-us/download/confirmation.aspx?id=40784
+
+http://www.microsoft.com/en-us/download/confirmation.aspx?id=40784 .
+
 Select the "vcredist_x86.exe" option and the executable should run properly.
 
 Paddlebets is a pet battle simulator, AI player, and back end.  It also includes a rudimentary text-based front end, which allows human against human play and human against computer play.  The display does not show all  important information for playing a pet battle.  Ability descriptions, pet power, damage source information, and ongoing debuff status are all missing from the display.
