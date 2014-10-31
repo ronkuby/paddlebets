@@ -1,5 +1,5 @@
-/****************************************************************************/
-/*  Copyright(C) 2014 Jon Goldstein (ronkuby@brasscube.com)                 *
+/***************************************************************************
+*  Copyright(C) 2014 Jon Goldstein (ronkuby@brasscube.com)                 *
 *                                                                          *
 *  This program is free software : you can redistribute it and / or modify *
 *  it under the terms of the GNU General Public License as published by    *
@@ -13,7 +13,7 @@
 *                                                                          *
 *  You should have received a copy of the GNU General Public License       *
 *  along with this program.If not, see <http://www.gnu.org/licenses/>.     *
-/****************************************************************************/
+****************************************************************************/
 
 #include <stdio.h>
 #include <string.h>
@@ -80,7 +80,7 @@ Io::Io(int argc, char *argv[]) {
       if (depth < 1 || depth > 9) {
          m_needHelp = true;
       }
-      else m_depth = depth;
+      else m_depth = depth + 1;
       if (m_playMode != PE_PM_TWOCOMPS && m_playMode != PE_PM_HUMANCOMP) m_needHelp = true;
    }
    else if (argc == 6) {

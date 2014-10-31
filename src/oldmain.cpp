@@ -1,20 +1,3 @@
-/***************************************************************************
-*  Copyright(C) 2014 Jon Goldstein (ronkuby@brasscube.com)                 *
-*                                                                          *
-*  This program is free software : you can redistribute it and / or modify *
-*  it under the terms of the GNU General Public License as published by    *
-*  the Free Software Foundation, either version 3 of the License, or       *
-*  (at your option) any later version.                                     *
-*                                                                          *
-*  This program is distributed in the hope that it will be useful,         *
-*  but WITHOUT ANY WARRANTY; without even the implied warranty of          *
-*  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.See the             *
-*  GNU General Public License for more details.                            *
-*                                                                          *
-*  You should have received a copy of the GNU General Public License       *
-*  along with this program.If not, see <http://www.gnu.org/licenses/>.     *
-****************************************************************************/
-
 #include <stdio.h>
 #include <conio.h>
 #include <cstdlib>
@@ -40,12 +23,8 @@ void play(Battle &battle, const int &depth, char *filename);
 bool executeProp(Battle &mainBattle, const vector<int> &move);
 
 int regression(Petinfo &pets);
-int pick(vector<double> *prob);
 
-PE_SIDE twoHumans(Battle &battle);
-PE_SIDE humanComp(Battle &battle, const int &maxDepth);
-int compComp(Petinfo &pets, PE_TEAM_SELECTION teamA, PE_TEAM_SELECTION teamB, const int &iters, const int &maxDepth);
-
+#define TEAM 1
 #define SEED 1
 
 int main(int argc, char *argv[]) {
@@ -57,33 +36,72 @@ int main(int argc, char *argv[]) {
    }
 
    Petinfo pets(args.infoFile(), args.dump()); // load pets
-
    pets.checkAbilities();
 #ifdef SEED
    int seed = static_cast<int>(time(0));
    srand(seed);
 #endif
-
+   srand(0);
    // set up team
    PE_TEAM_SELECTION teamA, teamB;
+
+   exit(1);
+   if (true) {
+      return regression(pets);
+   }
+
+   for (int pet = PE_PET1; pet < PE_TEAM_SIZE; pet++) {
+      for (teamA.pet[pet].petNumber = randInt(pets.numberPets()); !pets.numberBreeds(teamA.pet[pet].petNumber);) teamA.pet[pet].petNumber = randInt(pets.numberPets());
+      //teamA.pet[0].petNumber = MAX_PETS - 1;
+      teamA.pet[pet].breedNumber = randInt(pets.numberBreeds(teamA.pet[pet].petNumber));
+      for (teamB.pet[pet].petNumber = randInt(pets.numberPets()); !pets.numberBreeds(teamB.pet[pet].petNumber);) teamB.pet[pet].petNumber = randInt(pets.numberPets());
+      teamB.pet[pet].breedNumber = randInt(pets.numberBreeds(teamB.pet[pet].petNumber));
+      for (int move = PE_SLOT1; move < PE_ABILITIES; move++) {
+         teamA.pet[pet].abilitySelection[move] = randInt(PE_SELECTIONS);
+         teamB.pet[pet].abilitySelection[move] = randInt(PE_SELECTIONS);
+      }
+   }
+
+#ifdef TEAM 
+   Battle mainBattle(pets, teamA, teamB);
+#else
+   Battle mainBattle(pets, teamB, teamA);
+#endif
+   play(mainBattle, PE_INFINITE, "C:\\code\\bp\\x64\\Release\\doodle.txt");
+
+   mainBattle.dumpSituation();
+   while (mainBattle.simpleEval() > 0 && mainBattle.simpleEval() < maxEval) {
+      vector<vector<int> > move;
+      vector<vector<double> > x;
+      for (int depth = 1; depth < 6; depth++) {
+         move.clear();
+         x.clear();
+         double value = SMAB(mainBattle, move, x, depth);
+         printf("  depth %d nodes %8d value %4.0f time %9.3f\n", depth, mainBattle.nodes(), value, mainBattle.time());
+         if (value == 0 || value == maxEval) break;
+      }
+      int bestRow = 0, bestCol = 0;
+	  for (uint32_t row = 1; row < x[PE_SIDEA].size(); row++) {
+         if (x[PE_SIDEA][row] > x[PE_SIDEA][bestRow]) bestRow = row;
+      }
+	  for (uint32_t col = 1; col < x[PE_SIDEB].size(); col++) {
+         if (x[PE_SIDEB][col] > x[PE_SIDEB][bestCol]) bestCol = col;
+      }
+
+      vector<int> theMove(PE_SIDES, 0);
+      theMove[0] = move[PE_SIDEA][bestRow];
+      theMove[1] = move[PE_SIDEB][bestCol];
+      //executeML(mainBattle, theMove);
+      bool gameOver = executeProp(mainBattle, theMove);
+      printf("turn %d best = %f %f and %d %d eval = %4d\n", mainBattle.turn(), x[PE_SIDEA][bestRow], x[PE_SIDEB][bestCol], move[PE_SIDEA][bestRow], move[PE_SIDEB][bestCol], mainBattle.simpleEval());
+      //break;
+      //if (mainBattle.turn() == 4) break;
+      if (gameOver) break;
+   }
    PE_SIDE winner;
 
-   if (!args.copyTeams(pets, teamA, teamB)) {
-      printf("invalid team entry\n");
-      exit(-1);
-   }
-
-   Battle mainBattle(pets, teamA, teamB, PE_VERBOSE_ON);
-
-   if (args.playMode() == PE_PM_TWOHUMANS) {
-      winner = twoHumans(mainBattle);
-   }
-   else if (args.playMode() == PE_PM_HUMANCOMP) {
-      winner = humanComp(mainBattle, args.depth());
-   }
-   else if (args.playMode() == PE_PM_TWOCOMPS) {
-      winner = compComp(pets, teamA, teamB, args.games(), args.depth());
-   }
+   mainBattle.gameOver(winner);
+   printf("Winner = %d\n", winner);
 
    return 0;
 }
@@ -340,6 +358,16 @@ double SMAB(Battle &mainBattle, vector<vector<int> > &move, vector<vector<double
 		 for (uint32_t bmove = 0; bmove < move[PE_SIDEB].size(); bmove++) x[PE_SIDEB].push_back(1.0 / move[PE_SIDEB].size());
       }
    }
+   /*if ((depth == 4 && poop1) || (depth == 3 && poop2) || poop3) {
+      for (int amove = 0; amove < move[PE_SIDEA].size(); amove++) printf("0%d: %d %d %f\r\n", depth, amove, move[PE_SIDEA][amove], x[PE_SIDEA][amove]);
+      for (int bmove = 0; bmove < move[PE_SIDEB].size(); bmove++) printf("1%d: %d %d %f\r\n", depth, bmove, move[PE_SIDEB][bmove], x[PE_SIDEB][bmove]);
+      V.dump();
+   }*/
+   /*if (depth == 4) {
+      for (int amove = 0; amove < move[PE_SIDEA].size(); amove++) printf("0%d: %d %d %f\r\n", depth, amove, move[PE_SIDEA][amove], x[PE_SIDEA][amove]);
+      for (int bmove = 0; bmove < move[PE_SIDEB].size(); bmove++) printf("1%d: %d %d %f\r\n", depth, bmove, move[PE_SIDEB][bmove], x[PE_SIDEB][bmove]);
+      V.dump();
+   }*/
 
    mainBattle.decTurn();
 
@@ -435,18 +463,47 @@ double getPESMAB(Battle &mainBattle, const PE_SIDE firstSide, vector<vector<int>
 
 }
 
-int pick(vector<double> *prob) {
-   double accum = 0.0;
-   double roll = static_cast<double>(randInt(maxEval)) / static_cast<double>(maxEval);
-   uint32_t branch;
+/*void executeML(Battle &mainBattle, const vector<int> &move) {
+   bool switchOnly;
+   vector<PE_SV> speed(PE_SIDES, 0);
+   vector<vector<int> > movesAgain;
+   int firstSide, secondSide;
+   int mlBranch;
+   vector<Turn> turn;
+   turn.resize(PE_SIDES);
 
-   for (branch = 0; branch < prob->size(); branch++) {
-      accum += (*prob)[branch];
-      if (accum > roll) break;
+   mainBattle.incTurn();
+   mainBattle.getMoves(movesAgain, switchOnly);
+   if (switchOnly) {
+      mainBattle.doSimpleMove(PE_SIDEA, move[PE_SIDEA]);
+      mainBattle.doSimpleMove(PE_SIDEB, move[PE_SIDEB]);
+   }
+   else {
+      mainBattle.getSpeeds(move[PE_SIDEA], move[PE_SIDEB], speed);
+      if (speed[PE_SIDEA] >= speed[PE_SIDEB]) {
+         firstSide = PE_SIDEA;
+         secondSide = PE_SIDEB;
+      }
+      else {
+         firstSide = PE_SIDEB;
+         secondSide = PE_SIDEA;
+      }
+      mainBattle.getBranching(firstSide, move[firstSide], turn[firstSide]);
+      mlBranch = 0;
+      for (int branch = 1; branch < turn[firstSide].branches(); branch++) {
+         if (turn[firstSide].prob(branch) > turn[firstSide].prob(mlBranch)) mlBranch = branch;
+      }
+      mainBattle.doMove(firstSide, move[firstSide], turn[firstSide].type(mlBranch));
+      mainBattle.getBranching(secondSide, move[secondSide], turn[secondSide]);
+      mlBranch = 0;
+      for (int branch = 1; branch < turn[secondSide].branches(); branch++) {
+         if (turn[secondSide].prob(branch) > turn[secondSide].prob(mlBranch)) mlBranch = branch;
+      }
+      mainBattle.doMove(secondSide, move[secondSide], turn[secondSide].type(mlBranch));
+      mainBattle.finishTurn();
    }
 
-   return branch;
-}
+}*/
 
 bool executeProp(Battle &mainBattle, const vector<int> &move) {
    bool switchOnly;
@@ -455,7 +512,7 @@ bool executeProp(Battle &mainBattle, const vector<int> &move) {
    int32_t firstSide, secondSide, branch;
    vector<Turn> turn;
    turn.resize(PE_SIDES + 1);
-   vector<double> split(2, 0.5);
+   double roll, accum;
    PE_SIDE winner;
 
    mainBattle.incTurn();
@@ -466,10 +523,7 @@ bool executeProp(Battle &mainBattle, const vector<int> &move) {
    }
    else {
       mainBattle.getSpeeds(move[PE_SIDEA], move[PE_SIDEB], speed);
-      if (speed[PE_SIDEA] == speed[PE_SIDEB] && speed[PE_SIDEA] != PE_INFINITE && speed[PE_SIDEA] != 0) {
-         firstSide = pick(&split);
-      }
-      else if (speed[PE_SIDEA] > speed[PE_SIDEB]) {
+      if (speed[PE_SIDEA] >= speed[PE_SIDEB]) {
          firstSide = PE_SIDEA;
          secondSide = PE_SIDEB;
       }
@@ -478,17 +532,31 @@ bool executeProp(Battle &mainBattle, const vector<int> &move) {
          secondSide = PE_SIDEA;
       }
       mainBattle.getBranching(firstSide, move[firstSide], turn[firstSide]);
-      branch = pick(turn[firstSide].probs());
+      roll = static_cast<double>(randInt(10000))/10000.0;
+      accum = 0.0;
+      for (branch = 0; branch < turn[firstSide].branches(); branch++) {
+         accum += turn[firstSide].prob(branch);
+         if (accum > roll) break;
+      }
       mainBattle.doMove(firstSide, move[firstSide], turn[firstSide].type(branch));
       if (mainBattle.gameOver(winner)) return true;
 
       mainBattle.getBranching(secondSide, move[secondSide], turn[secondSide]);
-      branch = pick(turn[secondSide].probs());
+      roll = static_cast<double>(randInt(10000))/10000.0;
+      accum = 0.0;
+      for (branch = 0; branch < turn[secondSide].branches(); branch++) {
+         accum += turn[secondSide].prob(branch);
+         if (accum > roll) break;
+      }
       mainBattle.doMove(secondSide, move[secondSide], turn[secondSide].type(branch));
       if (mainBattle.gameOver(winner)) return true;
       mainBattle.getBranchingEndturn(turn[PE_SIDES]);
-
-      branch = pick(turn[PE_SIDES].probs());
+      roll = static_cast<double>(randInt(10000))/10000.0;
+      accum = 0.0;
+      for (branch = 0; branch < turn[PE_SIDES].branches(); branch++) {
+         accum += turn[PE_SIDES].prob(branch);
+         if (accum > roll) break;
+      }
       mainBattle.finishTurn(turn[PE_SIDES], turn[PE_SIDES].type(branch));
       if (mainBattle.gameOver(winner)) return true;
    }
@@ -514,7 +582,7 @@ void psl(vector<int> &move, const PE_ABILITY &comp, char *st) {
    if (m == move.size()) printf("  ");
 }
 
-void printMoves(vector<vector<int> > &move, bool no2) {
+void printMoves(vector<vector<int> > &move) {
 
    printf("    ");
    psl(move[PE_SIDEA], PE_SLOT1, "A1");
@@ -531,25 +599,20 @@ void printMoves(vector<vector<int> > &move, bool no2) {
    printf("    ");
    psl(move[PE_SIDEA], PE_PASS, "P7");
    printf("          ");
-   if (!no2) {
-      psl(move[PE_SIDEB], PE_SLOT1, "A1");
-      printf("    ");
-      psl(move[PE_SIDEB], PE_SLOT2, "A2");
-      printf("    ");
-      psl(move[PE_SIDEB], PE_SLOT3, "A3");
-      printf("    ");
-      psl(move[PE_SIDEB], PE_SWITCH1, "S4");
-      printf("    ");
-      psl(move[PE_SIDEB], PE_SWITCH2, "S5");
-      printf("    ");
-      psl(move[PE_SIDEB], PE_SWITCH3, "S6");
-      printf("    ");
-      psl(move[PE_SIDEB], PE_PASS, "P7");
-      printf("\r\n");
-   }
-   else {
-      printf("  Calculating Move .......");
-   }
+   psl(move[PE_SIDEB], PE_SLOT1, "A1");
+   printf("    ");
+   psl(move[PE_SIDEB], PE_SLOT2, "A2");
+   printf("    ");
+   psl(move[PE_SIDEB], PE_SLOT3, "A3");
+   printf("    ");
+   psl(move[PE_SIDEB], PE_SWITCH1, "S4");
+   printf("    ");
+   psl(move[PE_SIDEB], PE_SWITCH2, "S5");
+   printf("    ");
+   psl(move[PE_SIDEB], PE_SWITCH3, "S6");
+   printf("    ");
+   psl(move[PE_SIDEB], PE_PASS, "P7");
+   printf("\r\n");
 
 }
 
@@ -614,33 +677,6 @@ int *getMoves(vector<vector<int> > &move, FILE **ins) {
    return s;
 }
 
-int getHalfMoves(vector<vector<int> > &move, FILE **ins) {
-   int s;
-   char input[2];
-   uint32_t k;
-
-   for (uint32_t j = 0; j < PE_SIDEB; j++) {
-      if (move[j].size() == 1) {
-         s = move[j][0];
-         psp(s);
-         continue;
-      }
-      while (true) {
-         input[j] = nextChar(ins);
-         s = input[j] - '1';
-         if (s >= PE_ABILITIES) s++;
-         for (k = 0; k < move[j].size(); k++) {
-            if (s == move[j][k]) break;
-         }
-         if (k < move[j].size()) break;
-      }
-      psp(s);
-   }
-   printf("\r\n");
-
-   return s;
-}
-
 int getBranch(vector<Turn> &turn, int side, FILE **ins) {
    int32_t branch;
 
@@ -658,183 +694,6 @@ int getBranch(vector<Turn> &turn, int side, FILE **ins) {
    printf("selected %d\r\n", branch + 1);
 
    return branch; 
-}
-
-int compComp(Petinfo &pets, PE_TEAM_SELECTION teamA, PE_TEAM_SELECTION teamB, const int &iters, const int &maxDepth) {
-   PE_SIDE winner;
-   int wins = 0;
-   double totalTime = 0.0;
-
-   for (int iter = 0; iter < iters; iter++) {
-      Battle mainBattle(pets, teamA, teamB, PE_VERBOSE_OFF);
-
-      mainBattle.dumpSituation();
-      while (mainBattle.simpleEval() > 0 && mainBattle.simpleEval() < maxEval) {
-         vector<vector<int> > move;
-         vector<vector<double> > x;
-         for (int depth = 1; depth < maxDepth; depth++) {
-            move.clear();
-            x.clear();
-            double value = SMAB(mainBattle, move, x, depth);
-            if (value == 0 || value == maxEval) break;
-         }
-         vector<int> theMove(PE_SIDES, 0);
-         theMove[0] = move[PE_SIDEA][pick(&x[PE_SIDEA])];
-         theMove[1] = move[PE_SIDEB][pick(&x[PE_SIDEB])];
-         bool gameOver = executeProp(mainBattle, theMove);
-         printf("turn %d eval = %4d\n", mainBattle.turn(), mainBattle.simpleEval());
-         if (gameOver) break;
-      }
-      mainBattle.gameOver(winner);
-      totalTime += mainBattle.time();
-
-      if (winner == PE_SIDEA) wins++;
-   }
-
-   printf("Side 1 wins %d/%d after %f seconds\r\n", wins, iters, totalTime);
-   
-   return wins;
-}
-
-
-PE_SIDE humanComp(Battle &battle, const int &maxDepth) {
-   bool switchOnly;
-   vector<vector<int> > move;
-   vector<vector<double> > x;
-   vector<PE_SV> speed(PE_SIDES, 0);
-   vector<vector<int32_t> > value;
-   vector<double> split(2, 0.5);
-   int s[2];
-   PE_SIDE firstSide;
-   uint32_t branch[PE_SIDES + 1];
-   FILE *inStream = (FILE *)NULL;
-   PE_SIDE winner;
-
-   while (true) {
-      // get moves from user
-      battle.dumpSituation();
-      move.clear();
-      battle.incTurn();
-      battle.getMoves(move, switchOnly);
-      printMoves(move, true);
-
-      if (move[PE_SIDEB].size() > 1) {
-         vector<vector<double> > x;
-         vector<vector<int> > emove;
-
-         battle.setVerbosity(PE_VERBOSE_OFF);
-         for (int depth = 1; depth < maxDepth; depth++) {
-            emove.clear();
-            x.clear();
-            double value = SMAB(battle, emove, x, depth);
-            if (value == 0 || value == maxEval) break;
-         }
-         s[1] = move[PE_SIDEB][pick(&x[PE_SIDEB])];
-      }
-      else {
-         s[1] = move[PE_SIDEB][0];
-      }
-      printf(" Ready!\r\n");
-      battle.setVerbosity(PE_VERBOSE_ON);
-      s[0] = getHalfMoves(move, &inStream);
-      if (switchOnly) {
-         battle.doSimpleMove(PE_SIDEA, s[PE_SIDEA]);
-         battle.doSimpleMove(PE_SIDEB, s[PE_SIDEB]);
-      }
-      else {
-         battle.getSpeeds(s[PE_SIDEA], s[PE_SIDEB], speed);
-         // check whether we have to split the moves
-         if (speed[PE_SIDEA] == speed[PE_SIDEB] && speed[PE_SIDEA] != PE_INFINITE && speed[PE_SIDEA] != 0) {
-            firstSide = pick(&split);
-         }
-         else if (speed[PE_SIDEA] >= speed[PE_SIDEB]) {
-            firstSide = PE_SIDEA;
-         }
-         else {
-            firstSide = PE_SIDEB;
-         }
-
-         PE_SIDE secondSide = firstSide ^ 1;
-         vector<Turn> turn;
-         turn.resize(PE_SIDES + 1);
-
-         battle.getBranching(firstSide, s[firstSide], turn[firstSide]);
-         branch[firstSide] = pick(turn[firstSide].probs());
-         battle.doMove(firstSide, s[firstSide], turn[firstSide].type(branch[firstSide]));
-         battle.getBranching(secondSide, s[secondSide], turn[secondSide]);
-         branch[secondSide] = pick(turn[secondSide].probs());
-         battle.doMove(secondSide, s[secondSide], turn[secondSide].type(branch[secondSide]));
-         battle.getBranchingEndturn(turn[PE_SIDES]);
-         branch[PE_SIDES] = pick(turn[PE_SIDES].probs());
-         battle.finishTurn(turn[PE_SIDES], turn[PE_SIDES].type(branch[PE_SIDES]));
-      }
-      if (battle.gameOver(winner)) break;
-   }
-
-   printf("Winner is side %d.\r\n", winner + 1);
-
-   return winner;
-}
-
-PE_SIDE twoHumans(Battle &battle) {
-   bool switchOnly;
-   vector<vector<int> > move;
-   vector<PE_SV> speed(PE_SIDES, 0);
-   vector<vector<int32_t> > value;
-   vector<double> split(2, 0.5);
-   int *s;
-   PE_SIDE firstSide;
-   uint32_t branch[PE_SIDES + 1];
-   FILE *inStream = (FILE *)NULL;
-   PE_SIDE winner;
-
-   battle.setVerbosity(PE_VERBOSE_ON);
-   while (true) {
-      // get moves from user
-      battle.dumpSituation();
-      move.clear();
-      battle.incTurn();
-      battle.getMoves(move, switchOnly);
-      printMoves(move, false);
-      s = getMoves(move, &inStream);
-      if (switchOnly) {
-         battle.doSimpleMove(PE_SIDEA, s[PE_SIDEA]);
-         battle.doSimpleMove(PE_SIDEB, s[PE_SIDEB]);
-      }
-      else {
-         battle.getSpeeds(s[PE_SIDEA], s[PE_SIDEB], speed);
-
-         // check whether we have to split the moves
-         if (speed[PE_SIDEA] == speed[PE_SIDEB] && speed[PE_SIDEA] != PE_INFINITE && speed[PE_SIDEA] != 0) {
-            firstSide = pick(&split);
-         }
-         else if (speed[PE_SIDEA] >= speed[PE_SIDEB]) {
-            firstSide = PE_SIDEA;
-         }
-         else {
-            firstSide = PE_SIDEB;
-         }
-
-         PE_SIDE secondSide = firstSide ^ 1;
-         vector<Turn> turn;
-         turn.resize(PE_SIDES + 1);
-
-         battle.getBranching(firstSide, s[firstSide], turn[firstSide]);
-         branch[firstSide] = pick(turn[firstSide].probs());
-         battle.doMove(firstSide, s[firstSide], turn[firstSide].type(branch[firstSide]));
-         battle.getBranching(secondSide, s[secondSide], turn[secondSide]);
-         branch[secondSide] = pick(turn[secondSide].probs());
-
-         battle.doMove(secondSide, s[secondSide], turn[secondSide].type(branch[secondSide]));
-         battle.getBranchingEndturn(turn[PE_SIDES]);
-         branch[PE_SIDES] = pick(turn[PE_SIDES].probs());
-         battle.finishTurn(turn[PE_SIDES], turn[PE_SIDES].type(branch[PE_SIDES]));
-      }
-      printf("CURRENT VALUE: %d\r\n", battle.simpleEval());
-      if (battle.gameOver(winner)) break;
-   }
-
-   return winner;
 }
 
 void play(Battle &battle, const int &depth, char *filename) {
@@ -859,7 +718,7 @@ void play(Battle &battle, const int &depth, char *filename) {
       move.clear();
       battle.incTurn();
       battle.getMoves(move, switchOnly);
-      printMoves(move, false);
+      printMoves(move);
       s = getMoves(move, &inStream);
       if (switchOnly) {
          battle.doSimpleMove(PE_SIDEA, s[PE_SIDEA]);
@@ -913,6 +772,7 @@ int regression(Petinfo &pets) {
    FILE *log;
    int seed;
 
+
    fopen_s(&log, "log.txt", "w");
    for (int iter = 0; iter < 10000; iter++) {
       for (int pet = PE_PET1; pet < PE_TEAM_SIZE; pet++) {
@@ -925,16 +785,16 @@ int regression(Petinfo &pets) {
             teamB.pet[pet].abilitySelection[move] = randInt(PE_SELECTIONS);
          }
       }
-      /*teamA.pet[0].petNumber = 594, teamA.pet[1].petNumber = 440, teamA.pet[2].petNumber = 607;
-      teamA.pet[0].breedNumber = 2, teamA.pet[1].breedNumber = 1, teamA.pet[2].breedNumber = 0;
-      teamA.pet[0].abilitySelection[0] = 0, teamA.pet[0].abilitySelection[1] = 1, teamA.pet[0].abilitySelection[2] = 1;
+      /*teamA.pet[0].petNumber = 435, teamA.pet[1].petNumber = 480, teamA.pet[2].petNumber = 619;
+      teamA.pet[0].breedNumber = 0, teamA.pet[1].breedNumber = 0, teamA.pet[2].breedNumber = 2;
+      teamA.pet[0].abilitySelection[0] = 0, teamA.pet[0].abilitySelection[1] = 0, teamA.pet[0].abilitySelection[2] = 1;
       teamA.pet[1].abilitySelection[0] = 1, teamA.pet[1].abilitySelection[1] = 1, teamA.pet[1].abilitySelection[2] = 0;
-      teamA.pet[2].abilitySelection[0] = 1, teamA.pet[2].abilitySelection[1] = 1, teamA.pet[2].abilitySelection[2] = 0;
-      teamB.pet[0].petNumber = 589, teamB.pet[1].petNumber = 23, teamB.pet[2].petNumber = 219;
-      teamB.pet[0].breedNumber = 0, teamB.pet[1].breedNumber = 0, teamB.pet[2].breedNumber = 0;
-      teamB.pet[0].abilitySelection[0] = 0, teamB.pet[0].abilitySelection[1] = 1, teamB.pet[0].abilitySelection[2] = 1;
-      teamB.pet[1].abilitySelection[0] = 1, teamB.pet[1].abilitySelection[1] = 1, teamB.pet[1].abilitySelection[2] = 0;
-      teamB.pet[2].abilitySelection[0] = 0, teamB.pet[2].abilitySelection[1] = 1, teamB.pet[2].abilitySelection[2] = 1;*/
+      teamA.pet[2].abilitySelection[0] = 0, teamA.pet[2].abilitySelection[1] = 1, teamA.pet[2].abilitySelection[2] = 0;
+      teamB.pet[0].petNumber = 27, teamB.pet[1].petNumber = 379, teamB.pet[2].petNumber = 364;
+      teamB.pet[0].breedNumber = 1, teamB.pet[1].breedNumber = 0, teamB.pet[2].breedNumber = 0;
+      teamB.pet[0].abilitySelection[0] = 1, teamB.pet[0].abilitySelection[1] = 1, teamB.pet[0].abilitySelection[2] = 0;
+      teamB.pet[1].abilitySelection[0] = 0, teamB.pet[1].abilitySelection[1] = 1, teamB.pet[1].abilitySelection[2] = 1;
+      teamB.pet[2].abilitySelection[0] = 0, teamB.pet[2].abilitySelection[1] = 0, teamB.pet[2].abilitySelection[2] = 1;*/
 
       seed = static_cast<int>(time(0));
       fprintf(log, "%d %d\n", iter, seed);
@@ -953,8 +813,8 @@ int regression(Petinfo &pets) {
       fflush(log);
 
       srand(seed);
-      //srand(1414305133);
-      Battle mainBattle(pets, teamA, teamB, PE_VERBOSE_REQ);
+      //srand(1414261701);
+      Battle mainBattle(pets, teamA, teamB);
 
       mainBattle.dumpSituation();
       while (mainBattle.simpleEval() > 0 && mainBattle.simpleEval() < maxEval) {

@@ -1,5 +1,5 @@
-/****************************************************************************/
-/*  Copyright(C) 2014 Jon Goldstein (ronkuby@brasscube.com)                 *
+/***************************************************************************
+*  Copyright(C) 2014 Jon Goldstein (ronkuby@brasscube.com)                 *
 *                                                                          *
 *  This program is free software : you can redistribute it and / or modify *
 *  it under the terms of the GNU General Public License as published by    *
@@ -13,7 +13,7 @@
 *                                                                          *
 *  You should have received a copy of the GNU General Public License       *
 *  along with this program.If not, see <http://www.gnu.org/licenses/>.     *
-/****************************************************************************/
+****************************************************************************/
 
 #ifndef TVECTOR_H
 #define TVECTOR_H
@@ -114,6 +114,8 @@ public:
       assert(m_track.size() == 0);
    }
 #endif
+
+   bool empty() { return !m_debuff.size(); }
 
 private:
    vector<Debuff>    m_debuff;

@@ -1,5 +1,5 @@
-/****************************************************************************/
-/*  Copyright(C) 2014 Jon Goldstein (ronkuby@brasscube.com)                 *
+/***************************************************************************
+*  Copyright(C) 2014 Jon Goldstein (ronkuby@brasscube.com)                 *
 *                                                                          *
 *  This program is free software : you can redistribute it and / or modify *
 *  it under the terms of the GNU General Public License as published by    *
@@ -13,7 +13,7 @@
 *                                                                          *
 *  You should have received a copy of the GNU General Public License       *
 *  along with this program.If not, see <http://www.gnu.org/licenses/>.     *
-/****************************************************************************/
+****************************************************************************/
 
 #include <stdint.h>
 #include <vector>
@@ -164,41 +164,51 @@ PE_ERROR State::activate(const PE_SIDE side, const int pet) {
    if (m_health[side][pet] <= 0) {
       return PE_OK;
    }
+   Tvector *dbl;
+
    // activate switch buffs/debuffs
-   Tvector *dbl = &m_debuff[PE_DB_MOBILITY][side][from];
-   for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
-      Debuff *db = dbl->on(track);
-      if (db->subType() == PE_DB_MOBILITY_SANCTIFIED_GROUND) {
-         debuffValues.push_back(static_cast<int>(PE_CELESTIAL_BLESSING*maxEval));
-         this->pushDebuff(side, pet, PE_DB_DAMAGED, Debuff(PE_DB_DAMAGED_CELESTIAL_BLESSING, PE_THREE_ROUNDS, false, side, pet, PE_IB_NONE, debuffValues));
-         removeDebuff(side, from, static_cast<PE_DB_TYPE>(PE_DB_MOBILITY), db->subType(), track);
+   if (!m_debuff[PE_DB_MOBILITY][side][from].empty()) {
+      dbl = &m_debuff[PE_DB_MOBILITY][side][from];
+      for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
+         Debuff *db = dbl->on(track);
+         if (db->subType() == PE_DB_MOBILITY_SANCTIFIED_GROUND) {
+            debuffValues.push_back(static_cast<int>(PE_CELESTIAL_BLESSING*maxEval));
+            this->pushDebuff(side, pet, PE_DB_DAMAGED, Debuff(PE_DB_DAMAGED_CELESTIAL_BLESSING, PE_THREE_ROUNDS, false, side, pet, PE_IB_NONE, debuffValues));
+            removeDebuff(side, from, static_cast<PE_DB_TYPE>(PE_DB_MOBILITY), db->subType(), track);
+         }
       }
    }
-   dbl = &m_debuff[PE_DB_OVERTIME][side][from];
-   for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
-      Debuff *db = dbl->on(track);
-      if (db->subType() == PE_DB_OVERTIME_FROSTBITE) {
-         removeDebuff(side, from, static_cast<PE_DB_TYPE>(PE_DB_OVERTIME), db->subType(), track);
+   if (!m_debuff[PE_DB_OVERTIME][side][from].empty()) {
+      dbl = &m_debuff[PE_DB_OVERTIME][side][from];
+      for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
+         Debuff *db = dbl->on(track);
+         if (db->subType() == PE_DB_OVERTIME_FROSTBITE) {
+            removeDebuff(side, from, static_cast<PE_DB_TYPE>(PE_DB_OVERTIME), db->subType(), track);
+         }
       }
    }
 
    // copy sticky debuffs
    for (int debuff = 0; debuff < PE_DB_TYPES; debuff++) {
-      dbl = &m_debuff[debuff][side][from];
-      for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
-         Debuff *db = dbl->on(track);
-         if (db->stick()) {
-            pushDebuff(side, pet, static_cast<PE_DB_TYPE>(debuff), Debuff(*db));
+      if (!m_debuff[debuff][side][from].empty()) {
+         dbl = &m_debuff[debuff][side][from];
+         for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
+            Debuff *db = dbl->on(track);
+            if (db->stick()) {
+               pushDebuff(side, pet, static_cast<PE_DB_TYPE>(debuff), Debuff(*db));
+            }
          }
       }
    }
    // delete sticky debuffs
    for (int debuff = 0; debuff < PE_DB_TYPES; debuff++) {
-      dbl = &m_debuff[debuff][side][from];
-      for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
-         Debuff *db = dbl->on(track);
-         if (db->stick()) {
-            removeDebuff(side, from, static_cast<PE_DB_TYPE>(debuff), db->subType(), track);
+      if (!m_debuff[debuff][side][from].empty()) {
+         dbl = &m_debuff[debuff][side][from];
+         for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
+            Debuff *db = dbl->on(track);
+            if (db->stick()) {
+               removeDebuff(side, from, static_cast<PE_DB_TYPE>(debuff), db->subType(), track);
+            }
          }
       }
    }
@@ -213,12 +223,14 @@ PE_ERROR State::activate(const PE_SIDE side, const int pet) {
    m_lastActive[side] = pet;
 
    // activate switch triggers/traps
-   dbl = &m_debuff[PE_DB_MOBILITY][side][pet];
-   for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
-      Debuff *db = dbl->on(track);
-      if (db->subType() > PE_DB_MOBILITY_SWITCH_START && db->subType() < PE_DB_MOBILITY_SWITCH_END) {
-         this->doHit(side, pet, static_cast<PE_FAMILY>(db->value(0)), db->value(1), PE_NO_ACTIVE, false, true, false, false);
-         removeDebuff(side, pet, static_cast<PE_DB_TYPE>(PE_DB_MOBILITY), db->subType(), track);
+   if (!m_debuff[PE_DB_MOBILITY][side][pet].empty()) {
+      dbl = &m_debuff[PE_DB_MOBILITY][side][pet];
+      for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
+         Debuff *db = dbl->on(track);
+         if (db->subType() > PE_DB_MOBILITY_SWITCH_START && db->subType() < PE_DB_MOBILITY_SWITCH_END) {
+            this->doHit(side, pet, static_cast<PE_FAMILY>(db->value(0)), db->value(1), PE_NO_ACTIVE, false, true, false, false);
+            removeDebuff(side, pet, static_cast<PE_DB_TYPE>(PE_DB_MOBILITY), db->subType(), track);
+         }
       }
    }
 
@@ -251,13 +263,15 @@ PE_FAMILY State::petFamily(const PE_SIDE side, const PE_PET_NUMBER pet, const PE
    PE_FAMILY family = m_family[side][pet];
 
    if (purpose == PE_FP_DAMAGE_TAKEN) {
-      Tvector *dbl = &m_debuff[PE_DB_DAMAGED][side][pet];
-      for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
-         Debuff *db = dbl->on(track);
-         if (db->subType() == PE_DB_DAMAGED_UNDEAD_MARK) {
-            family = PE_FAMILY_UNDEAD;
-            dbl->end(track);
-            break;
+      if (!m_debuff[PE_DB_DAMAGED][side][pet].empty()) {
+         Tvector *dbl = &m_debuff[PE_DB_DAMAGED][side][pet];
+         for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
+            Debuff *db = dbl->on(track);
+            if (db->subType() == PE_DB_DAMAGED_UNDEAD_MARK) {
+               family = PE_FAMILY_UNDEAD;
+               dbl->end(track);
+               break;
+            }
          }
       }
 
@@ -281,23 +295,28 @@ PE_SV State::lastHit(const PE_SIDE side) {
 PE_SV State::speed(const PE_SIDE side) {
    PE_SV baseSpeed = m_speed[side][m_activePet[side]];
    double modSpeed = 0;
+   Tvector *dbl;
 
-   Tvector *dbl = &m_debuff[PE_DB_MOBILITY][side][m_activePet[side]];
-   for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
-      Debuff *db = dbl->on(track);
-      if (db->subType() > PE_DB_MOBILITY_SPEED_START && db->subType() < PE_DB_MOBILITY_SPEED_END) {
-         modSpeed += static_cast<double>(db->value(0))/maxEval;
+   if (!m_debuff[PE_DB_MOBILITY][side][m_activePet[side]].empty()) {
+      dbl = &m_debuff[PE_DB_MOBILITY][side][m_activePet[side]];
+      for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
+         Debuff *db = dbl->on(track);
+         if (db->subType() > PE_DB_MOBILITY_SPEED_START && db->subType() < PE_DB_MOBILITY_SPEED_END) {
+            modSpeed += static_cast<double>(db->value(0)) / maxEval;
+         }
       }
    }
    if (petFamily(side, m_activePet[side], PE_FP_GENERAL) == PE_FAMILY_FLYING &&
       m_health[side][m_activePet[side]] > PE_FLYING_THRESHOLD*m_maxHealth[side][m_activePet[side]]) {
       modSpeed += PE_FLYING_SPEED;
    }
-   dbl = &m_debuff[PE_DB_IMMUNITY][side][m_activePet[side]];
-   for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
-      Debuff *db = dbl->on(track);
-      if (db->subType() == PE_DB_IMMUNE_SILK_COCOON) {
-         modSpeed = -1.0;
+   if (!m_debuff[PE_DB_IMMUNITY][side][m_activePet[side]].empty()) {
+      dbl = &m_debuff[PE_DB_IMMUNITY][side][m_activePet[side]];
+      for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
+         Debuff *db = dbl->on(track);
+         if (db->subType() == PE_DB_IMMUNE_SILK_COCOON) {
+            modSpeed = -1.0;
+         }
       }
    }
 
@@ -324,19 +343,24 @@ double State::modAccuracy(const PE_SIDE side, const double current, const PE_PET
    if (m_weather == PE_WEATHER_DARKNESS && petFamily(side, pet, PE_FP_GENERAL) != PE_FAMILY_ELEMENTAL) {
       accuracy -= PE_DARKNESS_REDUCTION;
    }
-   Tvector *dbl = &m_debuff[PE_DB_MOBILITY][side][pet];
-   for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
-      Debuff *db = dbl->on(track);
-      if (db->subType() > PE_DB_MOBILITY_ACCURACY_START && db->subType() < PE_DB_MOBILITY_ACCURACY_END) {
-         accuracy += static_cast<double>(db->value(0))/maxEval;
+   Tvector *dbl;
+   if (!m_debuff[PE_DB_MOBILITY][side][pet].empty()) {
+      dbl = &m_debuff[PE_DB_MOBILITY][side][pet];
+      for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
+         Debuff *db = dbl->on(track);
+         if (db->subType() > PE_DB_MOBILITY_ACCURACY_START && db->subType() < PE_DB_MOBILITY_ACCURACY_END) {
+            accuracy += static_cast<double>(db->value(0)) / maxEval;
+         }
       }
    }
-   dbl = &m_debuff[PE_DB_MOBILITY][side^1][epet];
-   for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
-      Debuff *db = dbl->on(track);
-      if (db->subType() > PE_DB_MOBILITY_ACCURACY_AGAINST_START &&
-          db->subType() < PE_DB_MOBILITY_ACCURACY_AGAINST_END) {
-         accuracy += static_cast<double>(db->value(0))/maxEval;
+   if (!m_debuff[PE_DB_MOBILITY][side ^ 1][epet].empty()) {
+      dbl = &m_debuff[PE_DB_MOBILITY][side ^ 1][epet];
+      for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
+         Debuff *db = dbl->on(track);
+         if (db->subType() > PE_DB_MOBILITY_ACCURACY_AGAINST_START &&
+            db->subType() < PE_DB_MOBILITY_ACCURACY_AGAINST_END) {
+            accuracy += static_cast<double>(db->value(0)) / maxEval;
+         }
       }
    }
 
@@ -356,11 +380,13 @@ double State::modCrit(const PE_SIDE side, const double current, const PE_PET_NUM
    double crit = current;
 
    // check buffs/debuffs on attacking side
-   Tvector *dbl = &m_debuff[PE_DB_MOBILITY][side][pet];
-   for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
-      Debuff *db = dbl->on(track);
-      if (db->subType() > PE_DB_MOBILITY_CRIT_START && db->subType() < PE_DB_MOBILITY_CRIT_END) {
-         crit += static_cast<double>(db->value(0))/maxEval;
+   if (!m_debuff[PE_DB_MOBILITY][side][pet].empty()) {
+      Tvector *dbl = &m_debuff[PE_DB_MOBILITY][side][pet];
+      for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
+         Debuff *db = dbl->on(track);
+         if (db->subType() > PE_DB_MOBILITY_CRIT_START && db->subType() < PE_DB_MOBILITY_CRIT_END) {
+            crit += static_cast<double>(db->value(0)) / maxEval;
+         }
       }
    }
    if (crit < 0.0) crit = 0.0;
@@ -381,11 +407,13 @@ PE_SV State::modHit(const PE_SIDE side, const PE_PET_NUMBER pet, const PE_SV hit
    if (m_weather == PE_WEATHER_SANDSTORM) {
       modHit -= m_weatherValue;
    }
-   Tvector *dbl = &m_debuff[PE_DB_DAMAGED][side][pet];
-   for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
-      Debuff *db = dbl->on(track);
-      if (db->subType() > PE_DB_DAMAGED_MOD_TAKEN_ADD_START && db->subType() < PE_DB_DAMAGED_MOD_TAKEN_ADD_END) {
-         modHit += db->value(0);
+   if (!m_debuff[PE_DB_DAMAGED][side][pet].empty()) {
+      Tvector *dbl = &m_debuff[PE_DB_DAMAGED][side][pet];
+      for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
+         Debuff *db = dbl->on(track);
+         if (db->subType() > PE_DB_DAMAGED_MOD_TAKEN_ADD_START && db->subType() < PE_DB_DAMAGED_MOD_TAKEN_ADD_END) {
+            modHit += db->value(0);
+         }
       }
    }
 
@@ -397,15 +425,17 @@ void State::modMoveBranching(const PE_SIDE side, Turn &turn) {
    if (m_activePet[side] == PE_NO_ACTIVE) return;
    if (!turn.branches()) return;
 
-   Tvector *dbl = &m_debuff[PE_DB_OVERTIME][side][m_activePet[side]];
-   for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
-      Debuff *db = dbl->on(track);
-      if (db->subType() == PE_DB_OVERTIME_MAGMA_TRAP || db->subType() == PE_DB_OVERTIME_SNAP_TRAP) {
-         if (turn.type(0) != PE_MT_NO_ATTACK) {
-            int preBranches = turn.branches();
-            for (int branch = 0; branch < preBranches; branch++) {
-               turn.push(static_cast<PE_MOVETYPE>(PE_MT_MAGMA_TRAP | turn.type(branch)), turn.prob(branch)*PE_MAGMA_TRAP);
-               turn.probMod(branch, maxProb - PE_MAGMA_TRAP);
+   if (!m_debuff[PE_DB_OVERTIME][side][m_activePet[side]].empty()) {
+      Tvector *dbl = &m_debuff[PE_DB_OVERTIME][side][m_activePet[side]];
+      for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
+         Debuff *db = dbl->on(track);
+         if (db->subType() == PE_DB_OVERTIME_MAGMA_TRAP || db->subType() == PE_DB_OVERTIME_SNAP_TRAP) {
+            if (turn.type(0) != PE_MT_NO_ATTACK) {
+               int preBranches = turn.branches();
+               for (int branch = 0; branch < preBranches; branch++) {
+                  turn.push(static_cast<PE_MOVETYPE>(PE_MT_MAGMA_TRAP | turn.type(branch)), turn.prob(branch)*PE_MAGMA_TRAP);
+                  turn.probMod(branch, maxProb - PE_MAGMA_TRAP);
+               }
             }
          }
       }
@@ -422,20 +452,22 @@ PE_MOVETYPE State::executeModMove(const PE_SIDE side, const PE_MOVETYPE type) {
    else {
       if (type&PE_MT_MAGMA_TRAP) {
          PE_SV damage;
-         Tvector *dbl = &m_debuff[PE_DB_OVERTIME][side][m_activePet[side]];
-         for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
-            Debuff *db = dbl->on(track);
-            if (db->subType() == PE_DB_OVERTIME_MAGMA_TRAP) {
-               damage = db->value(0);
-               this->removeDebuffActive(side, PE_DB_OVERTIME, PE_DB_OVERTIME_MAGMA_TRAP, track);
-               dbl->end(track);
-               break;
-            }
-            else if (db->subType() == PE_DB_OVERTIME_SNAP_TRAP) {
-               damage = db->value(0);
-               this->removeDebuffActive(side, PE_DB_OVERTIME, PE_DB_OVERTIME_SNAP_TRAP, track);
-               dbl->end(track);
-               break;
+         if (!m_debuff[PE_DB_OVERTIME][side][m_activePet[side]].empty()) {
+            Tvector *dbl = &m_debuff[PE_DB_OVERTIME][side][m_activePet[side]];
+            for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
+               Debuff *db = dbl->on(track);
+               if (db->subType() == PE_DB_OVERTIME_MAGMA_TRAP) {
+                  damage = db->value(0);
+                  this->removeDebuffActive(side, PE_DB_OVERTIME, PE_DB_OVERTIME_MAGMA_TRAP, track);
+                  dbl->end(track);
+                  break;
+               }
+               else if (db->subType() == PE_DB_OVERTIME_SNAP_TRAP) {
+                  damage = db->value(0);
+                  this->removeDebuffActive(side, PE_DB_OVERTIME, PE_DB_OVERTIME_SNAP_TRAP, track);
+                  dbl->end(track);
+                  break;
+               }
             }
          }
          this->doHitActive(side, PE_FAMILY_ELEMENTAL, damage, PE_NO_ACTIVE, false, true, false, false);
@@ -451,19 +483,21 @@ double State::factorTake(const PE_SIDE side, const PE_PET_NUMBER pet, const bool
    // check the increase/reduction percentage to damage on the active pet
    double hitFactor = 1.0;
 
-   Tvector *dbl = &m_debuff[PE_DB_DAMAGED][side][pet];
-   for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
-      Debuff *db = dbl->on(track);
-      if (db->subType() < PE_DB_DAMAGED_MOD_TAKEN_FACTOR_END) {
-         hitFactor *= (1.0 + static_cast<double>(db->value(0))/maxEval);
-         if (db->subType() == PE_DB_DAMAGED_OVERLOAD && removeHits) {
-            vector<int> debuffValues;
-            debuffValues.push_back(static_cast<int>(PE_HEARTBREAK*maxEval));
-            this->pushDebuff(side, pet, PE_DB_DAMAGED, Debuff(PE_DB_DAMAGED_HEARTBREAK, PE_TWO_ROUNDS, false, side, pet, PE_IB_NONE, debuffValues));
-         }
-         if (db->subType() > PE_DB_DAMAGED_MOD_TAKEN_FACTOR_HIT_START && removeHits) {
-            if (!db->dec(1)) { // remove single attack effects -- note this applies to dots
-               this->removeDebuff(side, pet, PE_DB_DAMAGED, db->subType(), track);
+   if (!m_debuff[PE_DB_DAMAGED][side][pet].empty()) {
+      Tvector *dbl = &m_debuff[PE_DB_DAMAGED][side][pet];
+      for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
+         Debuff *db = dbl->on(track);
+         if (db->subType() < PE_DB_DAMAGED_MOD_TAKEN_FACTOR_END) {
+            hitFactor *= (1.0 + static_cast<double>(db->value(0)) / maxEval);
+            if (db->subType() == PE_DB_DAMAGED_OVERLOAD && removeHits) {
+               vector<int> debuffValues;
+               debuffValues.push_back(static_cast<int>(PE_HEARTBREAK*maxEval));
+               this->pushDebuff(side, pet, PE_DB_DAMAGED, Debuff(PE_DB_DAMAGED_HEARTBREAK, PE_TWO_ROUNDS, false, side, pet, PE_IB_NONE, debuffValues));
+            }
+            if (db->subType() > PE_DB_DAMAGED_MOD_TAKEN_FACTOR_HIT_START && removeHits) {
+               if (!db->dec(1)) { // remove single attack effects -- note this applies to dots
+                  this->removeDebuff(side, pet, PE_DB_DAMAGED, db->subType(), track);
+               }
             }
          }
       }
@@ -477,17 +511,19 @@ double State::factorGive(const PE_SIDE side, const PE_PET_NUMBER pet, const bool
    // check the increase/reduction percentage to damage on the active pet
    double hitFactor = 1.0;
 
-   Tvector *dbl = &m_debuff[PE_DB_DAMAGED][side][pet];
-   for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
-      Debuff *db = dbl->on(track);
-      if (db->subType() > PE_DB_DAMAGED_MOD_GIVEN_FACTOR_START && db->subType() < PE_DB_DAMAGED_MOD_GIVEN_FACTOR_END) {
-         hitFactor *= (1.0 + static_cast<double>(db->value(0))/maxEval);
-         if (db->subType() > PE_DB_DAMAGED_MOD_GIVEN_FACTOR_HIT_START && removeHits) {
-            if (!db->dec(1)) { // remove single attack effects -- note this applies to dots
-               if (db->subType() == PE_DB_DAMAGED_PROWL) {
-                  this->removeDebuff(side, pet, PE_DB_MOBILITY, PE_DB_MOBILITY_PROWL, PE_NO_TRACK);
+   if (!m_debuff[PE_DB_DAMAGED][side][pet].empty()) {
+      Tvector *dbl = &m_debuff[PE_DB_DAMAGED][side][pet];
+      for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
+         Debuff *db = dbl->on(track);
+         if (db->subType() > PE_DB_DAMAGED_MOD_GIVEN_FACTOR_START && db->subType() < PE_DB_DAMAGED_MOD_GIVEN_FACTOR_END) {
+            hitFactor *= (1.0 + static_cast<double>(db->value(0)) / maxEval);
+            if (db->subType() > PE_DB_DAMAGED_MOD_GIVEN_FACTOR_HIT_START && removeHits) {
+               if (!db->dec(1)) { // remove single attack effects -- note this applies to dots
+                  if (db->subType() == PE_DB_DAMAGED_PROWL) {
+                     this->removeDebuff(side, pet, PE_DB_MOBILITY, PE_DB_MOBILITY_PROWL, PE_NO_TRACK);
+                  }
+                  this->removeDebuff(side, pet, PE_DB_DAMAGED, db->subType(), track);
                }
-               this->removeDebuff(side, pet, PE_DB_DAMAGED, db->subType(), track);
             }
          }
       }
@@ -501,25 +537,32 @@ bool State::immuneHit(const PE_SIDE side, const PE_PET_NUMBER pet, const bool in
 
    if (breaks == PE_IB_ALL) return false;
 
-   Tvector *dbl = &m_debuff[PE_DB_IMMUNITY][side][pet];
-   for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
-      Debuff *db = dbl->on(track);
-      if (initial) {
-         if (db->subType() < PE_DB_IMMUNE_PHASE_END) {
-            dbl->end(track);
-            return true;
-         }
-         else if (db->subType() < PE_DB_IMMUNE_LOCATION_END) {
-            if (breaks == PE_IB_LOCATION) continue;
-            if (db->subType() == PE_DB_IMMUNE_UNDERGROUND || db->subType() == PE_DB_IMMUNE_SUBMERGED) {
-               if (source != PE_NO_ACTIVE) {
-                  bool ugroundHit = false;
-                  Tvector *dbl2 = &m_debuff[PE_DB_IMMUNITY][side^1][source];
-                  for (int track2 = dbl2->initTrack(); dbl2->notEnd(track); dbl2->next(track)) {
-                     Debuff *db2 = dbl2->on(track);
-                     if (db2->subType() == PE_DB_IMMUNE_BREAK_UNDERGROUND) ugroundHit = true;
+   Tvector *dbl;
+   if (!m_debuff[PE_DB_IMMUNITY][side][pet].empty()) {
+      dbl = &m_debuff[PE_DB_IMMUNITY][side][pet];
+      for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
+         Debuff *db = dbl->on(track);
+         if (initial) {
+            if (db->subType() < PE_DB_IMMUNE_PHASE_END) {
+               dbl->end(track);
+               return true;
+            }
+            else if (db->subType() < PE_DB_IMMUNE_LOCATION_END) {
+               if (breaks == PE_IB_LOCATION) continue;
+               if (db->subType() == PE_DB_IMMUNE_UNDERGROUND || db->subType() == PE_DB_IMMUNE_SUBMERGED) {
+                  if (source != PE_NO_ACTIVE) {
+                     bool ugroundHit = false;
+                     Tvector *dbl2 = &m_debuff[PE_DB_IMMUNITY][side ^ 1][source];
+                     for (int track2 = dbl2->initTrack(); dbl2->notEnd(track); dbl2->next(track)) {
+                        Debuff *db2 = dbl2->on(track);
+                        if (db2->subType() == PE_DB_IMMUNE_BREAK_UNDERGROUND) ugroundHit = true;
+                     }
+                     if (!ugroundHit) {
+                        dbl->end(track);
+                        return true;
+                     }
                   }
-                  if (!ugroundHit) {
+                  else {
                      dbl->end(track);
                      return true;
                   }
@@ -529,32 +572,30 @@ bool State::immuneHit(const PE_SIDE side, const PE_PET_NUMBER pet, const bool in
                   return true;
                }
             }
-            else {
+            else if (db->subType() < PE_DB_IMMUNE_BLOCKS_END && removeHits) {
+               if (!db->dec(0)) {
+                  this->removeDebuff(side, pet, PE_DB_IMMUNITY, db->subType(), track);
+               }
                dbl->end(track);
                return true;
             }
-         }
-         else if (db->subType() < PE_DB_IMMUNE_BLOCKS_END && removeHits) {
-            if (!db->dec(0)) {
-               this->removeDebuff(side, pet, PE_DB_IMMUNITY, db->subType(), track);
-            }
-            dbl->end(track);
-            return true;
          }
       }
    }
 
    // look for blocks on attacking side
-   dbl = &m_debuff[PE_DB_IMMUNITY][side^1][m_lastActive[side^1]];
-   for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
-      Debuff *db = dbl->on(track);
-      if (initial) {
-         if (db->subType() > PE_DB_IMMUNE_BLOCKS_ALL_START && db->subType() < PE_DB_IMMUNE_BLOCKS_END && removeHits) {
-            if (!db->dec(0)) {
-               this->removeDebuff(side^1, m_lastActive[side^1], PE_DB_IMMUNITY, db->subType(), track);
+   if (!m_debuff[PE_DB_IMMUNITY][side ^ 1][m_lastActive[side ^ 1]].empty()) {
+      dbl = &m_debuff[PE_DB_IMMUNITY][side ^ 1][m_lastActive[side ^ 1]];
+      for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
+         Debuff *db = dbl->on(track);
+         if (initial) {
+            if (db->subType() > PE_DB_IMMUNE_BLOCKS_ALL_START && db->subType() < PE_DB_IMMUNE_BLOCKS_END && removeHits) {
+               if (!db->dec(0)) {
+                  this->removeDebuff(side ^ 1, m_lastActive[side ^ 1], PE_DB_IMMUNITY, db->subType(), track);
+               }
+               dbl->end(track);
+               return true;
             }
-            dbl->end(track);
-            return true;
          }
       }
    }
@@ -565,24 +606,26 @@ bool State::immuneHit(const PE_SIDE side, const PE_PET_NUMBER pet, const bool in
 PE_SV State::damageBackTaken(const PE_SIDE side, const PE_PET_NUMBER pet, PE_SV strike) {
    PE_SV damageBack = 0;
 
-   Tvector *dbl = &m_debuff[PE_DB_DAMAGED][side][pet];
-   for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
-      Debuff *db = dbl->on(track);
-      PE_DB_SUBTYPE subType = db->subType();
-      if (m_activePet[side] == PE_NO_ACTIVE) {
-         dbl->end(track);
-         break;
-      }
-      if (db->subType() > PE_DB_DAMAGED_MOD_TAKEN_DAMAGEBACK_START &&
-         db->subType() < PE_DB_DAMAGED_MOD_TAKEN_DAMAGEBACK_END) {
-         PE_SV hit = db->value(2); // normally a fixed value
-         if (db->subType() > PE_DB_DAMAGED_MOD_TAKEN_HFACTOR_START && PE_DB_DAMAGED_MOD_TAKEN_HFACTOR_END) {
-            hit = static_cast<PE_SV>(db->value(2)*m_maxHealth[side ^ 1][m_activePet[side]]/maxEval);
+   if (!m_debuff[PE_DB_DAMAGED][side][pet].empty()) {
+      Tvector *dbl = &m_debuff[PE_DB_DAMAGED][side][pet];
+      for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
+         Debuff *db = dbl->on(track);
+         PE_DB_SUBTYPE subType = db->subType();
+         if (m_activePet[side] == PE_NO_ACTIVE) {
+            dbl->end(track);
+            break;
          }
-         else if (db->subType() > PE_DB_DAMAGED_MOD_TAKEN_DFACTOR_START && PE_DB_DAMAGED_MOD_TAKEN_DFACTOR_END) {
-            hit = static_cast<PE_SV>(db->value(2)*strike/maxEval);
+         if (db->subType() > PE_DB_DAMAGED_MOD_TAKEN_DAMAGEBACK_START &&
+            db->subType() < PE_DB_DAMAGED_MOD_TAKEN_DAMAGEBACK_END) {
+            PE_SV hit = db->value(2); // normally a fixed value
+            if (db->subType() > PE_DB_DAMAGED_MOD_TAKEN_HFACTOR_START && PE_DB_DAMAGED_MOD_TAKEN_HFACTOR_END) {
+               hit = static_cast<PE_SV>(db->value(2)*m_maxHealth[side ^ 1][m_activePet[side]] / maxEval);
+            }
+            else if (db->subType() > PE_DB_DAMAGED_MOD_TAKEN_DFACTOR_START && PE_DB_DAMAGED_MOD_TAKEN_DFACTOR_END) {
+               hit = static_cast<PE_SV>(db->value(2)*strike / maxEval);
+            }
+            damageBack += doHit(side ^ 1, m_activePet[side ^ 1], static_cast<PE_FAMILY>(db->value(1)), hit, PE_NO_ACTIVE, false, false, false, false);
          }
-         damageBack += doHit(side ^ 1, m_activePet[side ^ 1], static_cast<PE_FAMILY>(db->value(1)), hit, PE_NO_ACTIVE, false, false, false, false);
       }
    }
 
@@ -592,17 +635,19 @@ PE_SV State::damageBackTaken(const PE_SIDE side, const PE_PET_NUMBER pet, PE_SV 
 PE_SV State::healingBackTaken(const PE_SIDE side, const PE_PET_NUMBER pet) {
    PE_SV healingBack = 0;
 
-   Tvector *dbl = &m_debuff[PE_DB_DAMAGED][side][pet];
-   for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
-      Debuff *db = dbl->on(track);
-      PE_DB_SUBTYPE subType = db->subType();
-      if (m_activePet[side] == PE_NO_ACTIVE) {
-         dbl->end(track);
-         break;
-      }
-      if (db->subType() > PE_DB_DAMAGED_MOD_TAKEN_HEALING_BACK_START &&
-         db->subType() < PE_DB_DAMAGED_MOD_TAKEN_HEALING_BACK_END) {
-         healingBack += this->doHeal(side ^ 1, m_activePet[side ^ 1], db->value(0), false);
+   if (!m_debuff[PE_DB_DAMAGED][side][pet].empty()) {
+      Tvector *dbl = &m_debuff[PE_DB_DAMAGED][side][pet];
+      for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
+         Debuff *db = dbl->on(track);
+         PE_DB_SUBTYPE subType = db->subType();
+         if (m_activePet[side] == PE_NO_ACTIVE) {
+            dbl->end(track);
+            break;
+         }
+         if (db->subType() > PE_DB_DAMAGED_MOD_TAKEN_HEALING_BACK_START &&
+            db->subType() < PE_DB_DAMAGED_MOD_TAKEN_HEALING_BACK_END) {
+            healingBack += this->doHeal(side ^ 1, m_activePet[side ^ 1], db->value(0), false);
+         }
       }
    }
 
@@ -612,20 +657,22 @@ PE_SV State::healingBackTaken(const PE_SIDE side, const PE_PET_NUMBER pet) {
 PE_SV State::damageBackGiven(const PE_SIDE side, const PE_PET_NUMBER pet, const PE_PET_NUMBER source) {
    PE_SV damageBack = 0;
 
-   Tvector *dbl = &m_debuff[PE_DB_DAMAGED][side][source];
-   for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
-      Debuff *db = dbl->on(track);
-      PE_DB_SUBTYPE subType = db->subType();
-      if (m_activePet[side] == PE_NO_ACTIVE) {
-         dbl->end(track);
-         break;
-      }
-      if (db->subType() > PE_DB_DAMAGED_MOD_GIVEN_ADD_START &&
-          db->subType() < PE_DB_DAMAGED_MOD_GIVEN_ADD_END) {
-         damageBack += doHit(side, source, static_cast<PE_FAMILY>(db->value(1)), db->value(2), PE_NO_ACTIVE, false, false, false, false);
-         if (db->subType() > PE_DB_DAMAGED_MOD_GIVEN_DAMAGEBACK_HIT) {
-            if (!db->dec(3)) {
-               this->removeDebuff(side, source, PE_DB_DAMAGED, db->subType(), track);
+   if (!m_debuff[PE_DB_DAMAGED][side][source].empty()) {
+      Tvector *dbl = &m_debuff[PE_DB_DAMAGED][side][source];
+      for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
+         Debuff *db = dbl->on(track);
+         PE_DB_SUBTYPE subType = db->subType();
+         if (m_activePet[side] == PE_NO_ACTIVE) {
+            dbl->end(track);
+            break;
+         }
+         if (db->subType() > PE_DB_DAMAGED_MOD_GIVEN_ADD_START &&
+            db->subType() < PE_DB_DAMAGED_MOD_GIVEN_ADD_END) {
+            damageBack += doHit(side, source, static_cast<PE_FAMILY>(db->value(1)), db->value(2), PE_NO_ACTIVE, false, false, false, false);
+            if (db->subType() > PE_DB_DAMAGED_MOD_GIVEN_DAMAGEBACK_HIT) {
+               if (!db->dec(3)) {
+                  this->removeDebuff(side, source, PE_DB_DAMAGED, db->subType(), track);
+               }
             }
          }
       }
@@ -791,12 +838,14 @@ double State::factorHeal(const PE_SIDE side, const PE_PET_NUMBER pet) {
          healFactor *= PE_MOONLIGHT_HEALING;
       }
    }
-   Tvector *dbl = &m_debuff[PE_DB_DAMAGED][side][pet];
-   for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
-      Debuff *db = dbl->on(track);
-      if (db->subType() > PE_DB_DAMAGED_MOD_HEALING_TAKEN_FACTOR_START &&
-         db->subType() < PE_DB_DAMAGED_MOD_HEALING_TAKEN_FACTOR_END) {
-         healFactor *= static_cast<double>(db->value(0))/maxEval;
+   if (!m_debuff[PE_DB_DAMAGED][side][pet].empty()) {
+      Tvector *dbl = &m_debuff[PE_DB_DAMAGED][side][pet];
+      for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
+         Debuff *db = dbl->on(track);
+         if (db->subType() > PE_DB_DAMAGED_MOD_HEALING_TAKEN_FACTOR_START &&
+            db->subType() < PE_DB_DAMAGED_MOD_HEALING_TAKEN_FACTOR_END) {
+            healFactor *= static_cast<double>(db->value(0)) / maxEval;
+         }
       }
    }
 
@@ -849,25 +898,30 @@ PE_ERROR State::die(const PE_SIDE side, const PE_PET_NUMBER pet) {
 PE_ERROR State::couldDie(const PE_SIDE side, const PE_PET_NUMBER pet) {
    bool survives = false;
    vector<PE_SV> debuffValues;
+   Tvector *dbl;
 
-   Tvector *dbl = &m_debuff[PE_DB_IMMUNITY][side][pet];
-   for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
-      Debuff *db = dbl->on(track);
-      if (db->subType() == PE_DB_IMMUNE_SURVIVAL || db->subType() == PE_DB_IMMUNE_UNDEAD) {
-         m_health[side][pet] = 1;
-         survives = true;
-      }
-      else if (db->subType() == PE_DB_IMMUNE_DARK_REBIRTH) {
-         m_health[side][pet] = m_maxHealth[side][pet];
-         this->pushDebuff(side, pet, PE_DB_OVERTIME, Debuff(PE_DB_OVERTIME_DARK_REBIRTH, PE_FIVE_ROUNDS, false, side, PE_NO_ACTIVE, PE_IB_NONE, debuffValues));
-         survives = true;
+   if (!m_debuff[PE_DB_IMMUNITY][side][pet].empty()) {
+      dbl = &m_debuff[PE_DB_IMMUNITY][side][pet];
+      for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
+         Debuff *db = dbl->on(track);
+         if (db->subType() == PE_DB_IMMUNE_SURVIVAL || db->subType() == PE_DB_IMMUNE_UNDEAD) {
+            m_health[side][pet] = 1;
+            survives = true;
+         }
+         else if (db->subType() == PE_DB_IMMUNE_DARK_REBIRTH) {
+            m_health[side][pet] = m_maxHealth[side][pet];
+            this->pushDebuff(side, pet, PE_DB_OVERTIME, Debuff(PE_DB_OVERTIME_DARK_REBIRTH, PE_FIVE_ROUNDS, false, side, PE_NO_ACTIVE, PE_IB_NONE, debuffValues));
+            survives = true;
+         }
       }
    }
-   dbl = &m_debuff[PE_DB_OVERTIME][side][pet];
-   for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
-      Debuff *db = dbl->on(track);
-      if (db->subType() == PE_DB_OVERTIME_DARK_REBIRTH) {
-         this->removeDebuff(side, pet, PE_DB_IMMUNITY, PE_DB_IMMUNE_DARK_REBIRTH, track);
+   if (!m_debuff[PE_DB_OVERTIME][side][pet].empty()) {
+      dbl = &m_debuff[PE_DB_OVERTIME][side][pet];
+      for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
+         Debuff *db = dbl->on(track);
+         if (db->subType() == PE_DB_OVERTIME_DARK_REBIRTH) {
+            this->removeDebuff(side, pet, PE_DB_IMMUNITY, PE_DB_IMMUNE_DARK_REBIRTH, track);
+         }
       }
    }
 
@@ -879,11 +933,13 @@ PE_ERROR State::couldDie(const PE_SIDE side, const PE_PET_NUMBER pet) {
       else if (petFamily(side, pet, PE_FP_GENERAL) == PE_FAMILY_MECHANICAL) {
          bool alreadyRessed = false;
          
-         dbl = &m_debuff[PE_DB_DAMAGED][side][pet];
-         for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
-            Debuff *db = dbl->on(track);
-            if (db->subType() == PE_DB_DAMAGED_MECHANICAL_RES) {
-               alreadyRessed = true;
+         if (!m_debuff[PE_DB_DAMAGED][side][pet].empty()) {
+            dbl = &m_debuff[PE_DB_DAMAGED][side][pet];
+            for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
+               Debuff *db = dbl->on(track);
+               if (db->subType() == PE_DB_DAMAGED_MECHANICAL_RES) {
+                  alreadyRessed = true;
+               }
             }
          }
          if (alreadyRessed) {
@@ -978,12 +1034,14 @@ bool State::pushDebuff(const PE_SIDE side, const PE_PET_NUMBER pet, const PE_DB_
          if (petFamily(side, pet, PE_FP_GENERAL) == PE_FAMILY_CRITTER) { // critter
             return false;
          }
-         Tvector *dbl = &m_debuff[PE_DB_MOBILITY][side][pet];
-         for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
-            Debuff *db = dbl->on(track);
-            if (db->subType() == PE_DB_MOBILITY_RESILIENT) {
-               dbl->end(track);
-               return false;
+         if (!m_debuff[PE_DB_MOBILITY][side][pet].empty()) {
+            Tvector *dbl = &m_debuff[PE_DB_MOBILITY][side][pet];
+            for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
+               Debuff *db = dbl->on(track);
+               if (db->subType() == PE_DB_MOBILITY_RESILIENT) {
+                  dbl->end(track);
+                  return false;
+               }
             }
          }
       }
@@ -996,22 +1054,26 @@ bool State::pushDebuff(const PE_SIDE side, const PE_PET_NUMBER pet, const PE_DB_
          }
       }
       if (debuff.subType() < PE_DB_MOBILITY_MOVE_CONTROL_END) { // resilience
-         Tvector *dbl = &m_debuff[PE_DB_MOBILITY][side][pet];
-         for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
-            Debuff *db = dbl->on(track);
-            if (db->subType() == PE_DB_MOBILITY_RESILIENT) {
-               dbl->end(track);
-               return false;
+         if (!m_debuff[PE_DB_MOBILITY][side][pet].empty()) {
+            Tvector *dbl = &m_debuff[PE_DB_MOBILITY][side][pet];
+            for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
+               Debuff *db = dbl->on(track);
+               if (db->subType() == PE_DB_MOBILITY_RESILIENT) {
+                  dbl->end(track);
+                  return false;
+               }
             }
          }
       }
    }
-   Tvector *dbl = &m_debuff[type][side][pet];
-   for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
-      Debuff *db = dbl->on(track);
-      if (db->subType() == debuff.subType()) {
-         alreadyDebuffed = true;
-         debuffIndex = dbl->onNum(track);
+   if (!m_debuff[type][side][pet].empty()) {
+      Tvector *dbl = &m_debuff[type][side][pet];
+      for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
+         Debuff *db = dbl->on(track);
+         if (db->subType() == debuff.subType()) {
+            alreadyDebuffed = true;
+            debuffIndex = dbl->onNum(track);
+         }
       }
    }
    if (m_weather == PE_WEATHER_RAIN) { // cleansing rain
@@ -1136,32 +1198,40 @@ PE_ERROR State::removeDebuffs(const PE_SIDE side, const PE_PET_NUMBER pet) {
    int track;
 
    //if (m_health[side][pet] <= 0) return PE_OK;
-   dbl = &m_debuff[PE_DB_OVERTIME][side][pet];
-   for (track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
-      db = dbl->on(track);
-      if (db->subType() < PE_DB_OVERTIME_OBJECTS_START || db->subType() > PE_DB_OVERTIME_OBJECTS_END) {
-         this->removeDebuff(side, pet, PE_DB_OVERTIME, db->subType(), track);
-		}
-	}
-   dbl = &m_debuff[PE_DB_DAMAGED][side][pet];
-   for (track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
-      db = dbl->on(track);
-      if (db->subType() != PE_DB_DAMAGED_MECHANICAL_RES) {
-         this->removeDebuff(side, pet, PE_DB_DAMAGED, db->subType(), track);
+   if (!m_debuff[PE_DB_OVERTIME][side][pet].empty()) {
+      dbl = &m_debuff[PE_DB_OVERTIME][side][pet];
+      for (track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
+         db = dbl->on(track);
+         if (db->subType() < PE_DB_OVERTIME_OBJECTS_START || db->subType() > PE_DB_OVERTIME_OBJECTS_END) {
+            this->removeDebuff(side, pet, PE_DB_OVERTIME, db->subType(), track);
+         }
       }
    }
-   dbl = &m_debuff[PE_DB_MOBILITY][side][pet];
-   for (track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
-      db = dbl->on(track);
-      if (db->subType() < PE_DB_MOBILITY_SWITCH_START || db->subType() > PE_DB_MOBILITY_SWITCH_END) {
-         this->removeDebuff(side, pet, PE_DB_MOBILITY, db->subType(), track);
+   if (!m_debuff[PE_DB_DAMAGED][side][pet].empty()) {
+      dbl = &m_debuff[PE_DB_DAMAGED][side][pet];
+      for (track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
+         db = dbl->on(track);
+         if (db->subType() != PE_DB_DAMAGED_MECHANICAL_RES) {
+            this->removeDebuff(side, pet, PE_DB_DAMAGED, db->subType(), track);
+         }
       }
    }
-   dbl = &m_debuff[PE_DB_IMMUNITY][side][pet];
-   for (track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
-      db = dbl->on(track);
-      if (db->subType() != PE_DB_IMMUNE_UNDEAD) {
-         this->removeDebuff(side, pet, PE_DB_IMMUNITY, db->subType(), track);
+   if (!m_debuff[PE_DB_MOBILITY][side][pet].empty()) {
+      dbl = &m_debuff[PE_DB_MOBILITY][side][pet];
+      for (track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
+         db = dbl->on(track);
+         if (db->subType() < PE_DB_MOBILITY_SWITCH_START || db->subType() > PE_DB_MOBILITY_SWITCH_END) {
+            this->removeDebuff(side, pet, PE_DB_MOBILITY, db->subType(), track);
+         }
+      }
+   }
+   if (!m_debuff[PE_DB_IMMUNITY][side][pet].empty()) {
+      dbl = &m_debuff[PE_DB_IMMUNITY][side][pet];
+      for (track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
+         db = dbl->on(track);
+         if (db->subType() != PE_DB_IMMUNE_UNDEAD) {
+            this->removeDebuff(side, pet, PE_DB_IMMUNITY, db->subType(), track);
+         }
       }
    }
 
@@ -1179,12 +1249,14 @@ PE_ERROR State::removeObjects() {
    for (PE_SIDE side = 0; side < PE_SIDES; side++) {
       for (PE_PET_NUMBER pet = 0; pet < PE_TEAM_SIZE; pet++) {
 
-         Tvector *dbl = &m_debuff[PE_DB_OVERTIME][side][pet];
-         for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
-            Debuff *db = dbl->on(track);
-            if (db->subType() > PE_DB_OVERTIME_OBJECTS_START &&
-               db->subType() < PE_DB_OVERTIME_OBJECTS_END) {
-               this->removeDebuff(side, pet, PE_DB_OVERTIME, db->subType(), track);
+         if (!m_debuff[PE_DB_OVERTIME][side][pet].empty()) {
+            Tvector *dbl = &m_debuff[PE_DB_OVERTIME][side][pet];
+            for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
+               Debuff *db = dbl->on(track);
+               if (db->subType() > PE_DB_OVERTIME_OBJECTS_START &&
+                  db->subType() < PE_DB_OVERTIME_OBJECTS_END) {
+                  this->removeDebuff(side, pet, PE_DB_OVERTIME, db->subType(), track);
+               }
             }
          }
       }
@@ -1211,10 +1283,12 @@ bool State::isBuffed(const PE_SIDE side, const PE_DB_TYPE type, const PE_DB_SUBT
 
    if (m_activePet[side] == PE_NO_ACTIVE) return false;
 
-   vector<Debuff> *dbl = m_debuff[type][side][m_activePet[side]].list();
-   for (uint32_t debuff = 0; debuff < dbl->size(); debuff++) {
-      if ((*dbl)[debuff].subType() == subType) {
-         return true;
+   if (!m_debuff[type][side][m_activePet[side]].empty()) {
+      vector<Debuff> *dbl = m_debuff[type][side][m_activePet[side]].list();
+      for (uint32_t debuff = 0; debuff < dbl->size(); debuff++) {
+         if ((*dbl)[debuff].subType() == subType) {
+            return true;
+         }
       }
    }
 
@@ -1229,10 +1303,12 @@ bool State::isBlinded(const PE_SIDE side) {
          return true;
       }
    }
-   vector<Debuff> *dbl = m_debuff[PE_DB_MOBILITY][side][m_activePet[side]].list();
-   for (uint32_t debuff = 0; debuff < dbl->size(); debuff++) {
-      if ((*dbl)[debuff].subType() > PE_DB_MOBILITY_BLINDING_START && (*dbl)[debuff].subType() < PE_DB_MOBILITY_BLINDING_END) {
-         return true;
+   if (!m_debuff[PE_DB_MOBILITY][side][m_activePet[side]].empty()) {
+      vector<Debuff> *dbl = m_debuff[PE_DB_MOBILITY][side][m_activePet[side]].list();
+      for (uint32_t debuff = 0; debuff < dbl->size(); debuff++) {
+         if ((*dbl)[debuff].subType() > PE_DB_MOBILITY_BLINDING_START && (*dbl)[debuff].subType() < PE_DB_MOBILITY_BLINDING_END) {
+            return true;
+         }
       }
    }
    /*for (int di = 0; di < m_debuff[PE_DB_MOBILITY][side][m_activePet[side]].size(); di++) {
@@ -1248,10 +1324,12 @@ bool State::isBleeding(const PE_SIDE side) {
 
    if (m_activePet[side] == PE_NO_ACTIVE) return false;
 
-   vector<Debuff> *dbl = m_debuff[PE_DB_OVERTIME][side][m_activePet[side]].list();
-   for (uint32_t debuff = 0; debuff < dbl->size(); debuff++) {
-      if ((*dbl)[debuff].subType() == PE_DB_OVERTIME_BLEED) {
-         return true;
+   if (!m_debuff[PE_DB_OVERTIME][side][m_activePet[side]].empty()) {
+      vector<Debuff> *dbl = m_debuff[PE_DB_OVERTIME][side][m_activePet[side]].list();
+      for (uint32_t debuff = 0; debuff < dbl->size(); debuff++) {
+         if ((*dbl)[debuff].subType() == PE_DB_OVERTIME_BLEED) {
+            return true;
+         }
       }
    }
 
@@ -1262,10 +1340,12 @@ bool State::isStunned(const PE_SIDE side) {
 
    if (m_activePet[side] == PE_NO_ACTIVE) return false;
 
-   vector<Debuff> *dbl = m_debuff[PE_DB_MOBILITY][side][m_activePet[side]].list();
-   for (uint32_t debuff = 0; debuff < dbl->size(); debuff++) {
-      if ((*dbl)[debuff].subType() == PE_DB_MOBILITY_STUNNED) {
-         return true;
+   if (!m_debuff[PE_DB_MOBILITY][side][m_activePet[side]].empty()) {
+      vector<Debuff> *dbl = m_debuff[PE_DB_MOBILITY][side][m_activePet[side]].list();
+      for (uint32_t debuff = 0; debuff < dbl->size(); debuff++) {
+         if ((*dbl)[debuff].subType() == PE_DB_MOBILITY_STUNNED) {
+            return true;
+         }
       }
    }
 
@@ -1281,11 +1361,13 @@ bool State::isBurning(const PE_SIDE side) {
          return true;
       }
    }
-   vector<Debuff> *dbl = m_debuff[PE_DB_OVERTIME][side][m_activePet[side]].list();
-   for (uint32_t debuff = 0; debuff < dbl->size(); debuff++) {
-      if ((*dbl)[debuff].subType() > PE_DB_OVERTIME_BURNING_START &&
-         (*dbl)[debuff].subType() < PE_DB_OVERTIME_BURNING_END) {
-         return true;
+   if (!m_debuff[PE_DB_OVERTIME][side][m_activePet[side]].empty()) {
+      vector<Debuff> *dbl = m_debuff[PE_DB_OVERTIME][side][m_activePet[side]].list();
+      for (uint32_t debuff = 0; debuff < dbl->size(); debuff++) {
+         if ((*dbl)[debuff].subType() > PE_DB_OVERTIME_BURNING_START &&
+            (*dbl)[debuff].subType() < PE_DB_OVERTIME_BURNING_END) {
+            return true;
+         }
       }
    }
 
@@ -1300,10 +1382,12 @@ bool State::isChilled(const PE_SIDE side) {
          return true;
       }
    }
-   vector<Debuff> *dbl = m_debuff[PE_DB_MOBILITY][side][m_activePet[side]].list();
-   for (uint32_t debuff = 0; debuff < dbl->size(); debuff++) {
-      if ((*dbl)[debuff].subType() == PE_DB_MOBILITY_SLIPPERY_ICE) {
-         return true;
+   if (!m_debuff[PE_DB_MOBILITY][side][m_activePet[side]].empty()) {
+      vector<Debuff> *dbl = m_debuff[PE_DB_MOBILITY][side][m_activePet[side]].list();
+      for (uint32_t debuff = 0; debuff < dbl->size(); debuff++) {
+         if ((*dbl)[debuff].subType() == PE_DB_MOBILITY_SLIPPERY_ICE) {
+            return true;
+         }
       }
    }
 
@@ -1313,10 +1397,12 @@ bool State::isChilled(const PE_SIDE side) {
 bool State::isImmobile(const PE_SIDE side) {
 
    if (m_activePet[side] == PE_NO_ACTIVE) return false;
-   vector<Debuff> *dbl = m_debuff[PE_DB_MOBILITY][side][m_activePet[side]].list();
-   for (uint32_t debuff = 0; debuff < dbl->size(); debuff++) {
-      if ((*dbl)[debuff].subType() < PE_DB_MOBILITY_MOVE_CONTROL_END) {
-         return true;
+   if (!m_debuff[PE_DB_MOBILITY][side][m_activePet[side]].empty()) {
+      vector<Debuff> *dbl = m_debuff[PE_DB_MOBILITY][side][m_activePet[side]].list();
+      for (uint32_t debuff = 0; debuff < dbl->size(); debuff++) {
+         if ((*dbl)[debuff].subType() < PE_DB_MOBILITY_MOVE_CONTROL_END) {
+            return true;
+         }
       }
    }
 
@@ -1326,17 +1412,22 @@ bool State::isImmobile(const PE_SIDE side) {
 bool State::isPoisoned(const PE_SIDE side) {
 
    if (m_activePet[side] == PE_NO_ACTIVE) return false;
-   vector<Debuff> *dbl = m_debuff[PE_DB_OVERTIME][side][m_activePet[side]].list();
-   for (uint32_t debuff = 0; debuff < dbl->size(); debuff++) {
-      if ((*dbl)[debuff].subType() > PE_DB_OVERTIME_POISONED_START &&
-         (*dbl)[debuff].subType() < PE_DB_OVERTIME_POISONED_END) {
-         return true;
+   vector<Debuff> *dbl;
+   if (!m_debuff[PE_DB_OVERTIME][side][m_activePet[side]].empty()) {
+      dbl = m_debuff[PE_DB_OVERTIME][side][m_activePet[side]].list();
+      for (uint32_t debuff = 0; debuff < dbl->size(); debuff++) {
+         if ((*dbl)[debuff].subType() > PE_DB_OVERTIME_POISONED_START &&
+            (*dbl)[debuff].subType() < PE_DB_OVERTIME_POISONED_END) {
+            return true;
+         }
       }
    }
-   dbl = m_debuff[PE_DB_MOBILITY][side][m_activePet[side]].list();
-   for (uint32_t debuff = 0; debuff < dbl->size(); debuff++) {
-      if ((*dbl)[debuff].subType() == PE_DB_MOBILITY_BLINDING_POISON) {
-         return true;
+   if (!m_debuff[PE_DB_MOBILITY][side][m_activePet[side]].empty()) {
+      dbl = m_debuff[PE_DB_MOBILITY][side][m_activePet[side]].list();
+      for (uint32_t debuff = 0; debuff < dbl->size(); debuff++) {
+         if ((*dbl)[debuff].subType() == PE_DB_MOBILITY_BLINDING_POISON) {
+            return true;
+         }
       }
    }
 
@@ -1346,13 +1437,15 @@ bool State::isPoisoned(const PE_SIDE side) {
 bool State::isRooted(const PE_SIDE side) {
 
    if (m_activePet[side] == PE_NO_ACTIVE) return false;
-   vector<Debuff> *dbl = m_debuff[PE_DB_MOBILITY][side][m_activePet[side]].list();
-   for (uint32_t debuff = 0; debuff < dbl->size(); debuff++) {
-      if (((*dbl)[debuff].subType() > PE_DB_MOBILITY_ROOTS_START &&
-          (*dbl)[debuff].subType() < PE_DB_MOBILITY_ROOTS_END) ||
-         ((*dbl)[debuff].subType() > PE_DB_MOBILITY_SELF_ROOT_START &&
-          (*dbl)[debuff].subType() < PE_DB_MOBILITY_SELF_ROOT_END)) {
-             return true;
+   if (!m_debuff[PE_DB_MOBILITY][side][m_activePet[side]].empty()) {
+      vector<Debuff> *dbl = m_debuff[PE_DB_MOBILITY][side][m_activePet[side]].list();
+      for (uint32_t debuff = 0; debuff < dbl->size(); debuff++) {
+         if (((*dbl)[debuff].subType() > PE_DB_MOBILITY_ROOTS_START &&
+            (*dbl)[debuff].subType() < PE_DB_MOBILITY_ROOTS_END) ||
+            ((*dbl)[debuff].subType() > PE_DB_MOBILITY_SELF_ROOT_START &&
+            (*dbl)[debuff].subType() < PE_DB_MOBILITY_SELF_ROOT_END)) {
+            return true;
+         }
       }
    }
 
@@ -1362,16 +1455,21 @@ bool State::isRooted(const PE_SIDE side) {
 bool State::isWebbed(const PE_SIDE side) {
 
    if (m_activePet[side] == PE_NO_ACTIVE) return false;
-   vector<Debuff> *dbl = m_debuff[PE_DB_MOBILITY][side][m_activePet[side]].list();
-   for (uint32_t debuff = 0; debuff < dbl->size(); debuff++) {
-      if ((*dbl)[debuff].subType() == PE_DB_MOBILITY_WEBBED) {
-         return true;
+   vector<Debuff> *dbl;
+   if (!m_debuff[PE_DB_MOBILITY][side][m_activePet[side]].empty()) {
+      dbl = m_debuff[PE_DB_MOBILITY][side][m_activePet[side]].list();
+      for (uint32_t debuff = 0; debuff < dbl->size(); debuff++) {
+         if ((*dbl)[debuff].subType() == PE_DB_MOBILITY_WEBBED) {
+            return true;
+         }
       }
    }
-   dbl = m_debuff[PE_DB_DAMAGED][side][m_activePet[side]].list();
-   for (uint32_t debuff = 0; debuff < dbl->size(); debuff++) {
-      if ((*dbl)[debuff].subType() == PE_DB_DAMAGED_BRITTLE_WEBBING) {
-         return true;
+   if (!m_debuff[PE_DB_DAMAGED][side][m_activePet[side]].empty()) {
+      dbl = m_debuff[PE_DB_DAMAGED][side][m_activePet[side]].list();
+      for (uint32_t debuff = 0; debuff < dbl->size(); debuff++) {
+         if ((*dbl)[debuff].subType() == PE_DB_DAMAGED_BRITTLE_WEBBING) {
+            return true;
+         }
       }
    }
 
@@ -1434,6 +1532,8 @@ PE_ERROR State::clearDebuffsActive(const PE_SIDE side) {
 
    if (pet == PE_NO_ACTIVE) return PE_OK;
    for (PE_DB_TYPE type = PE_DB_OVERTIME; type < PE_DB_TYPES; type = static_cast<PE_DB_TYPE>(static_cast<int>(type) + 1)) {
+      if (m_debuff[type][side][pet].empty()) continue;
+
       Tvector *dbl = &m_debuff[type][side][pet];
       for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
          Debuff *db = dbl->on(track);
@@ -1451,6 +1551,8 @@ PE_ERROR State::clearDebuffsActive(const PE_SIDE side) {
 }
 
 PE_ERROR State::clearExpired(const PE_SIDE side, const PE_PET_NUMBER pet, const PE_DB_TYPE type) {
+
+   if (m_debuff[type][side][pet].empty()) return PE_OK;
 
    Tvector *dbl = &m_debuff[type][side][pet];
    for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
@@ -1475,15 +1577,17 @@ PE_ERROR State::endBranching(Turn &turn) {
 
    for (PE_SIDE side = 0; side < PE_SIDES; side++) {
       for (int pet = 0; pet < PE_TEAM_SIZE; pet++) {
-         Tvector *dbl = &m_debuff[PE_DB_OVERTIME][side][pet];
-         for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
-            Debuff *db = dbl->on(track);
-            if (db->subType() == PE_DB_OVERTIME_CYCLONE) {
-               actionProb.push_back(7 * fiveProb);
-            }
-            else if (db->subType() == PE_DB_OVERTIME_VOLCANO) {
-               if (db->duration() <= PE_ONE_ROUND) {
-                  actionProb.push_back(5 * fiveProb);
+         if (!m_debuff[PE_DB_OVERTIME][side][pet].empty()) {
+            Tvector *dbl = &m_debuff[PE_DB_OVERTIME][side][pet];
+            for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
+               Debuff *db = dbl->on(track);
+               if (db->subType() == PE_DB_OVERTIME_CYCLONE) {
+                  actionProb.push_back(7 * fiveProb);
+               }
+               else if (db->subType() == PE_DB_OVERTIME_VOLCANO) {
+                  if (db->duration() <= PE_ONE_ROUND) {
+                     actionProb.push_back(5 * fiveProb);
+                  }
                }
             }
          }
@@ -1494,18 +1598,20 @@ PE_ERROR State::endBranching(Turn &turn) {
       if (m_activePet[side] == PE_NO_ACTIVE) continue;
       if (m_health[side][m_activePet[side]] > 0) {
          int pet = m_activePet[side];
-         Tvector *dbl = &m_debuff[PE_DB_IMMUNITY][side][pet];
-         for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
-            Debuff *db = dbl->on(track);
-            if (db->subType() == PE_DB_IMMUNE_FADE) {
-               int opets = 0;
-               for (int pet2 = 0; pet2 < PE_TEAM_SIZE; pet2++) {
-                  if (pet2 != pet && m_health[side][pet2] > 0) {
-                     opets++;
+         if (!m_debuff[PE_DB_IMMUNITY][side][pet].empty()) {
+            Tvector *dbl = &m_debuff[PE_DB_IMMUNITY][side][pet];
+            for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
+               Debuff *db = dbl->on(track);
+               if (db->subType() == PE_DB_IMMUNE_FADE) {
+                  int opets = 0;
+                  for (int pet2 = 0; pet2 < PE_TEAM_SIZE; pet2++) {
+                     if (pet2 != pet && m_health[side][pet2] > 0) {
+                        opets++;
+                     }
                   }
-               }
-               if (opets == 2) {
-                  actionProb.push_back(fiftyProb); // fifty prob
+                  if (opets == 2) {
+                     actionProb.push_back(fiftyProb); // fifty prob
+                  }
                }
             }
          }
@@ -1543,6 +1649,7 @@ PE_ERROR State::wrapUp(Turn &turn, const uint32_t outcome) {
    for (int side = 0; side < PE_SIDES; side++)  {
       for (int pet = 0; pet < PE_TEAM_SIZE; pet++) {
          if (m_health[side][pet] == 0) continue;
+         if (m_debuff[PE_DB_OVERTIME][side][pet].empty()) continue;
          Tvector *dbl = &m_debuff[PE_DB_OVERTIME][side][pet];
          for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
             Debuff *db = dbl->on(track);
@@ -1718,56 +1825,60 @@ PE_ERROR State::wrapUp(Turn &turn, const uint32_t outcome) {
             this->removeDebuffs(side, pet); // clear all buffs
             continue;
          }
-
+         Tvector *dbl;
          // check on dots which depend on lack of action (being damaged, etc) to work
-         Tvector *dbl = &m_debuff[PE_DB_MOBILITY][side][pet];
-         for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
-            Debuff *db = dbl->on(track);
-            if (m_health[side][pet] > 0) {
-               if (db->duration() == PE_ZERO_ROUND) {
-                  if (db->subType() == PE_DB_MOBILITY_SOOTHED && !m_damaged[side][pet] && !immuneHit(side, pet, true, PE_NO_ACTIVE, PE_IB_NONE, false)) {
-                     this->pushDebuff(side, pet, PE_DB_MOBILITY, Debuff(PE_DB_MOBILITY_ASLEEP, PE_TWO_ROUNDS, false, side, pet, PE_IB_NONE, debuffValues));
+         if (!m_debuff[PE_DB_MOBILITY][side][pet].empty()) {
+            dbl = &m_debuff[PE_DB_MOBILITY][side][pet];
+            for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
+               Debuff *db = dbl->on(track);
+               if (m_health[side][pet] > 0) {
+                  if (db->duration() == PE_ZERO_ROUND) {
+                     if (db->subType() == PE_DB_MOBILITY_SOOTHED && !m_damaged[side][pet] && !immuneHit(side, pet, true, PE_NO_ACTIVE, PE_IB_NONE, false)) {
+                        this->pushDebuff(side, pet, PE_DB_MOBILITY, Debuff(PE_DB_MOBILITY_ASLEEP, PE_TWO_ROUNDS, false, side, pet, PE_IB_NONE, debuffValues));
+                     }
                   }
-               }
-               if (dbl->viable(track)) {
-                  if (db->subType() == PE_DB_MOBILITY_ASLEEP && m_damaged[side][pet]) {
-                     this->removeDebuff(side, pet, PE_DB_MOBILITY, PE_DB_MOBILITY_ASLEEP, track);
+                  if (dbl->viable(track)) {
+                     if (db->subType() == PE_DB_MOBILITY_ASLEEP && m_damaged[side][pet]) {
+                        this->removeDebuff(side, pet, PE_DB_MOBILITY, PE_DB_MOBILITY_ASLEEP, track);
+                     }
                   }
                }
             }
          }
 
          // switchy pets
-         dbl = &m_debuff[PE_DB_IMMUNITY][side][pet];
-         for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
-            Debuff *db = dbl->on(track);
-            if (m_health[side][pet] > 0) {
-               if (db->duration() == PE_ZERO_ROUND) {
-                  // feign death
-                  if (db->subType() == PE_DB_IMMUNE_FEIGN_DEATH || db->subType() == PE_DB_IMMUNE_PORTAL) {
-                     int hp = -1;
-                     for (PE_PET_NUMBER mp = 0; mp < PE_TEAM_SIZE; mp++) {
-                        if (mp != pet) {
-                           if (hp < 0) {
-                              if (m_health[side][mp] > 0) hp = mp;
+         if (!m_debuff[PE_DB_IMMUNITY][side][pet].empty()) {
+            dbl = &m_debuff[PE_DB_IMMUNITY][side][pet];
+            for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
+               Debuff *db = dbl->on(track);
+               if (m_health[side][pet] > 0) {
+                  if (db->duration() == PE_ZERO_ROUND) {
+                     // feign death
+                     if (db->subType() == PE_DB_IMMUNE_FEIGN_DEATH || db->subType() == PE_DB_IMMUNE_PORTAL) {
+                        int hp = -1;
+                        for (PE_PET_NUMBER mp = 0; mp < PE_TEAM_SIZE; mp++) {
+                           if (mp != pet) {
+                              if (hp < 0) {
+                                 if (m_health[side][mp] > 0) hp = mp;
+                              }
+                              else if (m_health[side][mp] > m_health[side][hp]) hp = mp;
                            }
-                           else if (m_health[side][mp] > m_health[side][hp]) hp = mp;
                         }
+                        if (hp >= 0) this->activate(side, hp);
                      }
-                     if (hp >= 0) this->activate(side, hp);
-                  }
-                  // fade
-                  if (db->subType() == PE_DB_IMMUNE_FADE) {
-                     vector <int>ppet;
-                     for (PE_PET_NUMBER pet2 = 0; pet2 < PE_TEAM_SIZE; pet2++) {
-                        if (pet2 != pet && m_health[side][pet2] > 0) ppet.push_back(pet2);
-                     }
-                     if (ppet.size() == 2) {
-                        if (turn.doAction(outcome, action++)) this->activate(side, ppet[0]);
-                        else this->activate(side, ppet[1]);
-                     }
-                     else if (ppet.size() == 1) {
-                        this->activate(side, ppet[0]);
+                     // fade
+                     if (db->subType() == PE_DB_IMMUNE_FADE) {
+                        vector <int>ppet;
+                        for (PE_PET_NUMBER pet2 = 0; pet2 < PE_TEAM_SIZE; pet2++) {
+                           if (pet2 != pet && m_health[side][pet2] > 0) ppet.push_back(pet2);
+                        }
+                        if (ppet.size() == 2) {
+                           if (turn.doAction(outcome, action++)) this->activate(side, ppet[0]);
+                           else this->activate(side, ppet[1]);
+                        }
+                        else if (ppet.size() == 1) {
+                           this->activate(side, ppet[0]);
+                        }
                      }
                   }
                }
@@ -1781,44 +1892,50 @@ PE_ERROR State::wrapUp(Turn &turn, const uint32_t outcome) {
          }
 
          // detransform
-         dbl = &m_debuff[PE_DB_OVERTIME][side][pet];
-         for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
-            Debuff *db = dbl->on(track);
-            if (db->subType() == PE_DB_OVERTIME_NATURES_WARD &&
-               db->duration() == PE_ZERO_ROUND) {
-               m_family[side][pet] = m_baseFamily[side][pet];
+         if (!m_debuff[PE_DB_OVERTIME][side][pet].empty()) {
+            dbl = &m_debuff[PE_DB_OVERTIME][side][pet];
+            for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
+               Debuff *db = dbl->on(track);
+               if (db->subType() == PE_DB_OVERTIME_NATURES_WARD &&
+                  db->duration() == PE_ZERO_ROUND) {
+                  m_family[side][pet] = m_baseFamily[side][pet];
 
+               }
             }
          }
 
          // tricky: here we check whether a stun that will affect a pet next round exists
          // if so, push a resilience with one extra round.  as long as stunned + resilience = stunned,
          // this should work
-         dbl = &m_debuff[PE_DB_MOBILITY][side][pet];
-         for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
-            Debuff *db = dbl->on(track);
-            if (db->duration() >= PE_ONE_ROUND) {
-               if (db->subType() < PE_DB_MOBILITY_MOVE_CONTROL_END) {
-                  this->pushDebuff(side, pet, PE_DB_MOBILITY, Debuff(PE_DB_MOBILITY_RESILIENT, PE_TWO_ROUNDS + db->duration(), false, side, pet, PE_IB_NONE, debuffValues));
-                  m_multiRound[side] = PE_NO_ROUNDS; // interupt multi-round stuff
+         if (!m_debuff[PE_DB_MOBILITY][side][pet].empty()) {
+            dbl = &m_debuff[PE_DB_MOBILITY][side][pet];
+            for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
+               Debuff *db = dbl->on(track);
+               if (db->duration() >= PE_ONE_ROUND) {
+                  if (db->subType() < PE_DB_MOBILITY_MOVE_CONTROL_END) {
+                     this->pushDebuff(side, pet, PE_DB_MOBILITY, Debuff(PE_DB_MOBILITY_RESILIENT, PE_TWO_ROUNDS + db->duration(), false, side, pet, PE_IB_NONE, debuffValues));
+                     m_multiRound[side] = PE_NO_ROUNDS; // interupt multi-round stuff
+                  }
                }
-            }
-            if (dbl->viable(track)) {
-               if (db->subType() == PE_DB_MOBILITY_NEVERMORE) {
-                  PE_ABILITY move = this->backMoveStack(side);
-                  if (move < PE_ABILITIES) {
-                     m_lastUsed[side][pet][move] = PE_NEVERMORE;
-                     this->removeDebuff(side, pet, PE_DB_MOBILITY, PE_DB_MOBILITY_NEVERMORE, track);
+               if (dbl->viable(track)) {
+                  if (db->subType() == PE_DB_MOBILITY_NEVERMORE) {
+                     PE_ABILITY move = this->backMoveStack(side);
+                     if (move < PE_ABILITIES) {
+                        m_lastUsed[side][pet][move] = PE_NEVERMORE;
+                        this->removeDebuff(side, pet, PE_DB_MOBILITY, PE_DB_MOBILITY_NEVERMORE, track);
+                     }
                   }
                }
             }
          }
-         dbl = &m_debuff[PE_DB_IMMUNITY][side][pet];
-         for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
-            Debuff *db = dbl->on(track);
-            if (db->subType() == PE_DB_IMMUNE_UNDEAD &&
-               db->duration() == PE_ZERO_ROUND) {
-               die(side, pet);
+         if (!m_debuff[PE_DB_IMMUNITY][side][pet].empty()) {
+            dbl = &m_debuff[PE_DB_IMMUNITY][side][pet];
+            for (int track = dbl->initTrack(); dbl->notEnd(track); dbl->next(track)) {
+               Debuff *db = dbl->on(track);
+               if (db->subType() == PE_DB_IMMUNE_UNDEAD &&
+                  db->duration() == PE_ZERO_ROUND) {
+                  die(side, pet);
+               }
             }
          }
 
