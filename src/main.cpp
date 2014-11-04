@@ -729,7 +729,7 @@ PE_SIDE humanComp(Battle &battle, const int &maxDepth) {
             double value = SMAB(battle, emove, x, depth);
             if (value == 0 || value == maxEval) break;
          }
-         s[1] = move[PE_SIDEB][pick(&x[PE_SIDEB])];
+         s[1] = emove[PE_SIDEB][pick(&x[PE_SIDEB])];
       }
       else {
          s[1] = move[PE_SIDEB][0];
